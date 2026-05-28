@@ -1,0 +1,1730 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>About Us — LeafSpire | Youth Today, Leaders Tomorrow</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LeafSpire youth empowerment NGO mentorship mental health community leadership" name="keywords">
+    <meta content="LeafSpire is a youth-centered social impact initiative empowering young people globally to grow into mentally strong, socially responsible, and professionally equipped changemakers." name="description">
+
+    <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --green-deep:   #1b4332;
+            --green-mid:    #2d6a4f;
+            --green-main:   #40916c;
+            --green-soft:   #52b788;
+            --green-light:  #b7e4c7;
+            --green-pale:   #d8f3dc;
+            --green-mist:   #f0faf3;
+            --white:        #ffffff;
+            --dark:         #0d1b12;
+            --text-body:    #3a4a3e;
+            --text-muted:   #7a9080;
+            --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+            --shadow-hover: 0 12px 36px rgba(29,67,44,0.18);
+            --radius-card:  14px;
+            --transition:   all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background: #ffffff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        .display-4, .display-6 { font-family: 'Playfair Display', Georgia, serif; font-weight: 700; }
+
+        .text-primary   { color: var(--green-main) !important; }
+        .bg-primary     { background-color: var(--green-main) !important; }
+        .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; }
+        .btn-primary:hover, .btn-primary:focus { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(64,145,108,0.35); }
+        .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+        .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; transform: translateY(-1px); }
+        .border-primary { border-color: var(--green-main) !important; }
+        .bg-secondary   { background-color: var(--green-pale) !important; }
+
+        /* ===== SPINNER ===== */
+        #spinner { z-index: 9999; }
+        .spinner-grow.text-primary { color: var(--green-main) !important; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--green-deep);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+        }
+        .top-bar a { transition: var(--transition); }
+        .top-bar a:hover { color: var(--green-light) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(27, 67, 50, 0.97) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(82,183,136,0.15);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .navbar-brand h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.2rem;
+            margin-bottom: 0 !important;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--green-soft) !important;
+        }
+        .navbar-brand h1 span { color: #fff !important; }
+        .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            padding: 1.5rem 0.85rem !important;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%; right: 50%;
+            height: 2px;
+            background: var(--green-soft);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after, .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .dropdown-menu {
+            background: var(--green-deep);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .dropdown-item {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 0.87rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
+        .navbar .btn-outline-primary { border-color: var(--green-soft); color: var(--green-soft); font-size: 0.875rem; padding: 0.45rem 1.2rem; }
+        .navbar .btn-outline-primary:hover { background: var(--green-soft); color: var(--dark); }
+        .btn-sm-square {
+            width: 24px; height: 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 0.7rem;
+        }
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            position: relative;
+            min-height: 66vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        .page-hero__bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('img/tsu.jpg');
+            background-size: cover;
+            background-position: center 30%;
+            will-change: transform;
+            transition: transform 0.05s linear;
+        }
+        .page-hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(11,36,22,0.85) 0%, rgba(27,67,50,0.7) 50%, rgba(64,145,108,0.38) 100%);
+        }
+        .page-hero__content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 8rem 1rem 5rem;
+        }
+        .page-hero__eyebrow {
+            display: inline-block;
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--green-light);
+            background: rgba(82,183,136,0.15);
+            border: 1px solid rgba(82,183,136,0.3);
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 1.5rem;
+            opacity: 0;
+            animation: fadeUp 0.7s 0.2s forwards;
+        }
+        .page-hero__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.6rem, 6vw, 4.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.12;
+            margin-bottom: 1.25rem;
+            opacity: 0;
+            animation: fadeUp 0.75s 0.38s forwards;
+        }
+        .page-hero__title em { font-style: italic; color: var(--green-light); }
+        .page-hero__sub {
+            font-size: clamp(1rem, 1.6vw, 1.12rem);
+            color: rgba(255,255,255,0.7);
+            max-width: 560px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.8;
+            opacity: 0;
+            animation: fadeUp 0.75s 0.52s forwards;
+        }
+        .breadcrumb-wrap {
+            opacity: 0;
+            animation: fadeUp 0.7s 0.65s forwards;
+        }
+        .breadcrumb { background: transparent; margin: 0; padding: 0; }
+        .breadcrumb-item a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.85rem; transition: var(--transition); }
+        .breadcrumb-item a:hover { color: var(--green-light); }
+        .breadcrumb-item.active { color: var(--green-light); font-size: 0.85rem; }
+        .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.35); }
+
+        .scroll-cue {
+            position: absolute;
+            bottom: 1.8rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 3;
+            opacity: 0;
+            animation: fadeIn 0.8s 1s forwards;
+        }
+        .scroll-cue span {
+            display: block;
+            width: 22px; height: 22px;
+            border-right: 2px solid rgba(255,255,255,0.4);
+            border-bottom: 2px solid rgba(255,255,255,0.4);
+            transform: rotate(45deg);
+            margin: -8px auto 0;
+            animation: scrollBounce 1.5s infinite;
+        }
+
+        /* ===== ACCENT STRIP ===== */
+        .accent-strip {
+            background: var(--green-pale);
+            text-align: center;
+            padding: 14px 1rem;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--green-deep);
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+        }
+
+        /* ===== SECTION LABELS ===== */
+        .section-label {
+            display: inline-block;
+            background-color: var(--green-pale) !important;
+            color: var(--green-main) !important;
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== ABOUT / STORY SECTION ===== */
+        .about-section { padding: 6rem 0; }
+
+        .about-image-stack {
+            position: relative;
+            min-height: 520px;
+        }
+        .about-image-stack .img-main {
+            position: absolute;
+            inset: 40px 40px 0 0;
+            width: calc(100% - 40px);
+            height: calc(100% - 40px);
+            object-fit: cover;
+            border-radius: var(--radius-card);
+            box-shadow: 0 20px 60px rgba(27,67,50,0.18);
+        }
+        .about-image-stack .img-accent {
+            position: absolute;
+            top: 0; right: 0;
+            width: 190px; height: 190px;
+            object-fit: cover;
+            border-radius: 12px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.18);
+            border: 4px solid #fff;
+            z-index: 2;
+        }
+        .about-image-stack .img-badge {
+            position: absolute;
+            bottom: 2rem;
+            left: 0;
+            background: var(--green-deep);
+            color: #fff;
+            padding: 1rem 1.4rem;
+            border-radius: 10px;
+            z-index: 3;
+            box-shadow: 0 8px 28px rgba(11,36,22,0.3);
+        }
+        .about-image-stack .img-badge strong {
+            display: block;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.9rem;
+            line-height: 1;
+            color: var(--green-light);
+        }
+        .about-image-stack .img-badge span {
+            font-size: 0.72rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+        }
+
+        .pull-quote {
+            background: var(--green-mist);
+            border-left: 4px solid var(--green-main);
+            border-radius: 0 10px 10px 0;
+            padding: 1.3rem 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .pull-quote p {
+            font-style: italic;
+            font-size: 1.02rem;
+            color: var(--dark);
+            margin: 0 0 0.5rem;
+            line-height: 1.7;
+        }
+        .pull-quote cite {
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--green-main);
+            letter-spacing: 0.04em;
+            font-style: normal;
+        }
+
+        /* ===== STORY / SPLIT IMAGE SECTION ===== */
+        .story-split { padding: 0 0 5rem; }
+        .story-split__img {
+            width: 100%;
+            height: 420px;
+            object-fit: cover;
+            border-radius: var(--radius-card);
+        }
+        .story-split__col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 3rem;
+            background: var(--green-mist);
+            border-radius: var(--radius-card);
+            height: 100%;
+            min-height: 420px;
+        }
+
+        /* ===== STATS BAND ===== */
+        .stats-band {
+            background: var(--green-deep);
+            padding: 4rem 0;
+        }
+        .stat-item { text-align: center; }
+        .stat-item__number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            font-weight: 700;
+            color: var(--green-light);
+            line-height: 1;
+            display: block;
+        }
+        .stat-item__label {
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.55);
+            margin-top: 0.4rem;
+        }
+
+        /* ===== MISSION / VISION CARDS ===== */
+        .mv-section { padding: 5rem 0; background: var(--green-mist); }
+
+        .mv-card {
+            background: #fff;
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            padding: 2.4rem 2rem;
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+            transition: var(--transition);
+        }
+        .mv-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green-main), var(--green-soft));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: var(--transition);
+        }
+        .mv-card:hover::before { transform: scaleX(1); }
+        .mv-card:hover { box-shadow: var(--shadow-hover); transform: translateY(-5px); }
+
+        .mv-card__icon {
+            width: 60px; height: 60px;
+            background: var(--green-pale);
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            margin-bottom: 1.3rem;
+            transition: var(--transition);
+        }
+        .mv-card:hover .mv-card__icon { background: var(--green-main); transform: scale(1.08); }
+        .mv-card:hover .mv-card__icon svg { stroke: #fff; }
+        .mv-card__icon svg { transition: var(--transition); }
+        .mv-card h4 { font-size: 1.15rem; font-weight: 700; margin-bottom: 0.8rem; color: var(--dark); }
+        .mv-card p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.75; margin: 0; }
+
+        /* ===== VALUES STRIP ===== */
+        .values-strip { padding: 4.5rem 0; background: #fff; }
+        .value-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            background: var(--green-pale);
+            color: var(--green-deep);
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 9px 18px;
+            border-radius: 999px;
+            margin: 5px;
+            transition: var(--transition);
+            cursor: default;
+        }
+        .value-pill:hover {
+            background: var(--green-main);
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 16px rgba(64,145,108,0.28);
+        }
+        .value-pill .dot {
+            width: 7px; height: 7px;
+            border-radius: 50%;
+            background: var(--green-main);
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .value-pill:hover .dot { background: rgba(255,255,255,0.7); }
+
+        /* ===== WHAT WE DO — ACCORDION ===== */
+        .wwd-section { padding: 5.5rem 0; background: var(--green-mist); }
+
+        .wwd-accordion { max-width: 860px; margin: 0 auto; }
+
+        .wwd-item {
+            background: #fff;
+            border-radius: var(--radius-card);
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-card);
+            overflow: hidden;
+            transition: var(--transition);
+            border: 1px solid rgba(183,228,199,0.4);
+        }
+        .wwd-item.open { box-shadow: var(--shadow-hover); }
+
+        .wwd-trigger {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 1.5rem 1.75rem;
+            cursor: pointer;
+            text-align: left;
+            transition: var(--transition);
+        }
+        .wwd-trigger:hover { background: var(--green-mist); }
+        .wwd-item.open .wwd-trigger { background: var(--green-mist); }
+
+        .wwd-trigger__icon {
+            width: 52px; height: 52px;
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .wwd-item.open .wwd-trigger__icon,
+        .wwd-trigger:hover .wwd-trigger__icon {
+            background: var(--green-main);
+        }
+        .wwd-item.open .wwd-trigger__icon svg,
+        .wwd-trigger:hover .wwd-trigger__icon svg { stroke: #fff; }
+        .wwd-trigger__icon svg { transition: var(--transition); }
+
+        .wwd-trigger__text { flex: 1; }
+        .wwd-trigger__title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 0 0 0.2rem;
+        }
+        .wwd-trigger__sub {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        .wwd-trigger__arrow {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .wwd-trigger__arrow svg { transition: transform 0.35s ease; }
+        .wwd-item.open .wwd-trigger__arrow { background: var(--green-main); }
+        .wwd-item.open .wwd-trigger__arrow svg { transform: rotate(180deg); stroke: #fff; }
+
+        .wwd-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.45s cubic-bezier(0.4, 0, 0.2, 1), padding 0.35s ease;
+            padding: 0 1.75rem;
+        }
+        .wwd-item.open .wwd-body {
+            max-height: 600px;
+            padding: 0 1.75rem 1.75rem;
+        }
+
+        .wwd-body__inner {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--green-pale);
+        }
+        .wwd-detail-block h6 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            margin-bottom: 0.5rem;
+        }
+        .wwd-detail-block p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+        .wwd-detail-block ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .wwd-detail-block ul li {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .wwd-detail-block ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0.68em;
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--green-main);
+        }
+        .wwd-body__full {
+            padding-top: 1.25rem;
+            border-top: 1px solid var(--green-pale);
+        }
+
+        /* ===== IMAGE COLLAGE ===== */
+        .collage-section { padding: 5rem 0; background: #fff; }
+        .collage-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            grid-template-rows: auto auto;
+            gap: 1rem;
+        }
+        .collage-grid .c1 { grid-row: 1 / 3; }
+        .collage-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: var(--radius-card);
+            display: block;
+            min-height: 200px;
+        }
+        .collage-grid .c1 img { min-height: 440px; }
+
+        /* ===== SUPPORT / CTA SECTION ===== */
+        .support-section {
+            padding: 6rem 0;
+            background: var(--green-deep);
+            position: relative;
+            overflow: hidden;
+        }
+        .support-section::before {
+            content: '';
+            position: absolute;
+            top: -100px; right: -100px;
+            width: 420px; height: 420px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(82,183,136,0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .support-section::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; left: -80px;
+            width: 300px; height: 300px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(82,183,136,0.07) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .support-section .section-label {
+            background-color: rgba(82,183,136,0.15) !important;
+            color: var(--green-light) !important;
+        }
+        .support-section h2 {
+            color: #fff;
+            font-size: clamp(1.8rem, 3.5vw, 2.8rem);
+        }
+        .support-section p { color: rgba(255,255,255,0.65); }
+
+        .support-card {
+            background: rgba(255,255,255,0.06);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: var(--radius-card);
+            padding: 2rem 1.75rem;
+            text-align: center;
+            transition: var(--transition);
+            height: 100%;
+        }
+        .support-card:hover {
+            background: rgba(82,183,136,0.1);
+            border-color: rgba(82,183,136,0.4);
+            transform: translateY(-4px);
+        }
+        .support-card__icon {
+            width: 64px; height: 64px;
+            border-radius: 50%;
+            background: rgba(82,183,136,0.12);
+            border: 1px solid rgba(82,183,136,0.25);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.2rem;
+            transition: var(--transition);
+        }
+        .support-card:hover .support-card__icon { background: var(--green-main); border-color: var(--green-main); }
+        .support-card:hover .support-card__icon svg { stroke: #fff; }
+        .support-card__icon svg { transition: var(--transition); }
+        .support-card h5 { color: #fff; font-size: 1rem; margin-bottom: 0.6rem; }
+        .support-card p { font-size: 0.88rem; color: rgba(255,255,255,0.5); margin: 0; }
+
+        .btn-white {
+            background: #fff;
+            color: var(--green-deep);
+            border: none;
+            font-weight: 700;
+            padding: 0.7rem 1.8rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .btn-white:hover {
+            background: var(--green-light);
+            color: var(--green-deep);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            text-decoration: none;
+        }
+        .btn-outline-white {
+            background: transparent;
+            color: rgba(255,255,255,0.85);
+            border: 1.5px solid rgba(255,255,255,0.3);
+            font-weight: 600;
+            padding: 0.7rem 1.8rem;
+            border-radius: 8px;
+            transition: var(--transition);
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+        }
+        .btn-outline-white:hover {
+            background: rgba(255,255,255,0.1);
+            border-color: rgba(255,255,255,0.6);
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* ===== TEAM SECTION ===== */
+        .team-section { padding: 5.5rem 0; }
+
+        .team-item {
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+        }
+        .team-item:hover { box-shadow: var(--shadow-hover); transform: translateY(-4px); }
+        .team-item .overflow-hidden img { transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1); }
+        .team-item:hover .overflow-hidden img { transform: scale(1.06); }
+        .team-text { background: #fff !important; }
+        .team-text h5 { font-size: 1rem; font-weight: 600; color: var(--dark); }
+        .team-text .text-primary { font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; }
+
+        .btn-square {
+            width: 32px; height: 32px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            color: var(--green-main);
+            border: none;
+            font-size: 0.75rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+            margin: 0 2px;
+        }
+        .btn-square:hover { background: var(--green-main); color: #fff; transform: scale(1.12); }
+
+        /* ===== FOOTER ===== */
+        .footer { background: var(--dark) !important; }
+        .footer h1 { font-family: 'Italianno', cursive; font-size: 2.4rem; color: var(--green-soft) !important; margin-bottom: 0.5rem; line-height: 1; }
+        .footer h1 span { color: #fff !important; }
+        .footer h5 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9) !important; }
+        .footer .btn-square-footer {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(82,183,136,0.12);
+            border: 1px solid rgba(82,183,136,0.25);
+            color: var(--green-light);
+            font-size: 0.78rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+            text-decoration: none;
+            margin-right: 4px;
+        }
+        .footer .btn-square-footer:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+        .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+        .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+        .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+        .footer .form-control {
+            background: rgba(255,255,255,0.07) !important;
+            border: 1px solid rgba(82,183,136,0.25) !important;
+            color: #fff !important;
+            border-radius: 8px;
+            font-size: 0.88rem;
+        }
+        .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+        .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+        .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 1.25rem 0;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.35);
+        }
+        .copyright a { color: var(--green-light); text-decoration: none; }
+        .copyright a:hover { color: var(--green-soft); }
+
+        /* ===== POPUP ===== */
+        .leafspire-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(6px);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .leafspire-popup-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            animation: popIn 0.25s ease;
+        }
+        .leafspire-icon { font-size: 42px; margin-bottom: 10px; }
+        .leafspire-popup-card h3 { color: var(--green-mid); }
+        .leafspire-popup-card p { font-size: 14px; color: #444; }
+        .leafspire-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: var(--green-mid);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            background: var(--green-main) !important;
+            border: none !important;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.4);
+            border-radius: 50% !important;
+            width: 46px; height: 46px;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            z-index: 999;
+            color: #fff;
+        }
+        .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.65s ease, transform 0.65s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left  { opacity: 0; transform: translateX(-30px); transition: opacity 0.65s ease, transform 0.65s ease; }
+        .reveal-left.visible  { opacity: 1; transform: translateX(0); }
+        .reveal-right { opacity: 0; transform: translateX(30px); transition: opacity 0.65s ease, transform 0.65s ease; }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.22s; }
+        .reveal-delay-3 { transition-delay: 0.34s; }
+        .reveal-delay-4 { transition-delay: 0.46s; }
+
+        /* ===== KEYFRAMES ===== */
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(22px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to   { opacity: 1; }
+        }
+        @keyframes scrollBounce {
+            0%, 100% { opacity: 0.4; transform: rotate(45deg) translateY(0); }
+            50%       { opacity: 1;   transform: rotate(45deg) translateY(6px); }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991.98px) {
+            .page-hero { min-height: 52vh; }
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-link { padding: 0.6rem 1rem !important; }
+            .nav-link::after { display: none; }
+            .about-image-stack { min-height: 340px; margin-bottom: 2rem; }
+            .story-split__col { min-height: auto; padding: 2rem; }
+            .wwd-body__inner { grid-template-columns: 1fr; }
+            .collage-grid { grid-template-columns: 1fr 1fr; grid-template-rows: auto auto auto; }
+            .collage-grid .c1 { grid-column: 1 / 3; grid-row: 1; }
+            .collage-grid .c1 img { min-height: 280px; }
+        }
+        @media (max-width: 575.98px) {
+            .page-hero { min-height: 70vh; }
+            .about-image-stack { min-height: 280px; }
+            .about-image-stack .img-accent { width: 130px; height: 130px; }
+            .collage-grid { grid-template-columns: 1fr; }
+            .collage-grid .c1 { grid-column: 1; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/leafspirelogoremovebg.png" alt="LeafSpire Logo" style="width:58px;height:58px;object-fit:contain;margin-right:10px;">
+                <h1 class="fw-bold mb-0" style="font-family:'Italianno',cursive;font-size:2.2rem;">
+                    Leaf<span class="text-white">spire</span>
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="causes.html" class="nav-item nav-link">Causes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Our Programmes</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Get Involved</a>
+                            <a href="404.html" class="dropdown-item">Stories</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Page Hero Start -->
+    <div class="page-hero">
+        <div class="page-hero__bg" id="heroBg"></div>
+        <div class="page-hero__overlay"></div>
+        <div class="page-hero__content">
+            <div class="page-hero__eyebrow">Our Story</div>
+            <h1 class="page-hero__title"> <em>LeafSpire</em></h1>
+            <p class="page-hero__sub">A youth-centered movement rooted in Africa — nurturing the leaders, changemakers, and community builders the world needs tomorrow.</p>
+            <div class="breadcrumb-wrap">
+                <nav aria-label="breadcrumb">
+                    <ol class="breadcrumb justify-content-center mb-0">
+                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                        <li class="breadcrumb-item"><a href="#">Pages</a></li>
+                        <li class="breadcrumb-item active" aria-current="page">About Us</li>
+                    </ol>
+                </nav>
+            </div>
+        </div>
+        <div class="scroll-cue"><span></span></div>
+    </div>
+    <!-- Page Hero End -->
+
+    <!-- Accent Strip -->
+    <div class="accent-strip">✦ &nbsp; Youth Today, Leaders Tomorrow &nbsp; ✦</div>
+
+    <!-- About / Story Start -->
+    <section class="about-section">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 reveal-left">
+                    <div class="about-image-stack">
+                        <img class="img-main"
+                             src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=900&auto=format&fit=crop&q=80"
+                             alt="LeafSpire youth community">
+                        <img class="img-accent"
+                             src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=400&auto=format&fit=crop&q=80"
+                             alt="Youth mentorship session">
+                        <div class="img-badge">
+                            <strong>2025</strong>
+                            <span>Founded</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 reveal-right">
+                    <div class="section-label">About Us</div>
+                    <h1 class="display-6 mb-4" style="font-size: clamp(1.8rem, 3vw, 2.5rem);">
+                        Nurturing the Leaders<br>The World Needs Tomorrow
+                    </h1>
+
+                    <div class="pull-quote">
+                        <p>"We believe that when young people are given the right support, they don't just change their own lives — they transform their communities."</p>
+                        <cite>— LeafSpire Founding Team</cite>
+                    </div>
+
+                    <p class="mb-4" style="color: var(--text-muted); line-height: 1.85;">
+                        LeafSpire is a youth-centered social impact initiative rooted in Kenya and beyond. We work with young people across mentorship, mental health, community volunteering, and sustainability — giving them the tools, guidance, and spaces they need to grow into confident, responsible, and purpose-driven changemakers.
+                    </p>
+                    <p class="mb-5" style="color: var(--text-muted); line-height: 1.85;">
+                        We don't just run programs — we build relationships. Every session, every conversation, every volunteer drive is a step toward a world where no young person is left behind.
+                    </p>
+
+                    <a class="btn btn-primary py-2 px-3 me-3" href="causes.html">
+                        Our Focus Areas
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a class="btn btn-outline-primary py-2 px-3" href="contact.html">
+                        Contact Us
+                        <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About / Story End -->
+
+    <!-- Stats Band Start -->
+    <div class="stats-band">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3 reveal reveal-delay-1">
+                    <div class="stat-item">
+                        <span class="stat-item__number">500+</span>
+                        <div class="stat-item__label">Youth Reached</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 reveal reveal-delay-2">
+                    <div class="stat-item">
+                        <span class="stat-item__number">50+</span>
+                        <div class="stat-item__label">Active Mentors</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 reveal reveal-delay-3">
+                    <div class="stat-item">
+                        <span class="stat-item__number">9k+</span>
+                        <div class="stat-item__label">Volunteer Hours</div>
+                    </div>
+                </div>
+                <div class="col-6 col-md-3 reveal reveal-delay-4">
+                    <div class="stat-item">
+                        <span class="stat-item__number">85%</span>
+                        <div class="stat-item__label">Career Transition Rate</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stats Band End -->
+
+    <!-- Story Split Section Start -->
+    <section class="story-split">
+        <div class="container">
+            <div class="row g-4 align-items-stretch mt-3">
+                <div class="col-lg-6 reveal-left">
+                    <img class="story-split__img"
+                         src="img/ko.jpg"
+                         alt="Young people in community action">
+                </div>
+                <div class="col-lg-6 reveal-right">
+                    <div class="story-split__col">
+                        <div class="section-label">Our Origin</div>
+                        <h2 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 1rem;">Born From a Belief<br>in Young People</h2>
+                        <p style="color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem;">
+                            LeafSpire was founded in 2026 by a young leader who had experienced firsthand what happens when youth are seen, supported, and given room to grow. They built something they wished had existed for them.
+                        </p>
+                        <p style="color: var(--text-muted); line-height: 1.85; margin-bottom: 1.5rem;">
+                            What started as a small mentorship circle has grown into a multi-program initiative spanning mental health, community action, sustainability, and career development — touching lives across the continent and inspiring a global conversation about what youth empowerment truly means.
+                        </p>
+                        <a class="btn btn-primary py-2 px-3" href="causes.html">
+                            See Our Impact
+                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Second split row reversed -->
+            <div class="row g-4 align-items-stretch mt-4">
+                <div class="col-lg-6 order-lg-2 reveal-right">
+                    <img class="story-split__img"
+                         src="img/good.jpg"
+                         alt="Mental health and wellbeing for youth">
+                </div>
+                <div class="col-lg-6 order-lg-1 reveal-left">
+                    <div class="story-split__col" style="background: var(--green-pale);">
+                        <div class="section-label">Mental Wellness</div>
+                        <h2 style="font-size: clamp(1.5rem, 2.5vw, 2rem); margin-bottom: 1rem;">A Safe Space to<br>Speak, Heal &amp; Grow</h2>
+                        <p style="color: var(--text-muted); line-height: 1.85; margin-bottom: 1rem;">
+                            We believe mental health is not a luxury — it is a foundation. Before a young person can lead, build, or dream, they need to feel safe, heard, and understood.
+                        </p>
+                        <p style="color: var(--text-muted); line-height: 1.85; margin-bottom: 1.5rem;">
+                            Our listening circles and resilience workshops create stigma-free spaces where youth can share openly and access the emotional tools they need to navigate today's world with strength and clarity.
+                        </p>
+                        <a class="btn btn-outline-primary py-2 px-3" href="service.html">
+                            Our Programmes
+                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Story Split Section End -->
+
+    <!-- Mission / Vision Cards Start -->
+    <section class="mv-section">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 520px;">
+                <div class="section-label">Why We Exist</div>
+                <h1 class="display-6 mb-3">Mission, Vision &amp; Purpose</h1>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Three principles that guide everything we do at LeafSpire.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+                    <div class="mv-card">
+                        <div class="mv-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                            </svg>
+                        </div>
+                        <h4>Our Mission</h4>
+                        <p>To empower young people with mentorship, mental health support, and community tools — so they can grow into confident, purposeful, and socially responsible leaders ready to serve their communities.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+                    <div class="mv-card">
+                        <div class="mv-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/>
+                            </svg>
+                        </div>
+                        <h4>Our Vision</h4>
+                        <p>A world where every young person — regardless of where they come from — has the opportunity, support, and inspiration to become a positive force in their community and beyond.</p>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+                    <div class="mv-card">
+                        <div class="mv-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <h4>Our Purpose</h4>
+                        <p>To bridge the gap between potential and opportunity — connecting youth with the people, programs, and platforms that unlock their ability to lead, serve, and inspire lasting change.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Mission / Vision Cards End -->
+
+    <!-- Values Strip Start -->
+    <section class="values-strip">
+        <div class="container">
+            <div class="text-center mb-4 reveal">
+                <div class="section-label">Our Values</div>
+                <h2 class="display-6 mb-2" style="font-size: 1.8rem;">What We Stand For</h2>
+            </div>
+            <div class="text-center reveal reveal-delay-1">
+                <span class="value-pill"><span class="dot"></span>Compassion</span>
+                <span class="value-pill"><span class="dot"></span>Integrity</span>
+                <span class="value-pill"><span class="dot"></span>Inclusivity</span>
+                <span class="value-pill"><span class="dot"></span>Youth Leadership</span>
+                <span class="value-pill"><span class="dot"></span>Community First</span>
+                <span class="value-pill"><span class="dot"></span>Sustainability</span>
+                <span class="value-pill"><span class="dot"></span>Accountability</span>
+                <span class="value-pill"><span class="dot"></span>Collaboration</span>
+                <span class="value-pill"><span class="dot"></span>Global Mindset</span>
+            </div>
+        </div>
+    </section>
+    <!-- Values Strip End -->
+
+    <!-- What We Do — Accordion Start -->
+    <section class="wwd-section">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 560px;">
+                <div class="section-label">What We Do</div>
+                <h1 class="display-6 mb-3">How We Get Involved</h1>
+                <p style="color: var(--text-muted); font-size: 0.95rem;">Our programmes are designed to develop the whole person — mind, voice, community, and future. Explore each pillar below.</p>
+            </div>
+
+            <div class="wwd-accordion reveal">
+
+                <!-- Item 1 -->
+                <div class="wwd-item open" id="wwd-1">
+                    <button class="wwd-trigger" onclick="toggleWWD('wwd-1')" aria-expanded="true">
+                        <div class="wwd-trigger__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="wwd-trigger__text">
+                            <p class="wwd-trigger__title">Mentorship &amp; Leadership</p>
+                            <p class="wwd-trigger__sub">Building confident, purposeful young leaders through guided mentorship</p>
+                        </div>
+                        <div class="wwd-trigger__arrow">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </button>
+                    <div class="wwd-body">
+                        <div class="wwd-body__inner">
+                            <div class="wwd-detail-block">
+                                <h6>What We Offer</h6>
+                                <ul>
+                                    <li>One-on-one career guidance sessions</li>
+                                    <li>Peer mentorship circles and group cohorts</li>
+                                    <li>Leadership development workshops</li>
+                                    <li>Skills training and professional readiness</li>
+                                </ul>
+                            </div>
+                            <div class="wwd-detail-block">
+                                <h6>Our Impact</h6>
+                                <p>Young people gain clarity about their futures, build confidence in their abilities, and develop the networks they need to turn ambition into action. Mentors walk alongside them — not in front.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 -->
+                <div class="wwd-item" id="wwd-2">
+                    <button class="wwd-trigger" onclick="toggleWWD('wwd-2')" aria-expanded="false">
+                        <div class="wwd-trigger__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <div class="wwd-trigger__text">
+                            <p class="wwd-trigger__title">Mental Health &amp; Emotional Wellbeing</p>
+                            <p class="wwd-trigger__sub">Creating safe, stigma-free spaces for youth to heal, speak, and grow</p>
+                        </div>
+                        <div class="wwd-trigger__arrow">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </button>
+                    <div class="wwd-body">
+                        <div class="wwd-body__inner">
+                            <div class="wwd-detail-block">
+                                <h6>Activities</h6>
+                                <ul>
+                                    <li>Safe listening and peer support circles</li>
+                                    <li>Emotional resilience workshops</li>
+                                    <li>Mental health awareness campaigns</li>
+                                    <li>Referral pathways to professional support</li>
+                                </ul>
+                            </div>
+                            <div class="wwd-detail-block">
+                                <h6>Our Approach</h6>
+                                <p>We meet young people where they are — without judgment. Our programmes break down stigma around mental health and equip youth with practical emotional tools to navigate life's pressures with strength and clarity.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 3 -->
+                <div class="wwd-item" id="wwd-3">
+                    <button class="wwd-trigger" onclick="toggleWWD('wwd-3')" aria-expanded="false">
+                        <div class="wwd-trigger__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                            </svg>
+                        </div>
+                        <div class="wwd-trigger__text">
+                            <p class="wwd-trigger__title">Community Action &amp; Volunteering</p>
+                            <p class="wwd-trigger__sub">Youth-led initiatives that transform local environments and foster civic pride</p>
+                        </div>
+                        <div class="wwd-trigger__arrow">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </button>
+                    <div class="wwd-body">
+                        <div class="wwd-body__inner">
+                            <div class="wwd-detail-block">
+                                <h6>What We Organise</h6>
+                                <ul>
+                                    <li>Neighbourhood clean-up and beautification drives</li>
+                                    <li>Tree planting and environmental restoration</li>
+                                    <li>School and community outreach programmes</li>
+                                    <li>Civic education and youth advocacy events</li>
+                                </ul>
+                            </div>
+                            <div class="wwd-detail-block">
+                                <h6>Community Involvement</h6>
+                                <p>Real impact starts at home. Our volunteers don't just participate — they design, lead, and own these initiatives. Each drive builds a culture of civic responsibility and collective ownership within communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 4 -->
+                <div class="wwd-item" id="wwd-4">
+                    <button class="wwd-trigger" onclick="toggleWWD('wwd-4')" aria-expanded="false">
+                        <div class="wwd-trigger__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="wwd-trigger__text">
+                            <p class="wwd-trigger__title">Sustainability &amp; SDG Engagement</p>
+                            <p class="wwd-trigger__sub">Equipping youth to become environmental stewards and global citizens</p>
+                        </div>
+                        <div class="wwd-trigger__arrow">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </button>
+                    <div class="wwd-body">
+                        <div class="wwd-body__inner">
+                            <div class="wwd-detail-block">
+                                <h6>Programme Focus</h6>
+                                <ul>
+                                    <li>Climate literacy and environmental education</li>
+                                    <li>UN SDG awareness campaigns</li>
+                                    <li>Sustainable community projects and drives</li>
+                                    <li>Green entrepreneurship and innovation</li>
+                                </ul>
+                            </div>
+                            <div class="wwd-detail-block">
+                                <h6>Goals &amp; Outcomes</h6>
+                                <p>Young people leave with a deep understanding of their role in the global sustainability agenda — and the confidence to champion it. We believe the next generation of climate leaders is already among us.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 5 -->
+                <div class="wwd-item" id="wwd-5">
+                    <button class="wwd-trigger" onclick="toggleWWD('wwd-5')" aria-expanded="false">
+                        <div class="wwd-trigger__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/>
+                            </svg>
+                        </div>
+                        <div class="wwd-trigger__text">
+                            <p class="wwd-trigger__title">Social Inclusion &amp; Equal Access</p>
+                            <p class="wwd-trigger__sub">Ensuring no young person is left behind — regardless of background</p>
+                        </div>
+                        <div class="wwd-trigger__arrow">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+                        </div>
+                    </button>
+                    <div class="wwd-body">
+                        <div class="wwd-body__inner">
+                            <div class="wwd-detail-block">
+                                <h6>Our Commitment</h6>
+                                <ul>
+                                    <li>Targeted outreach to underserved communities</li>
+                                    <li>Accessible, low-barrier programme entry</li>
+                                    <li>Inclusive design across all activities</li>
+                                    <li>Safe participation for all identities</li>
+                                </ul>
+                            </div>
+                            <div class="wwd-detail-block">
+                                <h6>Why It Matters</h6>
+                                <p>Potential is everywhere. Opportunity is not. We work to close that gap — creating pathways to growth for the youth who are most often overlooked, but have the most to offer their communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- What We Do — Accordion End -->
+
+    <!-- Image Collage Start -->
+    <section class="collage-section">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 480px;">
+                <div class="section-label">In the Field</div>
+                <h2 style="font-size: clamp(1.6rem, 2.8vw, 2.2rem);">Youth. Community. Action.</h2>
+            </div>
+            <div class="collage-grid reveal">
+                <div class="c1">
+                    <img src="img/o1.jpg">
+                </div>
+                <div>
+                    <img src="img/o2.jpg">
+                </div>
+                <div>
+                    <img src="img/o3.jpg">
+                </div>
+                <div>
+                    <img src="img/o4.jpg" alt="Young leader">
+                </div>
+                <div>
+                    <img src="img/o5.jpg" alt="Team collaboration">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Image Collage End -->
+
+    <!-- Support / CTA Section Start -->
+    <section class="support-section">
+        <div class="container position-relative" style="z-index: 1;">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 580px;">
+                <div class="section-label">Get Involved</div>
+                <h2 class="mb-3">You Don't Have to Run a Program<br>to Change a Life.</h2>
+                <p class="mb-0">Just show up. Mentoring, volunteering, sharing our story, or simply sending us an email to say you believe in what we are doing — every form of support moves this forward.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center mb-5">
+                <div class="col-lg-3 col-md-6 reveal reveal-delay-1">
+                    <div class="support-card">
+                        <div class="support-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-light)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <h5>Mentor a Youth</h5>
+                        <p>Share your knowledge, time, and experience with a young person who needs guidance to find their path.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal reveal-delay-2">
+                    <div class="support-card">
+                        <div class="support-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-light)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
+                            </svg>
+                        </div>
+                        <h5>Become a Mentee</h5>
+                        <p>If you're a young person looking for guidance, community, and growth — join us. We are here for you.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal reveal-delay-3">
+                    <div class="support-card">
+                        <div class="support-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-light)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+                            </svg>
+                        </div>
+                        <h5>Spread the Word</h5>
+                        <p>Share our story on social media, in your community, or with anyone who believes in the power of youth.</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 reveal reveal-delay-4">
+                    <div class="support-card">
+                        <div class="support-card__icon">
+                            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-light)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+                            </svg>
+                        </div>
+                        <h5>Show Your Support</h5>
+                        <p>Send us a message. Make a contribution. Every gesture — big or small — tells a young person that someone believes in them.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center reveal">
+                <a class="btn-white me-3" href="testimonial.html">
+                    Become a Mentor
+                    <i class="fa fa-arrow-right ms-1" style="font-size:0.8rem;"></i>
+                </a>
+                <a class="btn-outline-white" href="testimonial.html">
+                    Become a Mentee
+                    <i class="fa fa-arrow-right ms-1" style="font-size:0.8rem;"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+    <!-- Support / CTA Section End -->
+
+   <!-- Team Start -->
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Team</div>
+            <h1 class="display-6 mb-3">Young Leaders Behind LeafSpire</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Passionate young Kenyans driving change from the ground up.</p>
+        </div>
+
+        <div class="row g-4 justify-content-center">
+
+            <!-- Row 1: Executive Director -->
+            <div class="col-lg-4 col-md-6">
+                <div class="wow fadeInUp" data-wow-delay="0.1s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/esc.jpg" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Escriva Josemaria</h5>
+                            <p class="text-primary">Executive Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Deputy Executive Director -->
+            <div class="col-lg-4 col-md-6">
+                <div class="wow fadeInUp" data-wow-delay="0.2s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/ver.jfif" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Veronicah L. Naitamany</h5>
+                            <p class="text-primary">Deputy Executive Director</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Director of Programs -->
+            <div class="col-lg-4 col-md-6">
+                <div class="wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/faith.png" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Faith Nganga</h5>
+                            <p class="text-primary">Director of Programs</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Row 2: Communications (under Executive Director) -->
+            <div class="col-lg-4 col-md-6">
+                <div class="wow fadeInUp" data-wow-delay="0.4s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/conrad.png" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Conrad Wesonga</h5>
+                            <p class="text-primary">Director of Communications</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advocacy & Research Lead -->
+            <div class="col-lg-4 col-md-6">
+                <div class="wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item position-relative rounded overflow-hidden">
+                        <div class="overflow-hidden">
+                            <img class="img-fluid" src="img/ws.png" alt="">
+                        </div>
+                        <div class="team-text bg-light text-center p-4">
+                            <h5>Washingtone Tinega</h5>
+                            <p class="text-primary">Advocacy & Research Lead</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- Team End -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold mb-2" style="font-family: 'Italianno', cursive; color: var(--green-soft);">
+                        Leaf<span style="color: #fff;">spire</span>
+                    </h1>
+                    <p style="font-size: 0.82rem; color: rgba(255,255,255,0.45); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Youth Today · Leaders Tomorrow</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn-square-footer" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                        <a class="btn-square-footer" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn-square-footer" href="https://youtube.com/@leafspirefoundation"><i class="fab fa-youtube"></i></a>
+                        <a class="btn-square-footer" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact</h5>
+                    <p><i class="fa fa-phone-alt me-3" style="color: var(--green-soft);"></i>+254 701 114562</p>
+                    <p><i class="fa fa-envelope me-3" style="color: var(--green-soft);"></i>leafspirefoundation@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Programmes</a>
+                    <a class="btn btn-link" href="terms.html">Terms &amp; Conditions</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay Connected</h5>
+                    <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+                    <form id="subscribeForm">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" id="emailInput" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </form>
+                    <small class="d-block mt-2" style="color: rgba(255,255,255,0.3); font-size: 0.78rem;">We only send meaningful updates. No spam.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="https://htmlcodex.com">riva.https</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Popup -->
+    <div id="leafspirePopup" class="leafspire-popup">
+        <div class="leafspire-popup-card">
+            <div class="leafspire-icon">💚</div>
+            <h3>Thank You for Joining LeafSpire</h3>
+            <p>You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+            <button onclick="closePopup()" class="leafspire-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        /* ===== SCROLL REVEAL ===== */
+        (function () {
+            var selectors = '.reveal, .reveal-left, .reveal-right';
+            var els = document.querySelectorAll(selectors);
+            if (!els.length) return;
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            els.forEach(function (el) { io.observe(el); });
+        })();
+
+        /* ===== HERO PARALLAX ===== */
+        (function () {
+            var bg = document.getElementById('heroBg');
+            if (!bg) return;
+            var ticking = false;
+            window.addEventListener('scroll', function () {
+                if (!ticking) {
+                    requestAnimationFrame(function () {
+                        var offset = window.scrollY;
+                        bg.style.transform = 'translateY(' + (offset * 0.28) + 'px) scale(1.06)';
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+        })();
+
+        /* ===== BACK TO TOP ===== */
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('.back-to-top');
+            if (!btn) return;
+            btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        /* ===== WHAT WE DO ACCORDION ===== */
+        function toggleWWD(id) {
+            var item = document.getElementById(id);
+            var btn = item.querySelector('.wwd-trigger');
+            var isOpen = item.classList.contains('open');
+
+            // Close all
+            document.querySelectorAll('.wwd-item').forEach(function(el) {
+                el.classList.remove('open');
+                el.querySelector('.wwd-trigger').setAttribute('aria-expanded', 'false');
+            });
+
+            // Open clicked if it was closed
+            if (!isOpen) {
+                item.classList.add('open');
+                btn.setAttribute('aria-expanded', 'true');
+            }
+        }
+
+        /* ===== FORMSPREE SUBSCRIPTION ===== */
+        var subscribeForm = document.getElementById("subscribeForm");
+        var popup = document.getElementById("leafspirePopup");
+
+        if (subscribeForm) {
+            subscribeForm.addEventListener("submit", async function (e) {
+                e.preventDefault();
+                var email = document.getElementById("emailInput").value;
+                try {
+                    await fetch("https://formspree.io/f/xredavrk", {
+                        method: "POST",
+                        headers: { "Content-Type": "application/json" },
+                        body: JSON.stringify({ email: email })
+                    });
+                    popup.style.display = "flex";
+                    subscribeForm.reset();
+                } catch (error) {
+                    alert("Something went wrong. Please try again.");
+                }
+            });
+        }
+
+        function closePopup() {
+            popup.style.display = "none";
+        }
+    </script>
+</body>
+
+</html>

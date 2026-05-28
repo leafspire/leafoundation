@@ -1,0 +1,1359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Terms, Governance & Donor Policy — LeafSpire</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LeafSpire terms of use governance donor policy refund policy Kenya NGO" name="keywords">
+    <meta content="LeafSpire's legal, ethical, and operational framework — our commitment to transparency, accountability, and youth-centered governance." name="description">
+
+    <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries (matching contact.html exactly) -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===== DESIGN TOKENS (identical to index.html) ===== */
+        :root {
+            --green-deep:   #1b4332;
+            --green-mid:    #2d6a4f;
+            --green-main:   #40916c;
+            --green-soft:   #52b788;
+            --green-light:  #b7e4c7;
+            --green-pale:   #d8f3dc;
+            --green-mist:   #f0faf3;
+            --white:        #ffffff;
+            --dark:         #0d1b12;
+            --text-body:    #3a4a3e;
+            --text-muted:   #7a9080;
+            --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+            --shadow-hover: 0 12px 36px rgba(29,67,44,0.18);
+            --radius-card:  14px;
+            --transition:   all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background: #ffffff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        .text-primary   { color: var(--green-main) !important; }
+        .bg-primary     { background-color: var(--green-main) !important; }
+        .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; }
+        .btn-primary:hover, .btn-primary:focus { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(64,145,108,0.35); }
+        .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+        .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; }
+        .bg-secondary   { background-color: var(--green-pale) !important; }
+
+        /* ===== SPINNER ===== */
+        #spinner { z-index: 9999; }
+        .spinner-grow.text-primary { color: var(--green-main) !important; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--green-deep);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+        }
+        .top-bar a { transition: var(--transition); }
+        .top-bar a:hover { color: var(--green-light) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(27, 67, 50, 0.97) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(82,183,136,0.15);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .navbar-brand h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            margin-bottom: 0 !important;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--green-soft) !important;
+        }
+        .navbar-brand h1 span { color: #fff !important; }
+        .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            padding: 1.5rem 0.85rem !important;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%; right: 50%;
+            height: 2px;
+            background: var(--green-soft);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .dropdown-menu {
+            background: var(--green-deep);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .dropdown-item {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 0.87rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
+        .btn-sm-square {
+            width: 24px; height: 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 0.7rem;
+        }
+
+        /* ===== HERO ===== */
+        .terms-hero {
+            position: relative;
+            min-height: 420px;
+            background: linear-gradient(135deg, #0d2218 0%, #1b4332 50%, #2d6a4f 100%);
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            padding-top: 90px;
+        }
+        .terms-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                radial-gradient(rgba(82,183,136,0.07) 1.5px, transparent 1.5px),
+                radial-gradient(rgba(82,183,136,0.07) 1.5px, transparent 1.5px);
+            background-size: 48px 48px;
+            background-position: 0 0, 24px 24px;
+        }
+        .terms-hero::after {
+            content: '';
+            position: absolute;
+            right: -5%;
+            bottom: -30%;
+            width: 500px;
+            height: 500px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(82,183,136,0.12) 0%, transparent 65%);
+            pointer-events: none;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero-pill {
+            display: inline-block;
+            background: rgba(82,183,136,0.18);
+            border: 1px solid rgba(82,183,136,0.35);
+            color: var(--green-light);
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 1.25rem;
+        }
+        .terms-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4.5vw, 3.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+        .terms-hero h1 em {
+            font-style: italic;
+            color: var(--green-light);
+        }
+        .terms-hero p {
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            max-width: 540px;
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+        .hero-meta {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-top: 2rem;
+        }
+        .hero-meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: rgba(255,255,255,0.55);
+            font-size: 0.82rem;
+        }
+        .hero-meta-item i { color: var(--green-soft); }
+
+        /* ===== TAGLINE STRIP ===== */
+        .tagline-strip {
+            background: var(--green-pale);
+            text-align: center;
+            padding: 12px 1rem;
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: var(--green-deep);
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+        }
+
+        /* ===== PAGE LAYOUT ===== */
+        .terms-layout {
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+            align-items: start;
+        }
+        @media (max-width: 991px) {
+            .terms-layout { grid-template-columns: 1fr; }
+            .toc-sidebar { display: none; }
+        }
+
+        /* ===== TABLE OF CONTENTS (STICKY) ===== */
+        .toc-sidebar {
+            position: sticky;
+            top: 90px;
+            padding-right: 2rem;
+        }
+        .toc-box {
+            background: var(--green-mist);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 14px;
+            padding: 1.5rem;
+        }
+        .toc-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .toc-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .toc-list li { margin-bottom: 2px; }
+        .toc-list a {
+            display: block;
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 6px 10px;
+            border-radius: 7px;
+            border-left: 2px solid transparent;
+            transition: var(--transition);
+            line-height: 1.4;
+        }
+        .toc-list a:hover,
+        .toc-list a.active {
+            color: var(--green-main);
+            background: rgba(64,145,108,0.07);
+            border-left-color: var(--green-main);
+        }
+
+        /* ===== TERMS CONTENT ===== */
+        .terms-content { min-width: 0; }
+
+        /* ===== SECTION CARDS ===== */
+        .terms-section {
+            margin-bottom: 2.2rem;
+            background: #fff;
+            border-radius: 16px;
+            border: 1px solid rgba(183,228,199,0.45);
+            box-shadow: 0 2px 16px rgba(29,67,44,0.06);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease, box-shadow 0.3s ease;
+        }
+        .terms-section.revealed {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .terms-section:hover {
+            box-shadow: var(--shadow-hover);
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            user-select: none;
+            transition: var(--transition);
+        }
+        .section-header:hover { background: var(--green-mist); }
+        .section-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--green-mid);
+            font-size: 1.1rem;
+            flex-shrink: 0;
+            transition: var(--transition);
+        }
+        .terms-section:hover .section-icon,
+        .section-header:hover .section-icon {
+            background: var(--green-main);
+            color: #fff;
+        }
+        .section-header-text { flex: 1; }
+        .section-num {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            margin-bottom: 2px;
+        }
+        .section-header h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin: 0;
+            font-weight: 700;
+        }
+        .section-toggle {
+            width: 28px; height: 28px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            border: none;
+            color: var(--green-main);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.8rem;
+            transition: var(--transition);
+            flex-shrink: 0;
+        }
+        .section-toggle.open { background: var(--green-main); color: #fff; transform: rotate(180deg); }
+
+        .section-body {
+            padding: 0 2rem 1.75rem 2rem;
+            border-top: 1px solid rgba(183,228,199,0.35);
+            display: none;
+        }
+        .section-body.open { display: block; }
+
+        /* Always-open sections (no accordion) */
+        .terms-section.always-open .section-body {
+            display: block !important;
+            border-top: 1px solid rgba(183,228,199,0.35);
+        }
+        .terms-section.always-open .section-toggle { display: none; }
+        .terms-section.always-open .section-header { cursor: default; }
+        .terms-section.always-open .section-header:hover { background: transparent; }
+
+        .section-body p {
+            font-size: 0.92rem;
+            color: var(--text-body);
+            line-height: 1.85;
+            margin-bottom: 0.9rem;
+        }
+        .section-body p:last-child { margin-bottom: 0; }
+
+        .section-body h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 0.98rem;
+            color: var(--dark);
+            margin-top: 1.25rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .policy-list {
+            list-style: none;
+            padding: 0;
+            margin: 0.75rem 0 1rem;
+        }
+        .policy-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 0.9rem;
+            color: var(--text-body);
+            line-height: 1.7;
+            padding: 5px 0;
+        }
+        .policy-list li::before {
+            content: '';
+            width: 6px; height: 6px;
+            border-radius: 50%;
+            background: var(--green-main);
+            margin-top: 8px;
+            flex-shrink: 0;
+        }
+
+        /* ===== PRINCIPLE GRID (Governance) ===== */
+        .principle-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .principle-card {
+            background: var(--green-mist);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 12px;
+            padding: 1.2rem;
+            transition: var(--transition);
+        }
+        .principle-card:hover {
+            background: var(--green-pale);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(29,67,44,0.1);
+        }
+        .principle-card .p-icon {
+            font-size: 1.4rem;
+            margin-bottom: 0.6rem;
+            display: block;
+        }
+        .principle-card h5 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 700;
+            color: var(--green-deep);
+            margin-bottom: 0.35rem;
+        }
+        .principle-card p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+
+        /* ===== ROLE CARDS ===== */
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .role-card {
+            border: 1px solid rgba(183,228,199,0.5);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: var(--transition);
+        }
+        .role-card:hover {
+            border-color: var(--green-soft);
+            box-shadow: 0 6px 20px rgba(29,67,44,0.09);
+        }
+        .role-card-label {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            margin-bottom: 0.6rem;
+        }
+
+        /* ===== ALERT BOXES ===== */
+        .policy-alert {
+            display: flex;
+            gap: 1rem;
+            align-items: flex-start;
+            background: rgba(183,228,199,0.25);
+            border: 1px solid rgba(82,183,136,0.3);
+            border-left: 4px solid var(--green-main);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            margin: 1rem 0;
+        }
+        .policy-alert.warning {
+            background: rgba(255,243,200,0.4);
+            border-color: rgba(245,200,60,0.4);
+            border-left-color: #f0a500;
+        }
+        .policy-alert.danger {
+            background: rgba(255,220,220,0.3);
+            border-color: rgba(220,80,80,0.25);
+            border-left-color: #dc3545;
+        }
+        .policy-alert-icon { font-size: 1.3rem; flex-shrink: 0; }
+        .policy-alert p { margin: 0; font-size: 0.88rem; color: var(--text-body); }
+
+        /* ===== CONTACT SECTION ===== */
+        .contact-cta {
+            background: var(--green-deep);
+            border-radius: 18px;
+            padding: 3rem;
+            text-align: center;
+            color: #fff;
+            margin-top: 1.5rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .contact-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 80%, rgba(82,183,136,0.15) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(82,183,136,0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        .contact-cta h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: #fff;
+            margin-bottom: 0.75rem;
+            position: relative;
+        }
+        .contact-cta p {
+            color: rgba(255,255,255,0.6);
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+        .contact-detail {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 999px;
+            padding: 0.6rem 1.4rem;
+            color: var(--green-light);
+            font-size: 0.9rem;
+            margin: 0.35rem;
+            text-decoration: none;
+            transition: var(--transition);
+            position: relative;
+        }
+        .contact-detail:hover {
+            background: var(--green-main);
+            border-color: var(--green-main);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        /* ===== EFFECTIVE DATE BADGE ===== */
+        .effective-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--green-mist);
+            border: 1px solid rgba(82,183,136,0.25);
+            border-radius: 999px;
+            padding: 5px 14px;
+            font-size: 0.78rem;
+            color: var(--green-mid);
+            font-weight: 500;
+            margin-bottom: 2.5rem;
+        }
+        .effective-badge i { color: var(--green-main); }
+
+        /* ===== FOOTER ===== */
+        .footer { background: var(--dark) !important; }
+        .footer h1 {
+            font-family: 'Italianno', cursive; font-size: 2.4rem;
+            color: var(--green-soft) !important; margin-bottom: 0.5rem; line-height: 1;
+        }
+        .footer h1 span { color: #fff !important; }
+        .footer h5 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9) !important; }
+        .footer .btn-square {
+            width: 36px; height: 36px; border-radius: 50%;
+            background: rgba(82,183,136,0.12); border: 1px solid rgba(82,183,136,0.25);
+            color: var(--green-light); font-size: 0.78rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .footer .btn-square:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+        .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+        .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+        .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+        .footer .form-control {
+            background: rgba(255,255,255,0.07) !important;
+            border: 1px solid rgba(82,183,136,0.25) !important;
+            color: #fff !important; border-radius: 8px; font-size: 0.88rem;
+        }
+        .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+        .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+        .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 1.25rem 0; font-size: 0.82rem; color: rgba(255,255,255,0.35);
+        }
+        .copyright a { color: var(--green-light); text-decoration: none; }
+        .copyright a:hover { color: var(--green-soft); }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            background: var(--green-main) !important; border: none !important;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.4); border-radius: 50% !important;
+            width: 46px; height: 46px; display: none; align-items: center; justify-content: center;
+            position: fixed; bottom: 2rem; right: 2rem; z-index: 999;
+            color: #fff; text-decoration: none; transition: var(--transition);
+        }
+        .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); color: #fff; }
+
+        /* ===== POPUP ===== */
+        .leafspire-popup {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+            justify-content: center; align-items: center; z-index: 9999;
+        }
+        .leafspire-popup-card {
+            background: #fff; padding: 30px; border-radius: 16px;
+            text-align: center; width: 90%; max-width: 420px;
+            animation: popIn 0.25s ease;
+        }
+        .leafspire-icon { font-size: 42px; margin-bottom: 10px; }
+        .leafspire-popup-card h3 { color: #1f6f4a; }
+        .leafspire-popup-card p { font-size: 14px; color: #444; }
+        .leafspire-btn {
+            margin-top: 15px; padding: 10px 20px; border: none;
+            background: #1f6f4a; color: white; border-radius: 8px; cursor: pointer;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 991.98px) {
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-link { padding: 0.6rem 1rem !important; }
+            .nav-link::after { display: none; }
+            .terms-layout { padding: 2rem 1rem; }
+            .section-body { padding: 0 1.25rem 1.5rem; }
+            .section-header { padding: 1.25rem; }
+            .contact-cta { padding: 2rem 1.5rem; }
+        }
+        @media (max-width: 575.98px) {
+            .principle-grid, .role-grid { grid-template-columns: 1fr 1fr; }
+            .terms-hero h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center" style="z-index:9999;">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/leafspirelogoremovebg.png" alt="Leafspire Logo" style="width:62px; height:62px; object-fit:contain; margin-right:10px;">
+                <h1 class="fw-bold mb-0" style="font-family: 'Italianno', cursive; font-size: 2.2rem;">
+                    Leaf<span class="text-white">spire</span>
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="causes.html" class="nav-item nav-link">Causes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Our Programmes</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Get Involved</a>
+                            <a href="404.html" class="dropdown-item">Stories</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+    <!-- Hero Start -->
+    <section class="terms-hero">
+        <div class="container">
+            <div class="hero-content">
+                <span class="hero-pill">Legal &amp; Governance</span>
+                <h1>Terms, Governance<br>&amp; <em>Donor Policy</em></h1>
+                <p>Our commitment to transparency, ethical operations, and accountability — the full legal and governance framework guiding LeafSpire's work.</p>
+                <div class="hero-meta">
+                    <div class="hero-meta-item"><i class="fa fa-calendar-alt"></i> Effective: 12 February 2025</div>
+                    <div class="hero-meta-item"><i class="fa fa-globe"></i> Organisation: Leafspire Kenya</div>
+                    <div class="hero-meta-item"><i class="fa fa-file-alt"></i> 15 Sections</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+    <div class="tagline-strip">✦ &nbsp; Accountability · Transparency · Youth-Led · Integrity &nbsp; ✦</div>
+
+    <!-- Main Content -->
+    <div class="terms-layout">
+
+        <!-- Sticky TOC -->
+        <aside class="toc-sidebar">
+            <div class="toc-box">
+                <span class="toc-label">On this page</span>
+                <ul class="toc-list" id="tocList">
+                    <li><a href="#s1" class="toc-link">Introduction</a></li>
+                    <li><a href="#s2" class="toc-link">Non-Politicization</a></li>
+                    <li><a href="#s3" class="toc-link">Startup Disclaimer</a></li>
+                    <li><a href="#s4" class="toc-link">Governance Principles</a></li>
+                    <li><a href="#s5" class="toc-link">Code of Conduct</a></li>
+                    <li><a href="#s6" class="toc-link">Volunteers, Mentees &amp; Mentors</a></li>
+                    <li><a href="#s7" class="toc-link">Anti-Scam &amp; Fraud</a></li>
+                    <li><a href="#s8" class="toc-link">Donor Policy</a></li>
+                    <li><a href="#s9" class="toc-link">Refund Policy</a></li>
+                    <li><a href="#s10" class="toc-link">Partners &amp; Collaborations</a></li>
+                    <li><a href="#s11" class="toc-link">Intellectual Property</a></li>
+                    <li><a href="#s12" class="toc-link">Limitation of Liability</a></li>
+                    <li><a href="#s13" class="toc-link">Privacy &amp; Data</a></li>
+                    <li><a href="#s14" class="toc-link">Amendments</a></li>
+                    <li><a href="#s15" class="toc-link">Contact</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Terms Content -->
+        <main class="terms-content">
+
+            <div class="effective-badge"><i class="fa fa-shield-alt"></i> Effective Date: 12 February 2025 &nbsp;·&nbsp; Version 1.0</div>
+
+            <!-- Section 1: Introduction -->
+            <div class="terms-section always-open" id="s1">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa fa-info-circle"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 01</div>
+                        <h3>Introduction</h3>
+                    </div>
+                </div>
+                <div class="section-body open">
+                    <p>Leafspire is a youth-centered social impact initiative focused on:</p>
+                    <ul class="policy-list">
+                        <li>Youth empowerment and leadership development</li>
+                        <li>Mental health and psychosocial wellbeing</li>
+                        <li>Community service and volunteering</li>
+                        <li>Environmental sustainability and SDG engagement</li>
+                        <li>Inclusion and social cohesion</li>
+                    </ul>
+                    <p>By accessing Leafspire programs, platforms, or donation systems, you agree to these Terms, Governance Principles, and Donor Policies.</p>
+                </div>
+            </div>
+
+            <!-- Section 2: Non-Politicization -->
+            <div class="terms-section" id="s2">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-balance-scale"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 02</div>
+                        <h3>Non-Politicization &amp; Neutrality Principle</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <div class="policy-alert">
+                        <span class="policy-alert-icon">🤝</span>
+                        <p><strong>Leafspire is strictly non-political, non-partisan, and non-ideological.</strong></p>
+                    </div>
+                    <p>We explicitly state that:</p>
+                    <ul class="policy-list">
+                        <li>We do not support, endorse, or affiliate with any political party, candidate, or political movement</li>
+                        <li>We do not engage in political campaigning or election-related activities</li>
+                        <li>Our programs are designed solely for youth development, humanitarian impact, and community wellbeing</li>
+                        <li>Participation in Leafspire does not imply political alignment or affiliation</li>
+                    </ul>
+                    <div class="policy-alert warning">
+                        <span class="policy-alert-icon">⚠️</span>
+                        <p>Any attempt to use Leafspire's name, programs, or activities for political influence, campaigning, or propaganda is <strong>strictly prohibited</strong>.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3: Startup Disclaimer -->
+            <div class="terms-section" id="s3">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-seedling"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 03</div>
+                        <h3>Startup &amp; Evolving Structure Disclaimer</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>Leafspire operates as an emerging NGO initiative. This means:</p>
+                    <ul class="policy-list">
+                        <li>Programs, structures, and systems are under continuous development</li>
+                        <li>Governance frameworks may evolve as the organization grows</li>
+                        <li>Operational limitations may exist due to funding and capacity constraints</li>
+                        <li>We prioritize transparency, accountability, and ethical growth over commercial or political interests</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 4: Governance Principles -->
+            <div class="terms-section" id="s4">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-globe"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 04</div>
+                        <h3>Governance Principles (UN-Style Alignment)</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>Leafspire is guided by the following principles:</p>
+                    <div class="principle-grid">
+                        <div class="principle-card">
+                            <span class="p-icon">🔍</span>
+                            <h5>Integrity</h5>
+                            <p>All actions must reflect honesty, accountability, and ethical conduct.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="p-icon">🌍</span>
+                            <h5>Inclusivity</h5>
+                            <p>We welcome all youth regardless of gender, background, religion, ethnicity, or socioeconomic status.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="p-icon">🛡️</span>
+                            <h5>Safeguarding</h5>
+                            <p>We commit to protecting vulnerable individuals, especially youth, from exploitation, abuse, or harm.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="p-icon">📋</span>
+                            <h5>Transparency</h5>
+                            <p>We maintain open communication regarding programs, funding use, and impact.</p>
+                        </div>
+                        <div class="principle-card">
+                            <span class="p-icon">⚖️</span>
+                            <h5>Independence</h5>
+                            <p>Leafspire operates independently from political, corporate, or religious influence.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5: Code of Conduct -->
+            <div class="terms-section" id="s5">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-gavel"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 05</div>
+                        <h3>Code of Conduct</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>All participants — volunteers, mentors, mentees, partners, and donors — must:</p>
+                    <ul class="policy-list">
+                        <li>Act respectfully and responsibly</li>
+                        <li>Avoid harassment, discrimination, or harmful behavior</li>
+                        <li>Respect confidentiality where applicable</li>
+                        <li>Refrain from misuse of Leafspire identity or authority</li>
+                        <li>Uphold safeguarding standards for youth engagement</li>
+                    </ul>
+                    <div class="policy-alert warning">
+                        <span class="policy-alert-icon">⚠️</span>
+                        <p>Leafspire reserves the right to remove any participant who violates these principles.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6: Volunteers, Mentees & Mentors -->
+            <div class="terms-section" id="s6">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-users"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 06</div>
+                        <h3>Volunteers, Mentees &amp; Mentors</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-card-label">Volunteers</div>
+                            <ul class="policy-list">
+                                <li>Act in good faith and with commitment</li>
+                                <li>Deliver assigned responsibilities responsibly</li>
+                                <li>Avoid misrepresentation of authority or role</li>
+                                <li>Respect timelines and coordination structures</li>
+                            </ul>
+                            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;">Volunteers are not employees unless formally stated.</p>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-card-label">Mentees</div>
+                            <ul class="policy-list">
+                                <li>Participate actively in mentorship and programs</li>
+                                <li>Respect mentors and peers</li>
+                                <li>Engage constructively in learning spaces</li>
+                                <li>Avoid disruptive or abusive conduct</li>
+                            </ul>
+                            <p style="font-size:0.8rem; color:var(--text-muted); margin-top:0.5rem;">Leafspire does not guarantee employment, academic admission, or financial outcomes.</p>
+                        </div>
+                        <div class="role-card">
+                            <div class="role-card-label">Mentors</div>
+                            <ul class="policy-list">
+                                <li>Provide guidance ethically and professionally</li>
+                                <li>Avoid exploitation or misuse of influence</li>
+                                <li>Respect confidentiality and boundaries</li>
+                                <li>Support youth development in good faith</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7: Anti-Scam -->
+            <div class="terms-section" id="s7">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-shield-alt"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 07</div>
+                        <h3>Anti-Scam &amp; Fraud Protection Policy</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <div class="policy-alert danger">
+                        <span class="policy-alert-icon">🚫</span>
+                        <p>Leafspire maintains a <strong>zero-tolerance policy</strong> against fraud, impersonation, and scams.</p>
+                    </div>
+                    <p>We confirm:</p>
+                    <ul class="policy-list">
+                        <li>We do not request money through personal accounts</li>
+                        <li>Official donations are only received via verified Leafspire channels</li>
+                        <li>We do not charge hidden "registration fees" for volunteering</li>
+                        <li>Any suspicious activity must be reported immediately</li>
+                    </ul>
+                    <p>Leafspire is not responsible for unauthorized third-party impersonation.</p>
+                </div>
+            </div>
+
+            <!-- Section 8: Donor Policy -->
+            <div class="terms-section" id="s8">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-heart"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 08</div>
+                        <h3>Donor Policy</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <h4>Nature of Donations</h4>
+                    <p>All donations to Leafspire are voluntary, non-compulsory, and contributed in support of youth and community programs.</p>
+
+                    <h4>Use of Funds</h4>
+                    <p>Donations are used for:</p>
+                    <ul class="policy-list">
+                        <li>Youth mentorship programs</li>
+                        <li>Mental health and wellbeing initiatives</li>
+                        <li>Community outreach and environmental projects</li>
+                        <li>Operational support for program delivery</li>
+                    </ul>
+                    <p>Leafspire may allocate funds based on priority impact needs.</p>
+
+                    <h4>Transparency Commitment</h4>
+                    <ul class="policy-list">
+                        <li>Ethical fund management</li>
+                        <li>Basic impact reporting where possible</li>
+                        <li>Responsible allocation aligned with mission objectives</li>
+                    </ul>
+
+                    <h4>Donor Intent</h4>
+                    <p>We respect donor preferences where feasible. However, Leafspire reserves the right to redirect funds to urgent or higher-impact needs aligned with its mission.</p>
+                </div>
+            </div>
+
+            <!-- Section 9: Refund Policy -->
+            <div class="terms-section" id="s9">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-undo"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 09</div>
+                        <h3>Refund Policy</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <div class="policy-alert">
+                        <span class="policy-alert-icon">💳</span>
+                        <p><strong>General Rule:</strong> All donations are considered final and non-refundable, except in cases of verified error.</p>
+                    </div>
+
+                    <h4>Eligible Refund Situations</h4>
+                    <p>A refund may be considered only if:</p>
+                    <ul class="policy-list">
+                        <li>A donation was made accidentally (duplicate or incorrect amount)</li>
+                        <li>A technical error caused unintended transaction duplication</li>
+                        <li>Fraudulent or unauthorized payment is proven</li>
+                    </ul>
+
+                    <h4>Non-Refundable Cases</h4>
+                    <p>Refunds will not be issued for:</p>
+                    <ul class="policy-list">
+                        <li>Voluntary donations made intentionally</li>
+                        <li>Contributions already allocated to program activities</li>
+                        <li>Donations made under misunderstanding without error evidence</li>
+                    </ul>
+
+                    <h4>Refund Request Process</h4>
+                    <p>To request a refund: contact Leafspire through official communication channels, provide proof of transaction. Requests will be reviewed within a reasonable timeframe. Approval is not guaranteed.</p>
+                </div>
+            </div>
+
+            <!-- Section 10: Partners -->
+            <div class="terms-section" id="s10">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-handshake"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 10</div>
+                        <h3>Partners &amp; Collaborations</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>Partners agree to:</p>
+                    <ul class="policy-list">
+                        <li>Engage in ethical, transparent collaboration</li>
+                        <li>Respect mutual branding agreements</li>
+                        <li>Avoid misuse of Leafspire identity</li>
+                        <li>Maintain non-political alignment in all joint activities</li>
+                    </ul>
+                    <p>Leafspire may terminate partnerships if values or safeguarding principles are violated.</p>
+                </div>
+            </div>
+
+            <!-- Section 11: IP -->
+            <div class="terms-section" id="s11">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-copyright"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 11</div>
+                        <h3>Intellectual Property</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>All Leafspire materials — including content, branding, and training resources — remain the property of Leafspire unless otherwise agreed in writing.</p>
+                    <div class="policy-alert warning">
+                        <span class="policy-alert-icon">📚</span>
+                        <p>Unauthorized use, reproduction, or distribution is prohibited.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 12: Liability -->
+            <div class="terms-section" id="s12">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-exclamation-triangle"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 12</div>
+                        <h3>Limitation of Liability</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>Leafspire is not liable for:</p>
+                    <ul class="policy-list">
+                        <li>Individual decisions made by participants</li>
+                        <li>External outcomes of participation</li>
+                        <li>Misuse of information outside official channels</li>
+                        <li>Actions of third parties impersonating the organization</li>
+                    </ul>
+                    <p>Participation is voluntary and at personal discretion.</p>
+                </div>
+            </div>
+
+            <!-- Section 13: Privacy -->
+            <div class="terms-section" id="s13">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-lock"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 13</div>
+                        <h3>Privacy &amp; Data Protection</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>We handle personal data responsibly and only for:</p>
+                    <ul class="policy-list">
+                        <li>Program coordination</li>
+                        <li>Communication</li>
+                        <li>Monitoring and evaluation</li>
+                    </ul>
+                    <div class="policy-alert">
+                        <span class="policy-alert-icon">🔒</span>
+                        <p>We do not sell or misuse personal data.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 14: Amendments -->
+            <div class="terms-section" id="s14">
+                <div class="section-header" onclick="toggleSection(this)">
+                    <div class="section-icon"><i class="fa fa-edit"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 14</div>
+                        <h3>Amendments</h3>
+                    </div>
+                    <button class="section-toggle" aria-label="Toggle section"><i class="fa fa-chevron-down"></i></button>
+                </div>
+                <div class="section-body">
+                    <p>Leafspire may update these Terms periodically to reflect organizational growth and operational needs. Continued participation indicates acceptance of updated terms.</p>
+                </div>
+            </div>
+
+            <!-- Section 15: Contact -->
+            <div class="terms-section always-open" id="s15">
+                <div class="section-header">
+                    <div class="section-icon"><i class="fa fa-envelope"></i></div>
+                    <div class="section-header-text">
+                        <div class="section-num">Section 15</div>
+                        <h3>Contact Information</h3>
+                    </div>
+                </div>
+                <div class="section-body open">
+                    <div class="contact-cta">
+                        <h3>Questions or Concerns?</h3>
+                        <p>For verification, inquiries, or reporting concerns, reach us through official Leafspire channels.</p>
+                        <div>
+                            <a href="mailto:leafspirefoundation@gmail.com" class="contact-detail">
+                                <i class="fa fa-envelope"></i> leafspirefoundation@gmail.com
+                            </a>
+                            <a href="tel:+254701114562" class="contact-detail">
+                                <i class="fa fa-phone"></i> +254 701 114562
+                            </a>
+                            <a href="contact.html" class="contact-detail">
+                                <i class="fa fa-map-marker-alt"></i> Contact Page
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+    <!-- End Terms Layout -->
+
+    <!-- Footer Start -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold mb-2" style="font-family: 'Italianno', cursive; color: var(--green-soft);">
+                        Leaf<span style="color: #fff;">spire</span>
+                    </h1>
+                    <p style="font-size: 0.82rem; color: rgba(255,255,255,0.45); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Youth Today · Leaders Tomorrow</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact</h5>
+                    <p><i class="fa fa-phone me-3" style="color:var(--green-soft);"></i>+254 701 114562</p>
+                    <p><i class="fa fa-envelope me-3" style="color:var(--green-soft);"></i>leafspirefoundation@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Programmes</a>
+                    <a class="btn btn-link" href="terms.html">Terms &amp; Governance</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay Connected</h5>
+                    <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+                    <form id="footerSubscribeForm">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5 text-light" type="email" id="footerEmailInput" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </form>
+                    <small class="text-muted d-block mt-2">We only send meaningful updates. No spam.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="#">riva.https</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Popup -->
+    <div id="leafspirePopup" class="leafspire-popup">
+        <div class="leafspire-popup-card">
+            <div class="leafspire-icon">💚</div>
+            <h3>Thank You for Joining Leafspire</h3>
+            <p>You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+            <button onclick="closePopup()" class="leafspire-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display:none;"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries (matching contact.html exactly) -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        /* ===== ACCORDION TOGGLE ===== */
+        function toggleSection(header) {
+            var body = header.nextElementSibling;
+            var btn = header.querySelector('.section-toggle');
+            var isOpen = body.classList.contains('open');
+            body.classList.toggle('open', !isOpen);
+            if (btn) btn.classList.toggle('open', !isOpen);
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        document.addEventListener('DOMContentLoaded', function () {
+            var sections = document.querySelectorAll('.terms-section');
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e, i) {
+                    if (e.isIntersecting) {
+                        setTimeout(function () {
+                            e.target.classList.add('revealed');
+                        }, i * 60);
+                        observer.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.07 });
+            sections.forEach(function (s) { observer.observe(s); });
+        });
+
+        /* ===== STICKY TOC HIGHLIGHT ===== */
+        document.addEventListener('DOMContentLoaded', function () {
+            var sectionIds = ['s1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15'];
+            var tocLinks = document.querySelectorAll('.toc-link');
+
+            function setActive(id) {
+                tocLinks.forEach(function (a) {
+                    a.classList.toggle('active', a.getAttribute('href') === '#' + id);
+                });
+            }
+
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) setActive(e.target.id);
+                });
+            }, { rootMargin: '-30% 0px -60% 0px' });
+
+            sectionIds.forEach(function (id) {
+                var el = document.getElementById(id);
+                if (el) io.observe(el);
+            });
+
+            /* Smooth scroll for TOC links */
+            tocLinks.forEach(function (a) {
+                a.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    var target = document.querySelector(a.getAttribute('href'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        });
+
+        /* ===== BACK TO TOP ===== */
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('.back-to-top');
+            if (btn) btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        /* ===== NEWSLETTER ===== */
+        var popup = document.getElementById("leafspirePopup");
+        document.getElementById("footerSubscribeForm").addEventListener("submit", async function (e) {
+            e.preventDefault();
+            var email = document.getElementById("footerEmailInput").value;
+            try {
+                await fetch("https://formspree.io/f/xredavrk", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({ email: email })
+                });
+                popup.style.display = "flex";
+                this.reset();
+            } catch (err) {
+                alert("Something went wrong. Please try again.");
+            }
+        });
+        function closePopup() { popup.style.display = "none"; }
+    </script>
+</body>
+</html>

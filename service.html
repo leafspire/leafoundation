@@ -1,0 +1,1164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Our Programmes — LeafSpire Youth Empowerment</title>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta content="LeafSpire youth programmes mentorship mental health community SDGs" name="keywords">
+  <meta content="Explore LeafSpire's youth empowerment programmes — mentorship, mental health, community action, sustainability, and social inclusion." name="description">
+
+  <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+  <link href="lib/animate/animate.min.css" rel="stylesheet">
+  <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+
+  <style>
+    /* ═══════════════════════════════════════════════
+       DESIGN TOKENS — identical to index.html
+    ═══════════════════════════════════════════════ */
+    :root {
+      --green-deep:   #1b4332;
+      --green-mid:    #2d6a4f;
+      --green-main:   #40916c;
+      --green-soft:   #52b788;
+      --green-light:  #b7e4c7;
+      --green-pale:   #d8f3dc;
+      --green-mist:   #f0faf3;
+      --white:        #ffffff;
+      --dark:         #0d1b12;
+      --text-body:    #3a4a3e;
+      --text-muted:   #7a9080;
+      --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+      --shadow-hover: 0 16px 48px rgba(29,67,44,0.20);
+      --radius-card:  14px;
+      --transition:   all 0.32s cubic-bezier(0.4,0,0.2,1);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: var(--text-body);
+      background: #ffffff;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    h1, h2, h3, h4, h5 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--dark); line-height: 1.25;
+    }
+
+    .display-4, .display-6 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-weight: 700;
+    }
+
+    .text-primary   { color: var(--green-main) !important; }
+    .bg-primary     { background-color: var(--green-main) !important; }
+    .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; }
+    .btn-primary:hover, .btn-primary:focus { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(64,145,108,0.35); }
+    .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+    .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; transform: translateY(-1px); }
+    .bg-secondary   { background-color: var(--green-pale) !important; }
+
+    #spinner { z-index: 9999; }
+    .spinner-grow.text-primary { color: var(--green-main) !important; }
+
+    /* ── Top bar — same as index.html ── */
+    .top-bar { background: var(--green-deep); padding: 8px 0; font-size: 0.82rem; letter-spacing: 0.02em; }
+    .top-bar a { transition: var(--transition); }
+    .top-bar a:hover { color: var(--green-light) !important; }
+
+    /* ── Navbar — same as index.html ── */
+    .navbar {
+      background: rgba(27,67,50,0.97) !important;
+      backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(82,183,136,0.15);
+      padding: 0 2rem; transition: var(--transition);
+    }
+    .navbar-brand h1 {
+      font-family: 'Italianno', cursive; font-size: 2.2rem;
+      margin-bottom: 0 !important; line-height: 1; letter-spacing: 0.02em;
+      color: var(--green-soft) !important;
+    }
+    .navbar-brand h1 span { color: #fff !important; }
+    .nav-link {
+      color: rgba(255,255,255,0.82) !important; font-weight: 500;
+      font-size: 0.9rem; letter-spacing: 0.04em;
+      padding: 1.5rem 0.85rem !important; position: relative; transition: var(--transition);
+    }
+    .nav-link::after {
+      content: ''; position: absolute; bottom: 0;
+      left: 50%; right: 50%; height: 2px;
+      background: var(--green-soft); transition: var(--transition);
+    }
+    .nav-link:hover::after, .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+    .nav-link:hover, .nav-link.active { color: #fff !important; }
+    .dropdown-menu {
+      background: var(--green-deep);
+      border: 1px solid rgba(82,183,136,0.2);
+      border-radius: 8px; padding: 0.5rem;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+    }
+    .dropdown-item {
+      color: rgba(255,255,255,0.78) !important;
+      font-size: 0.87rem; padding: 0.5rem 1rem;
+      border-radius: 5px; transition: var(--transition);
+    }
+    .dropdown-item:hover, .dropdown-item.active {
+      background: rgba(82,183,136,0.15); color: #fff !important;
+    }
+    .navbar .btn-outline-primary { border-color: var(--green-soft); color: var(--green-soft); font-size: 0.875rem; padding: 0.45rem 1.2rem; }
+    .navbar .btn-outline-primary:hover { background: var(--green-soft); color: var(--dark); }
+    .btn-sm-square { width: 24px; height: 24px; display: inline-flex; align-items: center; justify-content: center; border-radius: 50%; font-size: 0.7rem; }
+
+    /* ═══════════════════════════════════════════════
+       HERO — banner image with overlay
+    ═══════════════════════════════════════════════ */
+    .page-hero {
+      min-height: 54vh;
+      position: relative; overflow: hidden;
+      display: flex; align-items: center;
+      background: linear-gradient(150deg, var(--green-deep) 0%, #1e4a37 45%, var(--green-mid) 100%);
+    }
+
+    /* Image overlay layer */
+    .page-hero-img {
+      position: absolute; inset: 0; z-index: 0;
+      background-image: url('img/carousel-1.png');
+      background-size: cover; background-position: center 30%;
+      background-repeat: no-repeat;
+    }
+    .page-hero-img::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg,
+        rgba(13,27,18,0.88) 0%,
+        rgba(27,67,50,0.78) 40%,
+        rgba(45,106,79,0.65) 75%,
+        rgba(13,27,18,0.80) 100%);
+    }
+
+    /* Animated grain */
+    .page-hero::after {
+      content: '';
+      position: absolute; inset: 0; z-index: 2;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+      pointer-events: none; opacity: 0.5;
+    }
+
+    /* Decorative floating leaf */
+    .hero-leaf-float {
+      position: absolute; right: 2%; top: 50%;
+      transform: translateY(-50%);
+      width: clamp(220px, 34vw, 520px);
+      pointer-events: none; z-index: 3;
+      opacity: 0.10;
+      animation: heroLeafDrift 9s ease-in-out infinite;
+    }
+    @keyframes heroLeafDrift {
+      0%,100% { transform: translateY(-50%) rotate(0deg) scale(1); }
+      40%      { transform: translateY(-55%) rotate(3deg) scale(1.03); }
+      70%      { transform: translateY(-46%) rotate(-2deg) scale(0.97); }
+    }
+
+    /* Radial glow */
+    .hero-glow {
+      position: absolute; top: -30%; left: -10%;
+      width: 70vw; height: 70vw; border-radius: 50%;
+      background: radial-gradient(circle, rgba(82,183,136,0.12) 0%, transparent 65%);
+      pointer-events: none; z-index: 1;
+    }
+
+    .page-hero .container { position: relative; z-index: 4; padding: 140px 0 100px; }
+
+    /* Top animated strip */
+    .hero-top-strip {
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--green-soft), var(--green-light), var(--green-soft));
+      background-size: 200% 100%;
+      animation: stripMove 3.5s linear infinite; z-index: 10;
+    }
+    @keyframes stripMove { from{background-position:0%} to{background-position:200%} }
+
+    /* Hero eyebrow */
+    .hero-eyebrow {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 0.72rem; font-weight: 600;
+      letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--green-soft); margin-bottom: 1.2rem;
+      opacity: 0; animation: heroSlide 0.9s 0.2s ease-out forwards;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after {
+      content: ''; width: 24px; height: 1px;
+      background: var(--green-soft); opacity: 0.55;
+    }
+
+    .hero-title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.4rem, 5.5vw, 4.2rem);
+      font-weight: 700; color: #fff; line-height: 1.08; margin-bottom: 1.2rem;
+      opacity: 0; animation: heroSlide 1s 0.36s ease-out forwards;
+    }
+    .hero-title em { font-style: italic; color: var(--green-light); }
+
+    .hero-sub {
+      font-size: clamp(0.93rem, 1.6vw, 1.05rem);
+      color: rgba(255,255,255,0.62); line-height: 1.82;
+      max-width: 520px; font-weight: 300;
+      margin-bottom: 2rem;
+      opacity: 0; animation: heroSlide 1s 0.52s ease-out forwards;
+    }
+
+    .hero-breadcrumb {
+      display: flex; align-items: center; gap: 8px;
+      font-size: 0.74rem; letter-spacing: 0.1em;
+      color: rgba(255,255,255,0.38);
+      opacity: 0; animation: heroSlide 0.9s 0.08s ease-out forwards;
+      margin-bottom: 1.6rem;
+    }
+    .hero-breadcrumb a { color: rgba(255,255,255,0.38); text-decoration: none; transition: color 0.2s; }
+    .hero-breadcrumb a:hover { color: var(--green-soft); }
+    .hero-breadcrumb .sep { font-size: 0.55rem; color: rgba(82,183,136,0.5); }
+    .hero-breadcrumb .current { color: var(--green-soft); }
+
+    /* Scroll cue */
+    .hero-scroll-cue {
+      position: absolute; bottom: 28px; left: 50%; transform: translateX(-50%);
+      z-index: 10; display: flex; flex-direction: column; align-items: center; gap: 6px;
+      opacity: 0; animation: heroSlide 1s 1s ease-out forwards;
+    }
+    .hero-scroll-cue span { font-size: 0.58rem; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(255,255,255,0.28); }
+    .scroll-mouse { width: 20px; height: 32px; border: 1.5px solid rgba(255,255,255,0.2); border-radius: 99px; display: flex; align-items: flex-start; justify-content: center; padding-top: 4px; }
+    .scroll-wheel { width: 2.5px; height: 6px; background: var(--green-soft); border-radius: 99px; animation: swh 1.8s ease infinite; }
+    @keyframes swh { 0%{transform:translateY(0);opacity:1}80%{transform:translateY(10px);opacity:0}100%{transform:translateY(0);opacity:0} }
+    @keyframes heroSlide { from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:translateY(0)} }
+
+    /* ── Tagline strip ── */
+    .tagline-strip {
+      background: var(--green-pale); text-align: center;
+      padding: 13px 1rem; font-size: 0.87rem; font-weight: 500;
+      color: var(--green-deep); letter-spacing: 0.18em; text-transform: uppercase;
+    }
+
+    /* ── Section pill label ── */
+    .section-pill {
+      display: inline-block;
+      background-color: var(--green-pale) !important;
+      color: var(--green-main) !important;
+      font-size: 0.78rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 6px 18px; border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .section-line {
+      width: 48px; height: 3px;
+      background: linear-gradient(90deg, var(--green-main), var(--green-soft));
+      border-radius: 99px; margin: 1rem auto 0;
+    }
+
+    /* ── Reveal animations ── */
+    .reveal { opacity:0; transform:translateY(28px); transition:opacity .65s ease,transform .65s ease; }
+    .reveal.visible { opacity:1; transform:translateY(0); }
+    .reveal-d1 { transition-delay:.08s; }
+    .reveal-d2 { transition-delay:.18s; }
+    .reveal-d3 { transition-delay:.28s; }
+    .reveal-d4 { transition-delay:.38s; }
+    .reveal-d5 { transition-delay:.48s; }
+
+    /* ═══════════════════════════════════════════════
+       PROGRAMMES SECTION
+    ═══════════════════════════════════════════════ */
+    .service-section { padding: 96px 0; background: #fff; }
+
+    /* ── Premium programme card ── */
+    .prog-card {
+      position: relative;
+      background: #fff;
+      border-radius: var(--radius-card);
+      border: 1px solid rgba(183,228,199,0.35);
+      box-shadow: var(--shadow-card);
+      padding: 2.4rem 2rem 2rem;
+      height: 100%;
+      overflow: hidden;
+      display: flex; flex-direction: column;
+      transition: transform 0.38s cubic-bezier(0.4,0,0.2,1),
+                  box-shadow 0.38s cubic-bezier(0.4,0,0.2,1),
+                  border-color 0.3s ease;
+    }
+
+    .prog-card::before {
+      content: '';
+      position: absolute; top: 0; left: 0; right: 0; height: 3px;
+      background: linear-gradient(90deg, var(--green-main), var(--green-soft));
+      transform: scaleX(0); transform-origin: left;
+      transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+      border-radius: var(--radius-card) var(--radius-card) 0 0;
+    }
+    .prog-card:hover::before { transform: scaleX(1); }
+
+    .prog-card::after {
+      content: '';
+      position: absolute; top: 0; left: -100%;
+      width: 55%; height: 100%;
+      background: linear-gradient(105deg, transparent, rgba(255,255,255,0.07), transparent);
+      transition: left 0.65s ease;
+      pointer-events: none;
+    }
+    .prog-card:hover::after { left: 140%; }
+
+    .prog-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-hover);
+      border-color: rgba(82,183,136,0.28);
+    }
+
+    .prog-card-num {
+      position: absolute; top: 1rem; right: 1.4rem;
+      font-family: 'Playfair Display', serif; font-size: 3.6rem;
+      font-weight: 700; color: rgba(64,145,108,0.07);
+      line-height: 1; pointer-events: none;
+      transition: color 0.35s;
+    }
+    .prog-card:hover .prog-card-num { color: rgba(64,145,108,0.13); }
+
+    .prog-tag {
+      display: inline-block;
+      font-size: 0.66rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--green-deep); background: var(--green-pale);
+      border-radius: 999px; padding: 4px 14px;
+      margin-bottom: 1.1rem;
+    }
+
+    .prog-icon {
+      width: 60px; height: 60px; border-radius: 16px;
+      background: linear-gradient(135deg, var(--green-main), var(--green-soft));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem; color: #fff; margin-bottom: 1.4rem;
+      box-shadow: 0 6px 20px rgba(64,145,108,0.3);
+      transition: transform 0.38s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.38s ease;
+      flex-shrink: 0;
+    }
+    .prog-card:hover .prog-icon {
+      transform: scale(1.12) rotate(-5deg);
+      box-shadow: 0 12px 32px rgba(64,145,108,0.42);
+    }
+
+    .prog-card h4 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.15rem; color: var(--dark);
+      margin-bottom: 0.7rem; font-weight: 600;
+    }
+
+    .prog-card .prog-short {
+      font-size: 0.88rem; color: var(--text-muted);
+      line-height: 1.78; margin-bottom: 0;
+    }
+
+    /* ── Expandable detail panel ── */
+    .prog-expand {
+      max-height: 0; overflow: hidden;
+      transition: max-height 0.55s cubic-bezier(0.4,0,0.2,1),
+                  padding 0.35s ease,
+                  opacity 0.4s ease;
+      opacity: 0;
+    }
+    .prog-expand.open {
+      max-height: 600px;
+      opacity: 1;
+      padding-top: 1rem;
+    }
+
+    .prog-expand-inner {
+      border-top: 1px solid rgba(183,228,199,0.5);
+      padding-top: 1rem;
+    }
+    .prog-expand-inner p {
+      font-size: 0.84rem; color: var(--text-muted);
+      line-height: 1.78; margin-bottom: 0.8rem;
+    }
+    .prog-expand-inner ul {
+      padding-left: 1.2rem; margin-bottom: 0.8rem;
+    }
+    .prog-expand-inner ul li {
+      font-size: 0.83rem; color: var(--text-muted);
+      line-height: 1.7; margin-bottom: 0.3rem;
+    }
+    .prog-expand-inner .outcome-chip {
+      display: inline-block;
+      background: var(--green-mist);
+      color: var(--green-deep);
+      font-size: 0.7rem; font-weight: 600;
+      letter-spacing: 0.06em;
+      border-radius: 99px; padding: 4px 12px;
+      margin: 2px;
+    }
+
+    /* Learn More toggle button */
+    .prog-link {
+      display: inline-flex; align-items: center; gap: 7px;
+      font-size: 0.8rem; font-weight: 600; letter-spacing: 0.04em;
+      color: var(--green-main); text-decoration: none;
+      transition: gap 0.25s ease, color 0.2s;
+      background: none; border: none; padding: 0; cursor: pointer;
+      margin-top: 1.2rem;
+    }
+    .prog-link:hover { gap: 12px; color: var(--green-deep); text-decoration: none; }
+    .prog-link-arrow {
+      width: 26px; height: 26px; border-radius: 50%;
+      background: var(--green-pale); color: var(--green-main);
+      display: inline-flex; align-items: center; justify-content: center;
+      font-size: 0.65rem; transition: background 0.25s ease, color 0.25s ease, transform 0.3s ease;
+    }
+    .prog-link:hover .prog-link-arrow { background: var(--green-main); color: #fff; }
+    .prog-link.active .prog-link-arrow { transform: rotate(90deg); background: var(--green-main); color: #fff; }
+
+    /* ── Feature highlight bar ── */
+    .prog-highlight {
+      background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+      border-radius: var(--radius-card);
+      padding: 2.8rem 3rem;
+      position: relative; overflow: hidden;
+      margin-top: 3rem;
+    }
+    .prog-highlight::before {
+      content: '';
+      position: absolute; top: -60px; right: -60px;
+      width: 240px; height: 240px; border-radius: 50%;
+      background: rgba(255,255,255,0.04); pointer-events: none;
+    }
+    .prog-highlight::after {
+      content: '';
+      position: absolute; bottom: -40px; left: -40px;
+      width: 160px; height: 160px; border-radius: 50%;
+      background: rgba(255,255,255,0.03); pointer-events: none;
+    }
+    .prog-highlight-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.2rem, 2.2vw, 1.6rem);
+      color: #fff; line-height: 1.45; font-weight: 600;
+    }
+    .prog-highlight-text em { color: var(--green-light); font-style: italic; }
+    .prog-highlight-sub {
+      font-size: 0.9rem; color: rgba(255,255,255,0.58);
+      margin-top: 0.6rem; line-height: 1.72;
+    }
+    .btn-highlight {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 0.84rem; font-weight: 600;
+      letter-spacing: 0.04em; background: #fff; color: var(--green-deep);
+      border: none; border-radius: 8px; padding: 13px 28px;
+      text-decoration: none; transition: all 0.3s ease;
+    }
+    .btn-highlight:hover {
+      background: var(--green-light); color: var(--green-deep); text-decoration: none;
+      transform: translateY(-2px); box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    }
+
+    /* ═══════════════════════════════════════════════
+       STATS STRIP
+    ═══════════════════════════════════════════════ */
+    .stats-strip {
+      background: var(--green-mist);
+      padding: 56px 0;
+      border-top: 1px solid rgba(183,228,199,0.5);
+      border-bottom: 1px solid rgba(183,228,199,0.5);
+    }
+    .stat-item { text-align: center; }
+    .stat-num {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.2rem, 4vw, 3.2rem);
+      font-weight: 700; color: var(--green-deep);
+      line-height: 1; display: block; margin-bottom: 0.4rem;
+    }
+    .stat-label {
+      font-size: 0.8rem; font-weight: 600;
+      color: var(--text-muted); letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+    .stat-divider {
+      width: 1px; background: rgba(64,145,108,0.2);
+      align-self: stretch; margin: 0 2rem;
+    }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER — exact match to index.html
+    ═══════════════════════════════════════════════ */
+    .footer { background: var(--dark) !important; }
+    .footer h1 {
+      font-family: 'Italianno', cursive; font-size: 2.4rem;
+      color: var(--green-soft) !important; margin-bottom: 0.5rem; line-height: 1;
+    }
+    .footer h1 span { color: #fff !important; }
+    .footer h5 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9) !important; }
+    .footer .btn-square {
+      width: 36px; height: 36px; border-radius: 50%;
+      background: rgba(82,183,136,0.12); border: 1px solid rgba(82,183,136,0.25);
+      color: var(--green-light); font-size: 0.78rem;
+      display: inline-flex; align-items: center; justify-content: center;
+      transition: var(--transition);
+    }
+    .footer .btn-square:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+    .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+    .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+    .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+    .footer .form-control { background: rgba(255,255,255,0.07) !important; border: 1px solid rgba(82,183,136,0.25) !important; color: #fff !important; border-radius: 8px; font-size: 0.88rem; }
+    .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+    .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+    .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+    .copyright { border-top: 1px solid rgba(255,255,255,0.07); padding: 1.25rem 0; font-size: 0.82rem; color: rgba(255,255,255,0.35); }
+    .copyright a { color: var(--green-light); text-decoration: none; }
+    .copyright a:hover { color: var(--green-soft); }
+
+    /* ── Back to top ── */
+    .back-to-top {
+      background: var(--green-main) !important; border: none !important;
+      box-shadow: 0 4px 16px rgba(64,145,108,0.4);
+      border-radius: 50% !important; width: 46px; height: 46px;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); }
+
+    /* ── Popup ── */
+    .leafspire-popup { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.6); backdrop-filter:blur(6px); justify-content:center; align-items:center; z-index:9999; }
+    .leafspire-popup-card { background:#fff; padding:30px; border-radius:16px; text-align:center; width:90%; max-width:420px; animation:popIn 0.25s ease; }
+    .leafspire-icon { font-size:42px; margin-bottom:10px; }
+    .leafspire-popup-card h3 { color:#1f6f4a; }
+    .leafspire-popup-card p { font-size:14px; color:#444; }
+    .leafspire-btn { margin-top:15px; padding:10px 20px; border:none; background:#1f6f4a; color:white; border-radius:8px; cursor:pointer; }
+    @keyframes popIn { from{transform:scale(0.85);opacity:0} to{transform:scale(1);opacity:1} }
+
+    /* ── Responsive ── */
+    @media (max-width: 991.98px) {
+      .navbar { padding: 0.5rem 1rem; }
+      .nav-link { padding: 0.6rem 1rem !important; }
+      .nav-link::after { display: none; }
+      .page-hero .container { padding: 110px 0 80px; }
+    }
+    @media (max-width: 767.98px) {
+      .prog-highlight { padding: 2rem 1.5rem; }
+      .prog-highlight .d-flex { flex-direction: column; gap: 0.8rem !important; }
+      .stats-strip .d-flex { flex-direction: column; gap: 2rem; }
+      .stat-divider { display: none; }
+    }
+    @media (max-width: 575.98px) {
+      .hero-title { font-size: 2.2rem; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Spinner -->
+  <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+    <div class="spinner-grow text-primary" role="status"></div>
+  </div>
+
+  <!-- ══ NAVBAR — exact match to index.html ══ -->
+  <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+    <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+      <div class="col-lg-6 px-5 text-start">
+        <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+      </div>
+      <div class="col-lg-6 px-5 text-end">
+        <small>Follow us:</small>
+        <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+        <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+        <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+        <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+      <!-- Logo + brand name — exact match to index.html -->
+      <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+        <img src="img/leafspirelogoremovebg.png" alt="LeafSpire Logo"
+             style="width:54px; height:54px; object-fit:contain; margin-right:10px;">
+        <h1 class="fw-bold mb-0" style="font-family:'Italianno',cursive; font-size:2.2rem;">
+          Leaf<span class="text-white">spire</span>
+        </h1>
+      </a>
+
+      <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div class="navbar-nav ms-auto p-4 p-lg-0">
+          <a href="index.html" class="nav-item nav-link">Home</a>
+          <a href="about.html" class="nav-item nav-link">About</a>
+          <a href="causes.html" class="nav-item nav-link">Causes</a>
+          <div class="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+            <div class="dropdown-menu m-0">
+              <a href="service.html" class="dropdown-item active">Our Programmes</a>
+              <a href="team.html" class="dropdown-item">Our Team</a>
+              <a href="testimonial.html" class="dropdown-item">Get Involved</a>
+              <a href="404.html" class="dropdown-item">Stories</a>
+            </div>
+          </div>
+          <a href="contact.html" class="nav-item nav-link">Contact</a>
+        </div>
+        <div class="d-none d-lg-flex ms-2">
+            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+              <i class="fa fa-arrow-right"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <!-- ══ NAVBAR END ══ -->
+
+
+  <!-- ══ CINEMATIC HERO ══ -->
+  <section class="page-hero" id="page-hero">
+    <!-- Banner image with overlay -->
+    <div class="page-hero-img"></div>
+
+    <div class="hero-top-strip"></div>
+    <div class="hero-glow"></div>
+
+    <!-- Floating decorative leaf -->
+    <svg class="hero-leaf-float" viewBox="0 0 580 560" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      <defs>
+        <radialGradient id="hg1" cx="50%" cy="45%" r="55%">
+          <stop offset="0%"   stop-color="#52B788" stop-opacity="1"/>
+          <stop offset="100%" stop-color="#163829" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <path d="M300,50 C480,30,580,130,560,280 C540,430,420,530,280,540 C140,550,20,460,10,310 C0,160,120,70,300,50 Z" fill="url(#hg1)" stroke="rgba(82,183,136,0.3)" stroke-width="1"/>
+      <line x1="300" y1="50"  x2="280" y2="540" stroke="rgba(149,213,178,0.3)" stroke-width="1.5"/>
+      <line x1="290" y1="150" x2="480" y2="120" stroke="rgba(149,213,178,0.2)" stroke-width="1"/>
+      <line x1="288" y1="210" x2="510" y2="200" stroke="rgba(149,213,178,0.2)" stroke-width="1"/>
+      <line x1="286" y1="270" x2="530" y2="270" stroke="rgba(149,213,178,0.18)" stroke-width="1"/>
+      <line x1="290" y1="150" x2="80"  y2="130" stroke="rgba(149,213,178,0.18)" stroke-width="1"/>
+      <line x1="288" y1="220" x2="40"  y2="230" stroke="rgba(149,213,178,0.15)" stroke-width="1"/>
+    </svg>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-7 col-xl-6">
+          <!-- Breadcrumb -->
+          <nav class="hero-breadcrumb" aria-label="breadcrumb">
+            <a href="index.html">Home</a>
+            <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.5rem;"></i></span>
+            <a href="#">Pages</a>
+            <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.5rem;"></i></span>
+            <span class="current">Our Programmes</span>
+          </nav>
+
+          <div class="hero-eyebrow">What We Do</div>
+
+          <h1 class="hero-title">
+            Five Pillars of<br>
+            <em>Youth Empowerment</em>
+          </h1>
+
+          <p class="hero-sub">
+            Every LeafSpire programme is built around one belief: that young people already carry the potential to lead — they just need the right support, space, and people around them to grow into it.
+          </p>
+
+          <div style="opacity:0; animation:heroSlide 1s .68s ease-out forwards;">
+            <a href="#programmes" class="btn btn-primary me-2" style="border-radius:8px; padding:11px 26px;">
+              Explore Programmes
+              <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                <i class="fa fa-arrow-right"></i>
+              </div>
+            </a>
+            <a href="testimonial.html" class="btn btn-outline-primary" style="border-radius:8px; padding:10px 22px; border-color:rgba(82,183,136,0.5); color:rgba(255,255,255,0.8);">
+              Get Involved
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-cue">
+      <span>Scroll</span>
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+    </div>
+  </section>
+  <!-- ══ HERO END ══ -->
+
+
+  <!-- Tagline strip -->
+  <div class="tagline-strip">✦ &nbsp; Youth Today, Leaders Tomorrow &nbsp; ✦</div>
+
+
+  <!-- ══ STATS STRIP ══ -->
+  <div class="stats-strip">
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center flex-wrap gap-4">
+        <div class="stat-item reveal reveal-d1">
+          <span class="stat-num">1,200+</span>
+          <span class="stat-label">Youth Supported</span>
+        </div>
+        <div class="stat-divider d-none d-md-block"></div>
+        <div class="stat-item reveal reveal-d2">
+          <span class="stat-num">5</span>
+          <span class="stat-label">Core Programmes</span>
+        </div>
+        <div class="stat-divider d-none d-md-block"></div>
+        <div class="stat-item reveal reveal-d3">
+          <span class="stat-num">85%</span>
+          <span class="stat-label">Career Transition Rate</span>
+        </div>
+        <div class="stat-divider d-none d-md-block"></div>
+        <div class="stat-item reveal reveal-d4">
+          <span class="stat-num">15k+</span>
+          <span class="stat-label">Volunteer Hours</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ══ STATS STRIP END ══ -->
+
+
+  <!-- ══ PROGRAMMES SECTION ══ -->
+  <div class="container-xxl py-5 service-section" id="programmes">
+    <div class="container">
+
+      <!-- Section header -->
+      <div class="text-center mx-auto mb-5 reveal" style="max-width:580px;">
+        <div class="section-pill">What We Do</div>
+        <h1 class="display-6 mb-3">Our Five Pillars of<br>Youth Empowerment</h1>
+        <p style="color:var(--text-muted); font-size:0.95rem; line-height:1.75;">
+          Our programmes are designed to develop the whole person — mind, voice, community, and future. Click any card to learn more and step into purpose.
+        </p>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Card grid -->
+      <div class="row g-4 justify-content-center">
+
+        <!-- ── Card 1: Youth Education ── -->
+        <div class="col-lg-4 col-md-6 reveal reveal-d1">
+          <div class="prog-card text-center h-100">
+            <span class="prog-card-num">01</span>
+            <span class="prog-tag">Education</span>
+            <div class="prog-icon mx-auto">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                <path d="M6 12v5c0 1.66 4 3 6 3s6-1.34 6-3v-5"/>
+              </svg>
+            </div>
+            <h4 class="mb-2">Mentorship & Leadership</h4>
+            <p class="prog-short">Accessible, quality learning pathways that unlock potential and build critical thinking for young people in underserved communities worldwide.</p>
+
+            <div class="prog-expand" id="expand-1">
+              <div class="prog-expand-inner">
+                <p>Our Mentorship & Leadership programme removes barriers to learning by pairing academic support with mentorship, digital literacy, and life skills training — giving every young person the tools they need to imagine and build their future.</p>
+                <p><strong style="color:var(--green-deep); font-size:0.82rem;">What participants gain:</strong></p>
+                <ul>
+                  <li>Peer tutoring and academic coaching sessions</li>
+                  <li>Digital skills and technology access workshops</li>
+                  <li>Scholarship and opportunity navigation support</li>
+                  <li>Critical thinking and communication development</li>
+                </ul>
+                <div>
+                  <span class="outcome-chip">📚 Learning</span>
+                  <span class="outcome-chip">💡 Critical Thinking</span>
+                  <span class="outcome-chip">🌐 Digital Skills</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="prog-link" onclick="toggleCard(this, 'expand-1')" aria-expanded="false">
+              Learn More
+              <span class="prog-link-arrow"><i class="fa fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── Card 2: Mental Health & Wellbeing ── -->
+        <div class="col-lg-4 col-md-6 reveal reveal-d2">
+          <div class="prog-card text-center h-100">
+            <span class="prog-card-num">02</span>
+            <span class="prog-tag">Wellbeing</span>
+            <div class="prog-icon mx-auto">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/>
+              </svg>
+            </div>
+            <h4 class="mb-2">Mental Health & Wellbeing</h4>
+            <p class="prog-short">Creating safe, stigma-free spaces where young people can speak openly, heal, and build the emotional resilience to face life's challenges.</p>
+
+            <div class="prog-expand" id="expand-2">
+              <div class="prog-expand-inner">
+                <p>We run mental health awareness campaigns, peer-listening circles, and emotional resilience workshops that break stigma and foster lasting wellbeing — because a healthy mind is the foundation of everything else.</p>
+                <p><strong style="color:var(--green-deep); font-size:0.82rem;">Programme activities:</strong></p>
+                <ul>
+                  <li>Peer support and listening circles</li>
+                  <li>Emotional resilience and coping skills workshops</li>
+                  <li>Awareness campaigns that challenge stigma</li>
+                  <li>Referral pathways to professional counselling</li>
+                </ul>
+                <div>
+                  <span class="outcome-chip">🧠 Mental Wellness</span>
+                  <span class="outcome-chip">💬 Peer Support</span>
+                  <span class="outcome-chip">🌱 Resilience</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="prog-link" onclick="toggleCard(this, 'expand-2')" aria-expanded="false">
+              Learn More
+              <span class="prog-link-arrow"><i class="fa fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── Card 3: Career & Professional Development ── -->
+        <div class="col-lg-4 col-md-6 reveal reveal-d3">
+          <div class="prog-card text-center h-100">
+            <span class="prog-card-num">03</span>
+            <span class="prog-tag">Career</span>
+            <div class="prog-icon mx-auto">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2"/>
+                <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/>
+                <line x1="12" y1="12" x2="12" y2="16"/>
+                <line x1="10" y1="14" x2="14" y2="14"/>
+              </svg>
+            </div>
+            <h4 class="mb-2">Career & Professional Development</h4>
+            <p class="prog-short">Equipping young people with the practical skills, networks, and confidence to transition into meaningful careers and entrepreneurship.</p>
+
+            <div class="prog-expand" id="expand-3">
+              <div class="prog-expand-inner">
+                <p>Through structured mentorship, skills bootcamps, and industry connections, our Career & Professional Development programme bridges the gap between aspiration and opportunity — helping youth leaders step into roles that match their potential.</p>
+                <p><strong style="color:var(--green-deep); font-size:0.82rem;">What's included:</strong></p>
+                <ul>
+                  <li>One-on-one career mentorship and guidance</li>
+                  <li>CV writing, interview prep, and job readiness training</li>
+                  <li>Entrepreneurship and financial literacy workshops</li>
+                  <li>Industry networking and internship placements</li>
+                </ul>
+                <div>
+                  <span class="outcome-chip">💼 Career Readiness</span>
+                  <span class="outcome-chip">🤝 Mentorship</span>
+                  <span class="outcome-chip">🚀 Entrepreneurship</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="prog-link" onclick="toggleCard(this, 'expand-3')" aria-expanded="false">
+              Learn More
+              <span class="prog-link-arrow"><i class="fa fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── Card 4: Sustainability & SDGs ── -->
+        <div class="col-lg-4 col-md-6 reveal reveal-d1">
+          <div class="prog-card text-center h-100">
+            <span class="prog-card-num">04</span>
+            <span class="prog-tag">Sustainability</span>
+            <div class="prog-icon mx-auto">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h4 class="mb-2">Sustainability & SDGs</h4>
+            <p class="prog-short">Equipping young people with climate literacy, SDG awareness, and the tools to champion environmental stewardship in their communities.</p>
+
+            <div class="prog-expand" id="expand-4">
+              <div class="prog-expand-inner">
+                <p>From tree planting to climate advocacy, our Sustainability programme turns young people into confident environmental leaders who understand the UN Sustainable Development Goals and know how to drive real change in their communities and beyond.</p>
+                <p><strong style="color:var(--green-deep); font-size:0.82rem;">Key programme areas:</strong></p>
+                <ul>
+                  <li>SDG education and climate literacy training</li>
+                  <li>Youth-led environmental action projects</li>
+                  <li>Tree planting and ecological restoration drives</li>
+                  <li>Policy engagement and advocacy skills</li>
+                </ul>
+                <div>
+                  <span class="outcome-chip">🌍 SDGs</span>
+                  <span class="outcome-chip">🌳 Environment</span>
+                  <span class="outcome-chip">📢 Advocacy</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="prog-link" onclick="toggleCard(this, 'expand-4')" aria-expanded="false">
+              Learn More
+              <span class="prog-link-arrow"><i class="fa fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+        <!-- ── Card 5: Social Inclusion ── -->
+        <div class="col-lg-4 col-md-6 reveal reveal-d2">
+          <div class="prog-card text-center h-100">
+            <span class="prog-card-num">05</span>
+            <span class="prog-tag">Inclusion</span>
+            <div class="prog-icon mx-auto">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                <circle cx="9" cy="7" r="4"/>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <h4 class="mb-2">Social Inclusion</h4>
+            <p class="prog-short">Creating pathways to opportunity for underserved and vulnerable youth — ensuring no young person is left behind on their journey forward.</p>
+
+            <div class="prog-expand" id="expand-5">
+              <div class="prog-expand-inner">
+                <p>Our Social Inclusion programme actively removes systemic barriers that prevent marginalised young people from accessing opportunity. We work with youth from underserved communities to build confidence, community ties, and equitable access to growth.</p>
+                <p><strong style="color:var(--green-deep); font-size:0.82rem;">Impact areas:</strong></p>
+                <ul>
+                  <li>Outreach to marginalised and underserved youth groups</li>
+                  <li>Safe spaces and community belonging initiatives</li>
+                  <li>Rights awareness and civic participation education</li>
+                  <li>Cross-community collaboration and solidarity programmes</li>
+                </ul>
+                <div>
+                  <span class="outcome-chip">🤲 Equity</span>
+                  <span class="outcome-chip">🏘 Community</span>
+                  <span class="outcome-chip">✊ Empowerment</span>
+                </div>
+              </div>
+            </div>
+
+            <button class="prog-link" onclick="toggleCard(this, 'expand-5')" aria-expanded="false">
+              Learn More
+              <span class="prog-link-arrow"><i class="fa fa-arrow-right"></i></span>
+            </button>
+          </div>
+        </div>
+
+      </div>
+      <!-- End card grid -->
+
+      <!-- Feature highlight bar — updated CTA -->
+      <div class="prog-highlight reveal mt-4">
+        <div class="row align-items-center g-4">
+          <div class="col-lg-8">
+            <p class="prog-highlight-text">
+              "Every programme we run starts with a simple question:<br>
+              <em>what do young people actually need right now?</em>"
+            </p>
+            <p class="prog-highlight-sub">
+              Our work is co-designed with the communities we serve. Young people are not beneficiaries — they are architects of the change we build together.
+            </p>
+          </div>
+          <div class="col-lg-4 d-flex gap-3 flex-wrap justify-content-lg-end">
+            <a href="testimonial.html" class="btn-highlight">
+              <i class="fa fa-user-plus me-1"></i> Join Us
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- ══ PROGRAMMES END ══ -->
+
+
+  <!-- ══ FOOTER — exact match to index.html with Formspree ══ -->
+  <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+    <div class="container py-5">
+      <div class="row g-5">
+
+        <!-- Brand + social -->
+        <div class="col-lg-3 col-md-6">
+          <h1 class="fw-bold mb-2" style="font-family:'Italianno',cursive; color:var(--green-soft);">
+            Leaf<span style="color:#fff;">spire</span>
+          </h1>
+          <p style="font-size:0.82rem; color:rgba(255,255,255,0.45); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:1rem;">Youth Today · Leaders Tomorrow</p>
+          <div class="d-flex pt-2">
+            <a class="btn btn-square me-1" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+            <a class="btn btn-square me-1" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+            <a class="btn btn-square me-1" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+            <a class="btn btn-square me-0" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+          </div>
+        </div>
+
+        <!-- Contact -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Contact</h5>
+          <p><i class="fa fa-phone me-3" style="color:var(--green-soft);"></i>+254 701 114562</p>
+          <p><i class="fa fa-envelope me-3" style="color:var(--green-soft);"></i>leafspirefoundation@gmail.com</p>
+        </div>
+
+        <!-- Quick links -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Quick Links</h5>
+          <a class="btn btn-link" href="about.html">About Us</a>
+          <a class="btn btn-link" href="contact.html">Contact Us</a>
+          <a class="btn btn-link" href="service.html">Our Programmes</a>
+          <a class="btn btn-link" href="terms.html">Terms &amp; Conditions</a>
+          <a class="btn btn-link" href="contact.html">Support</a>
+        </div>
+
+        <!-- Newsletter with Formspree — identical to index.html -->
+        <div class="col-lg-3 col-md-6">
+          <h5 class="text-light mb-4">Stay Connected</h5>
+          <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+          <form id="subscribeForm">
+            <div class="position-relative mx-auto" style="max-width:400px;">
+              <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5 text-light"
+                     type="email" id="emailInput"
+                     placeholder="Your email address" required>
+              <button type="submit"
+                      class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">
+                Subscribe
+              </button>
+            </div>
+          </form>
+          <small class="text-muted d-block mt-2">We only send meaningful updates. No spam.</small>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container-fluid copyright">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+            &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+          </div>
+          <div class="col-md-6 text-center text-md-end">
+            Designed By <a href="https://htmlcodex.com">HTML Codex</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ══ FOOTER END ══ -->
+
+
+  <!-- Popup — identical to index.html -->
+  <div id="leafspirePopup" class="leafspire-popup">
+    <div class="leafspire-popup-card">
+      <div class="leafspire-icon">💚</div>
+      <h3>Thank You for Joining LeafSpire</h3>
+      <p>You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+      <button onclick="closePopup()" class="leafspire-btn">Close</button>
+    </div>
+  </div>
+
+
+  <!-- Back to Top -->
+  <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+  <!-- JavaScript Libraries -->
+  <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="lib/wow/wow.min.js"></script>
+  <script src="lib/easing/easing.min.js"></script>
+  <script src="lib/waypoints/waypoints.min.js"></script>
+  <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+  <script src="lib/parallax/parallax.min.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+  (function () {
+    'use strict';
+
+    /* ── Scroll reveal (same IntersectionObserver as index.html) ── */
+    var reveals = document.querySelectorAll('.reveal');
+    if (reveals.length) {
+      var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) {
+            e.target.classList.add('visible');
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.1 });
+      reveals.forEach(function (el) { obs.observe(el); });
+    }
+
+    /* ── Back to top visibility ── */
+    window.addEventListener('scroll', function () {
+      var btn = document.querySelector('.back-to-top');
+      if (!btn) return;
+      btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+    }, { passive: true });
+
+    /* ── Smooth scroll for anchor links ── */
+    document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+
+    /* ── Formspree newsletter — identical to index.html ── */
+    var form    = document.getElementById('subscribeForm');
+    var popup   = document.getElementById('leafspirePopup');
+
+    if (form) {
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+        var email = document.getElementById('emailInput').value;
+        try {
+          await fetch('https://formspree.io/f/xredavrk', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ email: email })
+          });
+          if (popup) popup.style.display = 'flex';
+          form.reset();
+        } catch (err) {
+          alert('Something went wrong. Please try again.');
+        }
+      });
+    }
+
+  })();
+
+  /* ── Popup close ── */
+  function closePopup() {
+    var popup = document.getElementById('leafspirePopup');
+    if (popup) popup.style.display = 'none';
+  }
+
+  /* ── Expandable card toggle ── */
+  function toggleCard(btn, expandId) {
+    var expand  = document.getElementById(expandId);
+    var isOpen  = expand.classList.contains('open');
+
+    /* Close any currently open cards */
+    document.querySelectorAll('.prog-expand.open').forEach(function (el) {
+      el.classList.remove('open');
+    });
+    document.querySelectorAll('.prog-link.active').forEach(function (el) {
+      el.classList.remove('active');
+      el.setAttribute('aria-expanded', 'false');
+      el.childNodes[0].textContent = 'Learn More ';
+    });
+
+    if (!isOpen) {
+      expand.classList.add('open');
+      btn.classList.add('active');
+      btn.setAttribute('aria-expanded', 'true');
+      btn.childNodes[0].textContent = 'Show Less ';
+
+      /* Smooth scroll so expanded content is visible */
+      setTimeout(function () {
+        btn.closest('.prog-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }, 120);
+    }
+  }
+  </script>
+
+</body>
+</html>

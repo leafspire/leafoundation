@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Get Involved — LeafSpire | Youth Today, Leaders Tomorrow</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LeafSpire youth empowerment NGO mentorship mental health community volunteer" name="keywords">
+    <meta content="Join the LeafSpire movement. Mentor, volunteer, or partner with us to empower the next generation of changemakers." name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ============================================================
+           CSS VARIABLES — mirrored from index.html
+        ============================================================ */
+        :root {
+            --green-deep:   #1b4332;
+            --green-mid:    #2d6a4f;
+            --green-main:   #40916c;
+            --green-soft:   #52b788;
+            --green-light:  #b7e4c7;
+            --green-pale:   #d8f3dc;
+            --green-mist:   #f0faf3;
+            --white:        #ffffff;
+            --dark:         #0d1b12;
+            --text-body:    #3a4a3e;
+            --text-muted:   #7a9080;
+            --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+            --shadow-hover: 0 16px 48px rgba(29,67,44,0.20);
+            --radius-card:  14px;
+            --transition:   all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* ============================================================
+           GLOBAL
+        ============================================================ */
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background: #fff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        .display-4, .display-6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .text-primary   { color: var(--green-main) !important; }
+        .bg-primary     { background-color: var(--green-main) !important; }
+        .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; transition: var(--transition); }
+        .btn-primary:hover, .btn-primary:focus { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(64,145,108,0.38); }
+        .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; transition: var(--transition); }
+        .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; transform: translateY(-2px); }
+        .border-primary { border-color: var(--green-main) !important; }
+        .bg-secondary   { background-color: var(--green-pale) !important; }
+
+        /* ============================================================
+           SPINNER
+        ============================================================ */
+        #spinner { z-index: 9999; }
+        .spinner-grow { color: var(--green-main) !important; }
+
+        /* ============================================================
+           TOP BAR
+        ============================================================ */
+        .top-bar {
+            background: var(--green-deep);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+        }
+        .top-bar a { transition: var(--transition); }
+        .top-bar a:hover { color: var(--green-light) !important; }
+
+        /* ============================================================
+           NAVBAR
+        ============================================================ */
+        .navbar {
+            background: rgba(27, 67, 50, 0.97) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(82,183,136,0.15);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .navbar-brand h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            margin-bottom: 0 !important;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--green-soft) !important;
+        }
+        .navbar-brand h1 span { color: #fff !important; }
+        .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            padding: 1.5rem 0.85rem !important;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%; right: 50%;
+            height: 2px;
+            background: var(--green-soft);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .dropdown-menu {
+            background: var(--green-deep);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .dropdown-item {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 0.87rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
+        .dropdown-item.active { background: rgba(82,183,136,0.22); color: #fff !important; }
+        .navbar .btn-outline-primary {
+            border-color: var(--green-soft);
+            color: var(--green-soft);
+            font-size: 0.875rem;
+            padding: 0.45rem 1.2rem;
+        }
+        .navbar .btn-outline-primary:hover { background: var(--green-soft); color: var(--dark); }
+        .btn-sm-square {
+            width: 24px; height: 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 0.7rem;
+        }
+
+        /* ============================================================
+           PAGE HERO
+        ============================================================ */
+        .gi-hero {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--green-deep);
+        }
+        .gi-hero__bg {
+            position: absolute; inset: 0;
+            background:
+                url('https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1600&q=80')
+                center/cover no-repeat;
+            filter: brightness(0.28) saturate(1.2);
+            transform: scale(1.04);
+            transition: transform 12s ease;
+        }
+        .gi-hero:hover .gi-hero__bg { transform: scale(1.0); }
+        .gi-hero::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg,
+                rgba(27,67,50,0.72) 0%,
+                rgba(64,145,108,0.18) 60%,
+                rgba(27,67,50,0.60) 100%);
+            z-index: 1;
+        }
+        .gi-hero::after {
+            content: '';
+            position: absolute;
+            bottom: -2px; left: 0; right: 0;
+            height: 70px;
+            background: #fff;
+            clip-path: ellipse(60% 100% at 50% 100%);
+            z-index: 2;
+        }
+        .gi-hero__content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 7rem 1.5rem 5rem;
+        }
+        .gi-hero__eyebrow {
+            display: inline-block;
+            background: rgba(82,183,136,0.18);
+            border: 1px solid rgba(82,183,136,0.4);
+            border-radius: 999px;
+            color: var(--green-light);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            margin-bottom: 1.25rem;
+            backdrop-filter: blur(6px);
+        }
+        .gi-hero__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.12;
+            margin-bottom: 1.1rem;
+            text-shadow: 0 2px 24px rgba(0,0,0,0.3);
+        }
+        .gi-hero__title em {
+            font-style: italic;
+            color: var(--green-light);
+        }
+        .gi-hero__sub {
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            color: rgba(255,255,255,0.72);
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            font-weight: 300;
+            line-height: 1.75;
+        }
+        .gi-hero__breadcrumb {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.45);
+        }
+        .gi-hero__breadcrumb a { color: rgba(255,255,255,0.65); text-decoration: none; transition: var(--transition); }
+        .gi-hero__breadcrumb a:hover { color: var(--green-light); }
+        .gi-hero__breadcrumb .sep { opacity: 0.4; }
+        .gi-hero__breadcrumb .current { color: var(--green-light); font-weight: 500; }
+
+        /* ============================================================
+           SECTION LABEL PILL
+        ============================================================ */
+        .section-label {
+            display: inline-block;
+            background-color: var(--green-pale);
+            color: var(--green-main);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        /* ============================================================
+           IMPACT STATS STRIP
+        ============================================================ */
+        .stats-strip {
+            background: linear-gradient(90deg, var(--green-deep) 0%, var(--green-mid) 100%);
+            padding: 2.5rem 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+        .stats-strip::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .stat-item { text-align: center; position: relative; }
+        .stat-item + .stat-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 15%; bottom: 15%;
+            width: 1px;
+            background: rgba(255,255,255,0.12);
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--green-light);
+            line-height: 1;
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.55);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 500;
+            margin-top: 0.35rem;
+            display: block;
+        }
+
+        /* ============================================================
+           PATHWAY SECTION — 3 interactive cards
+        ============================================================ */
+        .pathway-section { padding: 6rem 0 3rem; }
+
+        .pathway-card {
+            border-radius: var(--radius-card);
+            overflow: visible;
+            position: relative;
+            background: #fff;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(183,228,199,0.35);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+        .pathway-card:hover {
+            box-shadow: var(--shadow-hover);
+            border-color: rgba(82,183,136,0.4);
+        }
+        .pathway-card__img-wrap { overflow: hidden; border-radius: var(--radius-card) var(--radius-card) 0 0; position: relative; }
+        .pathway-card__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.6s cubic-bezier(0.4,0,0.2,1);
+            filter: saturate(0.85);
+        }
+        .pathway-card:hover .pathway-card__img {
+            transform: scale(1.06);
+            filter: saturate(1.1);
+        }
+        .pathway-card__img-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0; right: 0;
+            height: 60px;
+            background: linear-gradient(to top, #fff 0%, transparent 100%);
+        }
+        .pathway-card__icon {
+            width: 54px; height: 54px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            margin: -28px auto 0;
+            position: relative;
+            z-index: 2;
+            border: 3px solid #fff;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.18);
+            transition: var(--transition);
+        }
+        .pathway-card:hover .pathway-card__icon {
+            background: var(--green-main);
+            transform: scale(1.1) rotate(-8deg);
+        }
+        .pathway-card:hover .pathway-card__icon svg { stroke: #fff; }
+        .pathway-card__icon svg { transition: var(--transition); }
+
+        .pathway-card__body {
+            padding: 1.25rem 1.75rem 1.75rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+        }
+        .pathway-card__tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            margin-bottom: 0.4rem;
+        }
+        .pathway-card__title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+        .pathway-card__desc {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            line-height: 1.75;
+            flex: 1;
+            margin-bottom: 1.25rem;
+        }
+        .pathway-card__cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            padding: 0.55rem 1.4rem;
+            border-radius: 8px;
+            align-self: center;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+        }
+
+        /* ============================================================
+           EXPANDABLE PANEL — slides open within card
+        ============================================================ */
+        .pathway-expand {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.55s cubic-bezier(0.4,0,0.2,1), padding 0.35s ease;
+            padding: 0 1.75rem;
+        }
+        .pathway-expand.open {
+            max-height: 800px;
+            padding: 0 1.75rem 1.75rem;
+        }
+        .pathway-expand-inner {
+            border-top: 1px solid var(--green-pale);
+            padding-top: 1.2rem;
+        }
+
+        /* Form inside mentor card */
+        .mentor-form label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--text-body);
+            margin-bottom: 0.3rem;
+            display: block;
+            text-align: left;
+        }
+        .mentor-form input,
+        .mentor-form textarea,
+        .mentor-form select {
+            width: 100%;
+            border: 1.5px solid rgba(64,145,108,0.25);
+            border-radius: 8px;
+            padding: 0.55rem 0.85rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-body);
+            margin-bottom: 0.85rem;
+            background: var(--green-mist);
+            outline: none;
+            transition: border-color 0.25s;
+        }
+        .mentor-form input:focus,
+        .mentor-form textarea:focus,
+        .mentor-form select:focus { border-color: var(--green-main); background: #fff; }
+        .mentor-form textarea { resize: vertical; min-height: 80px; }
+        .mentor-form .file-note { font-size: 0.76rem; color: var(--text-muted); margin-bottom: 0.85rem; text-align: left; }
+        .mentor-form .btn-submit-form {
+            background: var(--green-main);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.6rem 1.6rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+        .mentor-form .btn-submit-form:hover { background: var(--green-deep); transform: translateY(-1px); }
+        .form-success-msg {
+            display: none;
+            background: var(--green-pale);
+            border: 1px solid var(--green-light);
+            border-radius: 8px;
+            padding: 0.85rem 1rem;
+            font-size: 0.85rem;
+            color: var(--green-deep);
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        /* Mentee expand info */
+        .mentee-info-list { list-style: none; padding: 0; margin: 0 0 1rem; text-align: left; }
+        .mentee-info-list li {
+            font-size: 0.85rem;
+            color: var(--text-body);
+            padding: 0.35rem 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+        }
+        .mentee-info-list li::before {
+            content: '✓';
+            color: var(--green-main);
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .mentee-signup-form input {
+            width: 100%;
+            border: 1.5px solid rgba(64,145,108,0.25);
+            border-radius: 8px;
+            padding: 0.55rem 0.85rem;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.85rem;
+            color: var(--text-body);
+            background: var(--green-mist);
+            outline: none;
+            margin-bottom: 0.75rem;
+            transition: border-color 0.25s;
+        }
+        .mentee-signup-form input:focus { border-color: var(--green-main); background: #fff; }
+        .mentee-signup-form .btn-signup {
+            background: var(--green-main);
+            color: #fff;
+            border: none;
+            border-radius: 8px;
+            padding: 0.6rem 1.6rem;
+            font-weight: 600;
+            font-size: 0.875rem;
+            cursor: pointer;
+            transition: var(--transition);
+            width: 100%;
+        }
+        .mentee-signup-form .btn-signup:hover { background: var(--green-deep); transform: translateY(-1px); }
+
+        /* Partner expand info */
+        .partner-info { font-size: 0.86rem; color: var(--text-body); line-height: 1.75; text-align: left; margin-bottom: 1rem; }
+        .partner-contact-box {
+            background: var(--green-pale);
+            border-radius: 10px;
+            padding: 1rem 1.25rem;
+            font-size: 0.85rem;
+            color: var(--green-deep);
+            text-align: center;
+        }
+        .partner-contact-box a { color: var(--green-deep); font-weight: 600; text-decoration: underline; }
+
+        /* ============================================================
+           TESTIMONIAL — single quote block
+        ============================================================ */
+        .testimonial-section {
+            background: var(--green-mist);
+            padding: 5rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+        .testimonial-section::before {
+            content: '"';
+            position: absolute;
+            top: -0.5rem;
+            left: 2rem;
+            font-family: 'Playfair Display', serif;
+            font-size: 22rem;
+            line-height: 1;
+            color: rgba(64,145,108,0.05);
+            pointer-events: none;
+            user-select: none;
+        }
+        .quote-block {
+            background: #fff;
+            border-radius: var(--radius-card);
+            padding: 2.5rem 2.5rem 2rem;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(183,228,199,0.4);
+            position: relative;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        .quote-block::before {
+            content: '';
+            position: absolute;
+            top: 1.5rem; bottom: 1.5rem;
+            left: 0;
+            width: 4px;
+            background: linear-gradient(to bottom, var(--green-soft), var(--green-light));
+            border-radius: 0 4px 4px 0;
+        }
+        .quote-block__text {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--text-body);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+        .quote-block__author {
+            display: flex;
+            align-items: center;
+            gap: 0.85rem;
+        }
+        .quote-block__avatar {
+            width: 52px; height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--green-light);
+            flex-shrink: 0;
+        }
+        .quote-block__name {
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--dark);
+        }
+        .quote-block__role {
+            font-size: 0.8rem;
+            color: var(--green-main);
+            font-style: italic;
+        }
+        .quote-block__stars {
+            display: flex;
+            gap: 3px;
+            margin-bottom: 1rem;
+        }
+        .quote-block__stars i { color: #f4c23e; font-size: 0.85rem; }
+
+        /* ============================================================
+           UPCOMING EVENTS
+        ============================================================ */
+        .events-section {
+            padding: 5rem 0;
+            background: #fff;
+        }
+        .events-empty {
+            background: var(--green-mist);
+            border: 1.5px dashed var(--green-light);
+            border-radius: var(--radius-card);
+            padding: 3rem 2rem;
+            text-align: center;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+        .events-empty__icon {
+            font-size: 2.5rem;
+            color: var(--green-light);
+            margin-bottom: 1rem;
+        }
+        .events-empty h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        .events-empty p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+        }
+
+        /* ============================================================
+           CTA BAND — social media focused
+        ============================================================ */
+        .cta-band {
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
+            padding: 5rem 1.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-band::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.025'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .cta-band::after {
+            content: '';
+            position: absolute;
+            top: -2px; left: 0; right: 0;
+            height: 60px;
+            background: #fff;
+            clip-path: ellipse(60% 100% at 50% 0%);
+        }
+        .cta-band__content { position: relative; z-index: 2; }
+        .cta-band__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            color: #fff;
+            margin-bottom: 1rem;
+        }
+        .cta-band__title em { font-style: italic; color: var(--green-light); }
+        .cta-band__sub {
+            color: rgba(255,255,255,0.65);
+            font-size: 0.97rem;
+            max-width: 520px;
+            margin: 0 auto 2rem;
+            line-height: 1.75;
+        }
+        .cta-band__social {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .cta-social-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            font-size: 0.88rem;
+            font-weight: 600;
+            padding: 0.65rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: var(--transition);
+            border: 1.5px solid rgba(255,255,255,0.3);
+            color: #fff;
+            background: rgba(255,255,255,0.1);
+        }
+        .cta-social-btn:hover {
+            background: rgba(255,255,255,0.22);
+            border-color: rgba(255,255,255,0.6);
+            color: #fff;
+            transform: translateY(-2px);
+            text-decoration: none;
+        }
+        .cta-band__connected {
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.4);
+            margin-top: 1rem;
+        }
+
+        /* ============================================================
+           FOOTER — EXACT DUPLICATE of index.html
+        ============================================================ */
+        .footer { background: var(--dark) !important; }
+        .footer h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            color: var(--green-soft) !important;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        .footer h1 span { color: #fff !important; }
+        .footer h5 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9) !important; }
+        .footer .btn-square {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(82,183,136,0.12);
+            border: 1px solid rgba(82,183,136,0.25);
+            color: var(--green-light);
+            font-size: 0.78rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .footer .btn-square:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+        .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+        .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+        .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+        .footer .form-control {
+            background: rgba(255,255,255,0.07) !important;
+            border: 1px solid rgba(82,183,136,0.25) !important;
+            color: #fff !important;
+            border-radius: 8px;
+            font-size: 0.88rem;
+        }
+        .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+        .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+        .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 1.25rem 0;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.35);
+        }
+        .copyright a { color: var(--green-light); text-decoration: none; }
+        .copyright a:hover { color: var(--green-soft); }
+
+        /* ============================================================
+           BACK TO TOP
+        ============================================================ */
+        .back-to-top {
+            background: var(--green-main) !important;
+            border: none !important;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.4);
+            border-radius: 50% !important;
+            width: 46px; height: 46px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); }
+
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.22s; }
+        .reveal-delay-3 { transition-delay: 0.34s; }
+        .reveal-delay-4 { transition-delay: 0.46s; }
+
+        /* ============================================================
+           POPUP — reused from index.html
+        ============================================================ */
+        .leafspire-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(6px);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+        .leafspire-popup-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 16px;
+            text-align: center;
+            width: 90%;
+            max-width: 420px;
+            animation: popIn 0.25s ease;
+        }
+        .leafspire-icon { font-size: 42px; margin-bottom: 10px; }
+        .leafspire-popup-card h3 { color: var(--green-deep); }
+        .leafspire-popup-card p { font-size: 14px; color: #444; }
+        .leafspire-btn {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            background: var(--green-deep);
+            color: white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* ============================================================
+           RESPONSIVE
+        ============================================================ */
+        @media (max-width: 991.98px) {
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-link { padding: 0.6rem 1rem !important; }
+            .nav-link::after { display: none; }
+            .stat-item + .stat-item::before { display: none; }
+        }
+        @media (max-width: 575.98px) {
+            .gi-hero__title { font-size: 2rem; }
+            .pathway-section { padding: 4rem 0 2rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/leafspirelogoremovebg.png" alt="LeafSpire Logo" style="width:54px; height:54px; object-fit:contain; margin-right:10px;">
+                <h1 class="fw-bold mb-0" style="font-family:'Italianno',cursive; font-size:2.2rem;">
+                    Leaf<span class="text-white">spire</span>
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="causes.html" class="nav-item nav-link">Causes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Our Programmes</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="get-involved.html" class="dropdown-item active">Get Involved</a>
+                            <a href="404.html" class="dropdown-item">Stories</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- PAGE HERO -->
+    <section class="gi-hero">
+        <div class="gi-hero__bg"></div>
+        <div class="gi-hero__content">
+            <div class="gi-hero__eyebrow">✦ &nbsp; Be the Change &nbsp; ✦</div>
+            <h1 class="gi-hero__title">Get <em>Involved</em><br>with LeafSpire</h1>
+            <p class="gi-hero__sub">Every mentor session, every volunteer hour, every partnership helps a young person step into their potential. There is a place for you in this movement.</p>
+            <div class="gi-hero__breadcrumb">
+                <a href="index.html">Home</a>
+                <span class="sep">/</span>
+                <a href="#">Pages</a>
+                <span class="sep">/</span>
+                <span class="current">Get Involved</span>
+            </div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+
+    <!-- IMPACT STATS STRIP -->
+    <div class="stats-strip">
+        <div class="container">
+            <div class="row g-4 justify-content-center">
+                <div class="col-6 col-md-3 stat-item reveal">
+                    <span class="stat-number">500+</span>
+                    <span class="stat-label">Youth Reached</span>
+                </div>
+                <div class="col-6 col-md-3 stat-item reveal reveal-delay-1">
+                    <span class="stat-number">80+</span>
+                    <span class="stat-label">Volunteers</span>
+                </div>
+                <div class="col-6 col-md-3 stat-item reveal reveal-delay-2">
+                    <span class="stat-number">12+</span>
+                    <span class="stat-label">Programmes Run</span>
+                </div>
+                <div class="col-6 col-md-3 stat-item reveal reveal-delay-3">
+                    <span class="stat-number">4</span>
+                    <span class="stat-label">Counties Active</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Stats Strip End -->
+
+
+    <!-- INVOLVEMENT PATHWAYS -->
+    <section class="pathway-section">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 560px;">
+                <div class="section-label">Ways to Join Us</div>
+                <h2 class="display-6 mb-3">How You Can Make<br>a Difference</h2>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Whether you give your time, your skills, or your platform — there is a way for you to be part of this story.</p>
+            </div>
+            <div class="row g-4 justify-content-center">
+
+                <!-- Card 1: Become a Mentor -->
+                <div class="col-lg-4 col-md-6 reveal reveal-delay-1">
+                    <div class="pathway-card" id="mentor-card">
+                        <div class="pathway-card__img-wrap">
+                            <img class="pathway-card__img"
+                                 src="img/menttt.jpg"
+                                 alt="Mentor with young people">
+                        </div>
+                        <div class="pathway-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="var(--green-main)" stroke-width="1.75"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                                <circle cx="9" cy="7" r="4"/>
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                            </svg>
+                        </div>
+                        <div class="pathway-card__body">
+                            <p class="pathway-card__tag">Share Your Expertise</p>
+                            <h3 class="pathway-card__title">Become a Mentor</h3>
+                            <p class="pathway-card__desc">Guide young people through career decisions, skill-building, and personal growth. Your experience is exactly what the next generation needs.</p>
+                            <button onclick="toggleExpand('mentor-expand', this)" class="btn btn-outline-primary pathway-card__cta">
+                                Apply to Mentor
+                                <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle">
+                                    <i class="fa fa-arrow-down expand-arrow" id="mentor-arrow"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Expandable mentor form -->
+                        <div class="pathway-expand" id="mentor-expand">
+                            <div class="pathway-expand-inner mentor-form">
+                                <p style="font-size:0.84rem; color:var(--text-muted); margin-bottom:1rem; text-align:left;">Fill in the form below and our team will be in touch within 3 working days.</p>
+                                <form id="mentorForm" action="https://formspree.io/f/xredavrk" method="POST">
+                                    <label>Full Name *</label>
+                                    <input type="text" name="full_name" placeholder="Your full name" required>
+
+                                    <label>Email Address *</label>
+                                    <input type="email" name="email" placeholder="your@email.com" required>
+
+                                    <label>Area of Expertise *</label>
+                                    <input type="text" name="expertise" placeholder="e.g. Finance, Tech, Healthcare" required>
+
+                                    <label>What would you like to teach?</label>
+                                    <textarea name="what_to_teach" placeholder="Topics or skills you'd like to share..."></textarea>
+
+                                    <label>Why do you want to become a mentor?</label>
+                                    <textarea name="motivation" placeholder="Tell us what drives you to mentor..."></textarea>
+
+                                    <label>Qualifications / Background</label>
+                                    <textarea name="qualifications" placeholder="Relevant experience, qualifications, or background..."></textarea>
+
+                                    <label>Preferred Session Date / Availability</label>
+                                    <input type="text" name="availability" placeholder="e.g. Weekends, Tuesday evenings">
+
+                                    <label>CV / Portfolio Link (optional)</label>
+                                    <input type="url" name="cv_link" placeholder="https://linkedin.com/in/yourprofile">
+                                    <p class="file-note">If you'd prefer to attach a CV, please email it directly to <a href="mailto:leafspirefoundation@gmail.com" style="color:var(--green-main);">leafspirefoundation@gmail.com</a> with subject "Mentor Application – [Your Name]".</p>
+
+                                    <input type="hidden" name="_subject" value="New Mentor Application — LeafSpire">
+                                    <button type="submit" class="btn-submit-form">Submit Application</button>
+                                </form>
+                                <div class="form-success-msg" id="mentorSuccess">
+                                    💚 Thank you! Your mentor application has been submitted. We'll be in touch soon.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Become a Mentee / Volunteer -->
+                <div class="col-lg-4 col-md-6 reveal reveal-delay-2">
+                    <div class="pathway-card" id="mentee-card">
+                        <div class="pathway-card__img-wrap">
+                            <img class="pathway-card__img"
+                                 src="img/vol.jpg"
+                                 alt="Young people in a learning session">
+                        </div>
+                        <div class="pathway-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="var(--green-main)" stroke-width="1.75"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/>
+                                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/>
+                            </svg>
+                        </div>
+                        <div class="pathway-card__body">
+                            <p class="pathway-card__tag">Grow & Contribute</p>
+                            <h3 class="pathway-card__title">Become a Mentee / Volunteer</h3>
+                            <p class="pathway-card__desc">Join our community of young people and volunteers. No experience required — just a desire to learn, grow, and contribute to something meaningful.</p>
+                            <button onclick="toggleExpand('mentee-expand', this)" class="btn btn-outline-primary pathway-card__cta">
+                                Join Us
+                                <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle">
+                                    <i class="fa fa-arrow-down expand-arrow" id="mentee-arrow"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Expandable mentee info + signup -->
+                        <div class="pathway-expand" id="mentee-expand">
+                            <div class="pathway-expand-inner">
+                                <p style="font-size:0.86rem; color:var(--text-body); margin-bottom:0.85rem; text-align:left; font-weight:600;">What you get as a mentee or volunteer:</p>
+                                <ul class="mentee-info-list">
+                                    <li>You can join even without prior experience — all are welcome</li>
+                                    <li>Access to weekly or bi-weekly learning sessions</li>
+                                    <li>Participate online or in person — whichever works for you</li>
+                                    <li>Focus areas: career development, skills building, mentorship &amp; leadership growth</li>
+                                    <li>A supportive community of peers and mentors invested in your journey</li>
+                                </ul>
+                                <form class="mentee-signup-form" id="menteeForm" action="https://formspree.io/f/xredavrk" method="POST">
+                                    <input type="text" name="name" placeholder="Your full name" required>
+                                    <input type="email" name="email" placeholder="Your email address" required>
+                                    <input type="hidden" name="_subject" value="New Mentee/Volunteer Signup — LeafSpire">
+                                    <button type="submit" class="btn-signup">Sign Up Now</button>
+                                </form>
+                                <div class="form-success-msg" id="menteeSuccess">
+                                    💚 Welcome to the LeafSpire community! We'll be in touch with your next steps.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: Donor / Partner -->
+                <div class="col-lg-4 col-md-6 reveal reveal-delay-3">
+                    <div class="pathway-card" id="partner-card">
+                        <div class="pathway-card__img-wrap">
+                            <img class="pathway-card__img"
+                                 src="https://images.unsplash.com/photo-1582213782179-e0d53f98f2ca?w=600&q=75"
+                                 alt="Partnership and collaboration">
+                        </div>
+                        <div class="pathway-card__icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                 stroke="var(--green-main)" stroke-width="1.75"
+                                 stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                            </svg>
+                        </div>
+                        <div class="pathway-card__body">
+                            <p class="pathway-card__tag">Scale Impact Together</p>
+                            <h3 class="pathway-card__title">Partner with Us</h3>
+                            <p class="pathway-card__desc">Organisations, institutions, and sponsors can collaborate with LeafSpire to amplify reach and co-create lasting change in communities.</p>
+                            <button onclick="toggleExpand('partner-expand', this)" class="btn btn-outline-primary pathway-card__cta">
+                                Explore Partnership
+                                <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle">
+                                    <i class="fa fa-arrow-down expand-arrow" id="partner-arrow"></i>
+                                </div>
+                            </button>
+                        </div>
+                        <!-- Expandable partner info -->
+                        <div class="pathway-expand" id="partner-expand">
+                            <div class="pathway-expand-inner">
+                                <p class="partner-info">
+                                    LeafSpire partners with organisations, schools, corporates, and institutions that share our commitment to youth empowerment. Partnerships are built on shared values — not transactions.<br><br>
+                                    We collaborate through programme co-design, resource sharing, joint events, and community outreach. Every partnership is unique and tailored to mutual goals.
+                                </p>
+                                <div class="partner-contact-box">
+                                    <p style="margin-bottom:0.5rem; font-weight:600;">👉 Please contact us directly to schedule a partnership meeting</p>
+                                    <a href="mailto:leafspirefoundation@gmail.com">leafspirefoundation@gmail.com</a><br>
+                                    <a href="contact.html" style="display:inline-block; margin-top:0.5rem;">Or use our Contact Page →</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <!-- Pathways End -->
+
+
+    <!-- UPCOMING EVENTS -->
+    <section class="events-section">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 500px;">
+                <div class="section-label">Upcoming Events</div>
+                <h2 class="display-6 mb-3">What's Coming Up</h2>
+                <p style="color:var(--text-muted); font-size:0.95rem;">Stay connected with our programme schedule and community gatherings.</p>
+            </div>
+            <div class="reveal reveal-delay-1">
+                <div class="events-empty">
+                    <div class="events-empty__icon">
+                        <i class="far fa-calendar-alt"></i>
+                    </div>
+                    <h4>No Upcoming Events Scheduled</h4>
+                    <p>New programmes and events will be announced soon.<br>Follow our social media platforms to be the first to know.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Upcoming Events End -->
+
+
+    <!-- TESTIMONIAL — single quote block -->
+    <div class="testimonial-section">
+        <div class="container">
+            <div class="text-center mx-auto mb-5 reveal" style="max-width: 500px; position: relative; z-index: 2;">
+                <div class="section-label">Testimonials</div>
+                <h2 class="display-6 mb-3">A Voice From Our Community</h2>
+            </div>
+            <div class="reveal reveal-delay-1" style="position: relative; z-index: 2;">
+                <div class="quote-block">
+                    <div class="quote-block__stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    </div>
+                    <p class="quote-block__text">"LeafSpire gave me a mentor who believed in me before I believed in myself. Today I lead a team of 12 youth volunteers in my community — I never thought that was possible."</p>
+                    <div class="quote-block__author">
+                        <img class="quote-block__avatar"
+                             src="img/ww.jpg"
+                             alt="Community Member">
+                        <div>
+                            <p class="quote-block__name">Amina Wanjiku</p>
+                            <span class="quote-block__role">Youth Volunteer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Testimonial End -->
+
+
+    <!-- CTA BAND — social media focused -->
+    <div class="cta-band">
+        <div class="cta-band__content">
+            <h2 class="cta-band__title">Ready to Shape the<br><em>Changemakers of Tomorrow?</em></h2>
+            <p class="cta-band__sub">The next chapter of Respy is being written and there is a page with your name on it, join us today.</p>
+            <div class="cta-band__social">
+                <a href="https://www.facebook.com/profile.php?id=61590070211326" target="_blank" rel="noopener" class="cta-social-btn">
+                    <i class="fab fa-facebook-f"></i> Facebook
+                </a>
+                <a href="https://x.com/Leafspire" target="_blank" rel="noopener" class="cta-social-btn">
+                    <i class="fab fa-twitter"></i> Twitter / X
+                </a>
+                <a href="https://www.instagram.com/leafspirefoundation/" target="_blank" rel="noopener" class="cta-social-btn">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
+                <a href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR" target="_blank" rel="noopener" class="cta-social-btn">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+            </div>
+            <p class="cta-band__connected">Follow our social media platforms &amp; stay connected with our mission</p>
+        </div>
+    </div>
+    <!-- CTA Band End -->
+
+
+    <!-- Footer Start — EXACT DUPLICATE of index.html footer -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-0 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold mb-2" style="font-family:'Italianno',cursive; color:var(--green-soft);">
+                        Leaf<span style="color:#fff;">spire</span>
+                    </h1>
+                    <p style="font-size:0.82rem; color:rgba(255,255,255,0.45); letter-spacing:0.12em; text-transform:uppercase; margin-bottom:1rem;">Youth Today · Leaders Tomorrow</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact</h5>
+                    <p><i class="fa fa-phone-alt me-3" style="color:var(--green-soft);"></i>+254 701 114562</p>
+                    <p><i class="fa fa-envelope me-3" style="color:var(--green-soft);"></i>leafspirefoundation@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Programmes</a>
+                    <a class="btn btn-link" href="terms.html">Terms &amp; Conditions</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay Connected</h5>
+                    <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+                    <form id="footerSubscribeForm">
+                        <div class="position-relative mx-auto" style="max-width:400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" id="footerEmailInput" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </form>
+                    <small class="text-muted d-block mt-2">We only send meaningful updates. No spam.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="#">Riva.html</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Popup -->
+    <div id="leafspirePopup" class="leafspire-popup">
+        <div class="leafspire-popup-card">
+            <div class="leafspire-icon">💚</div>
+            <h3>Thank You for Joining LeafSpire</h3>
+            <p>You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+            <button onclick="closePopup()" class="leafspire-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        /* ============================================================
+           SCROLL REVEAL
+        ============================================================ */
+        (function () {
+            var reveals = document.querySelectorAll('.reveal');
+            if (!reveals.length) return;
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            reveals.forEach(function (el) { io.observe(el); });
+        })();
+
+        /* ============================================================
+           BACK TO TOP — show/hide
+        ============================================================ */
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('.back-to-top');
+            if (!btn) return;
+            btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+        (function () {
+            var btn = document.querySelector('.back-to-top');
+            if (btn) btn.style.display = 'none';
+        })();
+
+        /* ============================================================
+           TOGGLE EXPAND — cards open/close in-place
+        ============================================================ */
+        function toggleExpand(expandId, btn) {
+            var panel = document.getElementById(expandId);
+            var arrow = btn.querySelector('.expand-arrow');
+            var isOpen = panel.classList.contains('open');
+
+            // Close all panels first
+            document.querySelectorAll('.pathway-expand').forEach(function(p) {
+                p.classList.remove('open');
+            });
+            document.querySelectorAll('.expand-arrow').forEach(function(a) {
+                a.classList.remove('fa-arrow-up');
+                a.classList.add('fa-arrow-down');
+            });
+
+            // Open clicked one if it wasn't already open
+            if (!isOpen) {
+                panel.classList.add('open');
+                arrow.classList.remove('fa-arrow-down');
+                arrow.classList.add('fa-arrow-up');
+                // Smooth scroll to card
+                setTimeout(function() {
+                    panel.closest('.pathway-card').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+
+        /* ============================================================
+           MENTOR FORM — Formspree submission
+        ============================================================ */
+        var mentorForm = document.getElementById('mentorForm');
+        if (mentorForm) {
+            mentorForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                var btn = mentorForm.querySelector('.btn-submit-form');
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+                var data = new FormData(mentorForm);
+                var obj = {};
+                data.forEach(function(v, k) { obj[k] = v; });
+                try {
+                    await fetch(mentorForm.action, {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify(obj)
+                    });
+                    mentorForm.style.display = 'none';
+                    document.getElementById('mentorSuccess').style.display = 'block';
+                } catch (err) {
+                    btn.textContent = 'Submit Application';
+                    btn.disabled = false;
+                    alert('Something went wrong. Please try again or email us directly.');
+                }
+            });
+        }
+
+        /* ============================================================
+           MENTEE FORM — Formspree submission
+        ============================================================ */
+        var menteeForm = document.getElementById('menteeForm');
+        if (menteeForm) {
+            menteeForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                var btn = menteeForm.querySelector('.btn-signup');
+                btn.textContent = 'Signing up...';
+                btn.disabled = true;
+                var data = new FormData(menteeForm);
+                var obj = { _subject: 'New Mentee/Volunteer Signup — LeafSpire' };
+                data.forEach(function(v, k) { obj[k] = v; });
+                try {
+                    await fetch('https://formspree.io/f/xredavrk', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify(obj)
+                    });
+                    menteeForm.style.display = 'none';
+                    document.getElementById('menteeSuccess').style.display = 'block';
+                } catch (err) {
+                    btn.textContent = 'Sign Up Now';
+                    btn.disabled = false;
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+        }
+
+        /* ============================================================
+           FOOTER NEWSLETTER — Formspree (same as index.html)
+        ============================================================ */
+        var footerForm = document.getElementById('footerSubscribeForm');
+        var popup = document.getElementById('leafspirePopup');
+        if (footerForm) {
+            footerForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                var email = document.getElementById('footerEmailInput').value;
+                try {
+                    await fetch('https://formspree.io/f/xredavrk', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: email, _subject: 'Newsletter Signup — Get Involved Page' })
+                    });
+                    popup.style.display = 'flex';
+                    footerForm.reset();
+                } catch (err) {
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+        }
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>

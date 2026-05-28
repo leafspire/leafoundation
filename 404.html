@@ -1,0 +1,2048 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Voices of Youth — LeafSpire Stories</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LeafSpire youth stories mental health community impact SDG Kenya" name="keywords">
+    <meta content="A living archive of youth voices, mental health reflections, community impact stories, and SDG-focused articles from LeafSpire." name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===== CSS VARIABLES ===== */
+        :root {
+            --green-deep:   #1b4332;
+            --green-mid:    #2d6a4f;
+            --green-main:   #40916c;
+            --green-soft:   #52b788;
+            --green-light:  #b7e4c7;
+            --green-pale:   #d8f3dc;
+            --green-mist:   #f0faf3;
+            --white:        #ffffff;
+            --dark:         #0d1b12;
+            --text-body:    #3a4a3e;
+            --text-muted:   #7a9080;
+            --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+            --shadow-hover: 0 16px 48px rgba(29,67,44,0.20);
+            --radius-card:  14px;
+            --transition:   all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background: #fff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        /* ===== BOOTSTRAP OVERRIDES ===== */
+        .text-primary   { color: var(--green-main) !important; }
+        .bg-primary     { background-color: var(--green-main) !important; }
+        .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; }
+        .btn-primary:hover { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(64,145,108,0.35); }
+        .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+        .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; transform: translateY(-1px); }
+        .bg-secondary   { background-color: var(--green-pale) !important; }
+
+        /* ===== SPINNER ===== */
+        #spinner { z-index: 9999; }
+        .spinner-grow.text-primary { color: var(--green-main) !important; }
+
+        /* ===== TOP BAR ===== */
+        .top-bar {
+            background: var(--green-deep);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+        }
+        .top-bar a { transition: var(--transition); }
+        .top-bar a:hover { color: var(--green-light) !important; }
+
+        /* ===== NAVBAR ===== */
+        .navbar {
+            background: rgba(27, 67, 50, 0.97) !important;
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(82,183,136,0.15);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .navbar-brand h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            margin-bottom: 0 !important;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--green-soft) !important;
+        }
+        .navbar-brand h1 span { color: #fff !important; }
+        .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            padding: 1.5rem 0.85rem !important;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%; right: 50%;
+            height: 2px;
+            background: var(--green-soft);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after, .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .dropdown-menu {
+            background: var(--green-deep);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .dropdown-item {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 0.87rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
+        .navbar .btn-outline-primary {
+            border-color: var(--green-soft);
+            color: var(--green-soft);
+            font-size: 0.875rem;
+            padding: 0.45rem 1.2rem;
+        }
+        .navbar .btn-outline-primary:hover { background: var(--green-soft); color: var(--dark); }
+        .btn-sm-square {
+            width: 24px; height: 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 0.7rem;
+        }
+
+        /* ===== CINEMATIC HERO (from old site, adapted) ===== */
+        .stories-hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(160deg, #0a1f14 0%, #1b4332 30%, #1a2820 65%, #0d1b12 100%);
+        }
+
+        /* Particle canvas */
+        #stories-canvas {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            pointer-events: none;
+            opacity: 0.7;
+        }
+
+        /* Floating collage images */
+        .hero-collage {
+            position: absolute;
+            right: 0; top: 0; bottom: 0;
+            width: 48%;
+            z-index: 3;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .hero-collage::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: 4;
+            background: linear-gradient(to right, #1b4332 0%, rgba(27,67,50,0.3) 40%, transparent 65%);
+        }
+        .hero-collage-img {
+            position: absolute;
+            background-size: cover;
+            background-position: center;
+            border-radius: 14px;
+            overflow: hidden;
+        }
+        .hci-1 {
+            top: 8%; right: 5%; width: 52%; height: 38%;
+            background-image: url('img/k11.jpg');
+            animation: hciFloat 9s 0s ease-in-out infinite;
+        }
+        .hci-2 {
+            top: 40%; right: 28%; width: 38%; height: 28%;
+            background-image: url('img/k10.jpg');
+            animation: hciFloat 11s 2s ease-in-out infinite;
+        }
+        .hci-3 {
+            bottom: 8%; right: 8%; width: 48%; height: 32%;
+            background-image: url('img/k9.jpg');
+            animation: hciFloat 8s 1s ease-in-out infinite;
+        }
+        .hci-4 {
+            top: 22%; right: 58%; width: 32%; height: 22%;
+            background-image: url('img/k8.jpg');
+            animation: hciFloat 12s 3s ease-in-out infinite;
+            opacity: 0.7;
+        }
+        @keyframes hciFloat {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-14px); }
+        }
+
+        .hero-beam {
+            position: absolute;
+            top: -20%; right: 8%;
+            width: 480px; height: 200%;
+            background: linear-gradient(180deg, rgba(82,183,136,0.045) 0%, rgba(82,183,136,0.02) 50%, transparent 100%);
+            transform: rotate(-16deg);
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        /* Decorative grid pattern */
+        .stories-hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(82,183,136,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(82,183,136,0.04) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
+        }
+
+        .stories-hero .container {
+            position: relative;
+            z-index: 5;
+            padding: 160px 0 120px;
+        }
+
+        /* Hero breadcrumb */
+        .hero-breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.73rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.35);
+            margin-bottom: 2rem;
+            animation: sFade 0.8s 0.1s cubic-bezier(0.16,1,0.3,1) forwards;
+            opacity: 0;
+        }
+        .hero-breadcrumb a { color: rgba(255,255,255,0.35); text-decoration: none; transition: color 0.2s; }
+        .hero-breadcrumb a:hover { color: var(--green-soft); }
+        .hero-breadcrumb .sep { color: var(--green-soft); font-size: 0.6rem; }
+        .hero-breadcrumb .current { color: rgba(255,255,255,0.6); }
+
+        .stories-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: var(--green-soft);
+            margin-bottom: 1.6rem;
+            animation: sFade 0.9s 0.25s cubic-bezier(0.16,1,0.3,1) forwards;
+            opacity: 0;
+        }
+        .stories-eyebrow::before, .stories-eyebrow::after {
+            content: '';
+            width: 28px; height: 1px;
+            background: var(--green-soft);
+            opacity: 0.55;
+        }
+
+        .stories-hero-title {
+            font-family: 'DM Serif Display', 'Playfair Display', serif;
+            font-size: clamp(3rem, 6.5vw, 5.4rem);
+            font-weight: 400;
+            color: #f0faf3;
+            line-height: 1.06;
+            margin-bottom: 1.5rem;
+            animation: sFade 1s 0.4s cubic-bezier(0.16,1,0.3,1) forwards;
+            opacity: 0;
+        }
+        .stories-hero-title em {
+            font-style: italic;
+            color: var(--green-light);
+        }
+
+        .stories-hero-sub {
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.58);
+            line-height: 1.82;
+            max-width: 490px;
+            font-weight: 300;
+            margin-bottom: 2.8rem;
+            animation: sFade 1s 0.56s cubic-bezier(0.16,1,0.3,1) forwards;
+            opacity: 0;
+        }
+
+        .stories-hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+            flex-wrap: wrap;
+            animation: sFade 1s 0.7s cubic-bezier(0.16,1,0.3,1) forwards;
+            opacity: 0;
+        }
+
+        .btn-sage {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            background: var(--green-soft);
+            color: var(--green-deep);
+            border: none;
+            border-radius: 8px;
+            padding: 14px 32px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .btn-sage:hover {
+            background: var(--green-light);
+            transform: translateY(-3px);
+            box-shadow: 0 14px 36px rgba(82,183,136,0.45);
+            text-decoration: none;
+            color: var(--green-deep);
+        }
+
+        .btn-glass {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.84rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+            border: 1.5px solid rgba(255,255,255,0.28);
+            border-radius: 8px;
+            padding: 13px 28px;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+            transition: var(--transition);
+            backdrop-filter: blur(8px);
+        }
+        .btn-glass:hover {
+            background: rgba(255,255,255,0.2);
+            color: #fff;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        /* hero category pills */
+        .hero-cats {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 2.5rem;
+            animation: sFade 1s 0.86s cubic-bezier(0.16,1,0.3,1) forwards;
+            opacity: 0;
+        }
+        .hero-cat-pill {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            color: rgba(255,255,255,0.55);
+            border: 1px solid rgba(255,255,255,0.15);
+            border-radius: 999px;
+            padding: 7px 18px;
+            cursor: pointer;
+            transition: var(--transition);
+            background: rgba(255,255,255,0.04);
+            backdrop-filter: blur(8px);
+            text-decoration: none;
+        }
+        .hero-cat-pill:hover, .hero-cat-pill.active {
+            border-color: var(--green-soft);
+            color: var(--green-soft);
+            background: rgba(82,183,136,0.1);
+            text-decoration: none;
+        }
+
+        /* scroll cue */
+        .hero-scroll-cue {
+            position: absolute;
+            bottom: 34px; left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 7px;
+            animation: sFade 1s 1.2s ease forwards;
+            opacity: 0;
+        }
+        .hero-scroll-cue span {
+            font-size: 0.6rem;
+            letter-spacing: 0.22em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.3);
+        }
+        .scroll-mouse {
+            width: 22px; height: 34px;
+            border: 1.5px solid rgba(255,255,255,0.22);
+            border-radius: 999px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding-top: 5px;
+        }
+        .scroll-wheel {
+            width: 3px; height: 7px;
+            background: var(--green-soft);
+            border-radius: 999px;
+            animation: sWheel 1.8s ease infinite;
+        }
+
+        @keyframes sWheel {
+            0% { transform: translateY(0); opacity: 1; }
+            80% { transform: translateY(12px); opacity: 0; }
+            100% { transform: translateY(0); opacity: 0; }
+        }
+        @keyframes sFade {
+            from { opacity: 0; transform: translateY(28px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ===== SECTION PILL ===== */
+        .section-pill {
+            display: inline-block;
+            background-color: var(--green-pale);
+            color: var(--green-main);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        /* ===== FILTER BAR ===== */
+        .filter-bar {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-bottom: 3rem;
+        }
+        .filter-btn {
+            background: #fff;
+            border: 1.5px solid var(--green-light);
+            color: var(--text-muted);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.82rem;
+            font-weight: 500;
+            letter-spacing: 0.06em;
+            padding: 7px 18px;
+            border-radius: 999px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .filter-btn:hover, .filter-btn.active {
+            background: var(--green-main);
+            border-color: var(--green-main);
+            color: #fff;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 14px rgba(64,145,108,0.28);
+        }
+
+        /* ===== STORIES GRID — Masonry-style editorial ===== */
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        @media (max-width: 991px) { .stories-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 575px) { .stories-grid { grid-template-columns: 1fr; } }
+
+        .story-card {
+            background: #fff;
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(183,228,199,0.35);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            position: relative;
+        }
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--green-main), var(--green-soft));
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.38s cubic-bezier(0.4,0,0.2,1);
+            z-index: 2;
+        }
+        .story-card:hover::before { transform: scaleX(1); }
+        .story-card:hover {
+            transform: translateY(-7px);
+            box-shadow: var(--shadow-hover);
+        }
+
+        /* Tall card variant */
+        .story-card.tall .story-img-wrap { height: 300px; }
+        /* Wide card variant */
+        .story-card.wide {
+            grid-column: span 2;
+            flex-direction: row;
+        }
+        .story-card.wide .story-img-wrap {
+            width: 45%;
+            min-width: 45%;
+            height: auto;
+            min-height: 280px;
+        }
+        @media (max-width: 767px) {
+            .story-card.wide { grid-column: 1; flex-direction: column; }
+            .story-card.wide .story-img-wrap { width: 100%; min-height: 220px; }
+        }
+
+        .story-img-wrap {
+            position: relative;
+            height: 210px;
+            overflow: hidden;
+        }
+        .story-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+        }
+        .story-card:hover .story-img-wrap img { transform: scale(1.07); }
+
+        .story-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(13,27,18,0.55) 0%, transparent 55%);
+        }
+
+        .story-category {
+            position: absolute;
+            top: 14px; left: 14px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 999px;
+            z-index: 1;
+        }
+        .cat-youth     { background: #fff; color: var(--green-deep); }
+        .cat-mental    { background: #e8f4f8; color: #2c7da0; }
+        .cat-sdg       { background: #fef3c7; color: #b45309; }
+        .cat-reflection{ background: #f3e8ff; color: #7c3aed; }
+        .cat-community { background: var(--green-pale); color: var(--green-deep); }
+        .cat-mentor    { background: #fff3e0; color: #e65100; }
+        .cat-volunteer { background: #e8f5e9; color: #2e7d32; }
+        .cat-leadership{ background: #fce4ec; color: #c2185b; }
+
+        .story-body {
+            padding: 1.5rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .story-meta {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.76rem;
+            color: var(--text-muted);
+            margin-bottom: 0.75rem;
+        }
+        .story-meta .dot { width: 3px; height: 3px; border-radius: 50%; background: var(--green-light); display: inline-block; }
+        .story-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.08rem;
+            font-weight: 600;
+            color: var(--dark);
+            line-height: 1.35;
+            margin-bottom: 0.75rem;
+            transition: color 0.25s;
+        }
+        .story-card.wide .story-body h3 { font-size: 1.35rem; }
+        .story-card.tall .story-body h3 { font-size: 1.15rem; }
+        .story-card:hover .story-body h3 { color: var(--green-mid); }
+
+        .story-excerpt {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.72;
+            flex: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        .story-card.wide .story-excerpt { -webkit-line-clamp: 5; }
+
+        .story-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1.25rem;
+            padding-top: 1rem;
+            border-top: 1px solid var(--green-pale);
+        }
+        .story-author { display: flex; align-items: center; gap: 9px; }
+        .story-author-avatar {
+            width: 34px; height: 34px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid var(--green-light);
+        }
+        .story-author-name {
+            font-size: 0.8rem; font-weight: 600;
+            color: var(--text-body); display: block; line-height: 1.2;
+        }
+        .story-author-role { font-size: 0.72rem; color: var(--text-muted); }
+
+        .read-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--green-main);
+            text-decoration: none;
+            letter-spacing: 0.04em;
+            transition: var(--transition);
+        }
+        .read-more-btn:hover { color: var(--green-deep); gap: 10px; }
+        .read-more-btn .arrow {
+            width: 22px; height: 22px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.65rem;
+            transition: var(--transition);
+        }
+        .read-more-btn:hover .arrow { background: var(--green-main); color: #fff; }
+
+        /* ===== EDITORIAL QUOTE ===== */
+        .editorial-quote {
+            background: var(--green-mist);
+            border-left: 4px solid var(--green-main);
+            border-radius: 10px;
+            padding: 2rem 2.5rem;
+            margin: 3.5rem 0;
+            position: relative;
+        }
+        .editorial-quote::before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 5rem;
+            line-height: 0.8;
+            color: var(--green-light);
+            position: absolute;
+            top: 1rem; left: 1.5rem;
+        }
+        .editorial-quote p {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.18rem;
+            color: var(--green-deep);
+            line-height: 1.75;
+            padding-left: 2rem;
+        }
+        .editorial-quote cite {
+            display: block;
+            font-family: 'DM Sans', sans-serif;
+            font-style: normal;
+            font-size: 0.82rem;
+            font-weight: 600;
+            color: var(--green-main);
+            letter-spacing: 0.06em;
+            padding-left: 2rem;
+            margin-top: 0.5rem;
+        }
+
+        /* ===== SCROLL REVEAL ===== */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.65s ease, transform 0.65s ease;
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.08s; }
+        .reveal-delay-2 { transition-delay: 0.18s; }
+        .reveal-delay-3 { transition-delay: 0.28s; }
+        .reveal-delay-4 { transition-delay: 0.38s; }
+        .reveal-delay-5 { transition-delay: 0.48s; }
+        .reveal-delay-6 { transition-delay: 0.58s; }
+
+        .story-card.hidden { display: none; }
+
+        /* ===== YOUR STORY CTA STRIP ===== */
+        .stories-cta {
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
+            border-radius: var(--radius-card);
+            padding: 3.5rem 2.5rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            margin-top: 4rem;
+        }
+        .stories-cta::before {
+            content: '';
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(255,255,255,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+            background-size: 32px 32px;
+        }
+        .stories-cta h2 { color: #fff; font-size: 1.8rem; position: relative; z-index: 1; }
+        .stories-cta p { color: rgba(255,255,255,0.68); font-size: 0.95rem; position: relative; z-index: 1; max-width: 480px; margin: 0.75rem auto 1.75rem; }
+        .stories-cta .btn { position: relative; z-index: 1; }
+
+        /* ===== YOUTUBE BANNER ===== */
+        .youtube-section {
+            padding: 5rem 0;
+            background: var(--green-mist);
+        }
+        .youtube-section-heading {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+        .youtube-section-heading h2 {
+            font-size: clamp(1.6rem, 3vw, 2.4rem);
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+        .youtube-section-heading p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        .youtube-banner-wrap {
+            position: relative;
+            border-radius: 18px;
+            overflow: hidden;
+            max-width: 960px;
+            margin: 0 auto;
+            box-shadow: 0 16px 56px rgba(27,67,50,0.22);
+            background: var(--green-deep);
+            cursor: pointer;
+        }
+
+        /* Cinematic large banner with generous height */
+        .youtube-banner-inner {
+            position: relative;
+            width: 100%;
+            padding-bottom: 44%; /* wide cinematic ratio */
+            min-height: 320px;
+        }
+        @media (max-width: 767px) {
+            .youtube-banner-inner { padding-bottom: 62%; }
+        }
+        @media (max-width: 480px) {
+            .youtube-banner-inner { padding-bottom: 80%; }
+        }
+
+        .youtube-banner-bg {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.38;
+            transition: transform 8s ease, opacity 0.5s ease;
+        }
+        .youtube-banner-wrap:hover .youtube-banner-bg {
+            opacity: 0.48;
+            transform: scale(1.04);
+        }
+
+        .youtube-banner-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(27,67,50,0.88) 0%, rgba(64,145,108,0.55) 100%);
+        }
+
+        /* Ripple hover effect */
+        .youtube-ripple {
+            position: absolute;
+            inset: 0;
+            overflow: hidden;
+            border-radius: 18px;
+        }
+        .youtube-ripple::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at center, rgba(82,183,136,0.0) 0%, rgba(82,183,136,0.0) 100%);
+            transition: background 0.6s ease;
+        }
+        .youtube-banner-wrap:hover .youtube-ripple::after {
+            background: radial-gradient(ellipse at center, rgba(82,183,136,0.12) 0%, rgba(82,183,136,0.0) 70%);
+            animation: ripplePulse 2s ease infinite;
+        }
+        @keyframes ripplePulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.04); opacity: 0.7; }
+        }
+
+        .youtube-banner-content {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 2.5rem;
+            z-index: 3;
+        }
+
+        .youtube-cta-label {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--green-light);
+            margin-bottom: 0.8rem;
+        }
+
+        .youtube-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.4rem, 3.5vw, 2.4rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 2rem;
+        }
+        .youtube-title em {
+            font-style: italic;
+            color: var(--green-light);
+        }
+
+        /* Large YouTube play button */
+        .yt-play-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+            background: #FF0000;
+            color: #fff;
+            font-family: 'DM Sans', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            letter-spacing: 0.03em;
+            padding: 1rem 2.2rem;
+            border-radius: 999px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: 0 6px 24px rgba(255,0,0,0.4);
+        }
+        .yt-play-btn:hover {
+            background: #cc0000;
+            color: #fff;
+            transform: scale(1.07);
+            box-shadow: 0 12px 36px rgba(255,0,0,0.5);
+            text-decoration: none;
+        }
+        .yt-play-btn svg { flex-shrink: 0; }
+
+        /* ===== A DAY AS A VOLUNTEER ===== */
+        .volunteer-day-section {
+            padding: 5rem 0;
+            background: #fff;
+        }
+        .volunteer-day-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .volunteer-day-intro h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .volunteer-day-intro p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 560px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Timeline */
+        .vol-timeline {
+            position: relative;
+            max-width: 860px;
+            margin: 0 auto;
+        }
+        .vol-timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0; bottom: 0;
+            width: 2px;
+            background: linear-gradient(to bottom, transparent, var(--green-soft) 10%, var(--green-main) 50%, var(--green-soft) 90%, transparent);
+            transform: translateX(-50%);
+        }
+        @media (max-width: 767px) {
+            .vol-timeline::before { left: 20px; transform: none; }
+        }
+
+        .vol-block {
+            display: grid;
+            grid-template-columns: 1fr 60px 1fr;
+            gap: 0;
+            margin-bottom: 3rem;
+            align-items: start;
+        }
+        @media (max-width: 767px) {
+            .vol-block { grid-template-columns: 60px 1fr; padding-left: 0; }
+            .vol-block .vol-left { display: none; }
+            .vol-block .vol-center { grid-column: 1; }
+            .vol-block .vol-right { grid-column: 2; }
+        }
+
+        .vol-left { text-align: right; padding-right: 2rem; padding-top: 0.5rem; }
+        .vol-right { padding-left: 2rem; padding-top: 0.5rem; }
+        .vol-block.flipped .vol-left { order: 3; text-align: left; padding-left: 2rem; padding-right: 0; }
+        .vol-block.flipped .vol-center { order: 2; }
+        .vol-block.flipped .vol-right { order: 1; text-align: right; padding-right: 2rem; padding-left: 0; }
+        @media (max-width: 767px) {
+            .vol-block.flipped .vol-left, .vol-block.flipped .vol-right { order: unset; text-align: left; padding: 0 0 0 2rem; }
+        }
+
+        .vol-center {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0;
+        }
+        .vol-dot {
+            width: 50px; height: 50px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
+            border: 3px solid var(--green-soft);
+            display: flex; align-items: center; justify-content: center;
+            color: var(--green-light);
+            font-size: 1rem;
+            box-shadow: 0 0 0 6px rgba(82,183,136,0.12);
+            flex-shrink: 0;
+            z-index: 1;
+            transition: var(--transition);
+        }
+        .vol-dot:hover { transform: scale(1.12); box-shadow: 0 0 0 12px rgba(82,183,136,0.15); }
+
+        .vol-time {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            margin-bottom: 0.4rem;
+        }
+        .vol-card {
+            background: var(--green-mist);
+            border: 1px solid var(--green-pale);
+            border-radius: 12px;
+            padding: 1.5rem;
+            transition: var(--transition);
+        }
+        .vol-card:hover {
+            background: #fff;
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+        }
+        .vol-card h4 {
+            font-size: 1.05rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+        .vol-card p {
+            font-size: 0.875rem;
+            color: var(--text-muted);
+            line-height: 1.72;
+            margin: 0;
+        }
+        .vol-card .vol-tag {
+            display: inline-block;
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green-deep);
+            background: var(--green-light);
+            border-radius: 999px;
+            padding: 3px 10px;
+            margin-bottom: 0.6rem;
+        }
+
+        /* ===== YOUR VOLUNTEER JOURNEY ===== */
+        .journey-section {
+            padding: 5rem 0;
+            background: var(--green-mist);
+        }
+        .journey-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+        .journey-intro h2 {
+            font-size: clamp(1.8rem, 3vw, 2.6rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .journey-intro p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            max-width: 520px;
+            margin: 0 auto;
+        }
+
+        .journey-steps {
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 0;
+            flex-wrap: wrap;
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .journey-step {
+            flex: 1;
+            min-width: 150px;
+            max-width: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+            position: relative;
+        }
+        .journey-step::after {
+            content: '';
+            position: absolute;
+            top: 28px;
+            right: -1px;
+            width: calc(100% - 58px);
+            height: 2px;
+            background: linear-gradient(to right, var(--green-main), var(--green-light));
+            left: calc(50% + 28px);
+        }
+        .journey-step:last-child::after { display: none; }
+        @media (max-width: 767px) {
+            .journey-steps { flex-direction: column; align-items: center; gap: 2rem; }
+            .journey-step::after { display: none; }
+            .journey-step { max-width: 100%; flex-direction: row; text-align: left; gap: 1.2rem; }
+            .journey-step-body { text-align: left; }
+        }
+
+        .journey-num {
+            width: 56px; height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--green-main), var(--green-soft));
+            color: #fff;
+            display: flex; align-items: center; justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            margin-bottom: 1.2rem;
+            flex-shrink: 0;
+            box-shadow: 0 6px 20px rgba(64,145,108,0.3);
+            transition: var(--transition);
+        }
+        .journey-step:hover .journey-num {
+            transform: scale(1.12);
+            box-shadow: 0 10px 30px rgba(64,145,108,0.4);
+        }
+        .journey-step-body h4 {
+            font-size: 1rem;
+            color: var(--dark);
+            margin-bottom: 0.4rem;
+        }
+        .journey-step-body p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer { background: var(--dark) !important; }
+        .footer h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            color: var(--green-soft) !important;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        .footer h1 span { color: #fff !important; }
+        .footer h5 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9) !important; }
+        .footer .btn-square {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(82,183,136,0.12);
+            border: 1px solid rgba(82,183,136,0.25);
+            color: var(--green-light);
+            font-size: 0.78rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .footer .btn-square:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+        .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+        .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+        .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+        .footer .form-control {
+            background: rgba(255,255,255,0.07) !important;
+            border: 1px solid rgba(82,183,136,0.25) !important;
+            color: #fff !important;
+            border-radius: 8px;
+            font-size: 0.88rem;
+        }
+        .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+        .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+        .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 1.25rem 0;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.35);
+        }
+        .copyright a { color: var(--green-light); text-decoration: none; }
+        .copyright a:hover { color: var(--green-soft); }
+
+        /* ===== BACK TO TOP ===== */
+        .back-to-top {
+            background: var(--green-main) !important;
+            border: none !important;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.4);
+            border-radius: 50% !important;
+            width: 46px; height: 46px;
+            display: none;
+            align-items: center; justify-content: center;
+        }
+        .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); }
+
+        /* ===== RESPONSIVE NAVBAR ===== */
+        @media (max-width: 991.98px) {
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-link { padding: 0.6rem 1rem !important; }
+            .nav-link::after { display: none; }
+            .hero-collage { display: none; }
+            .stories-hero .container { padding: 130px 0 90px; }
+            .stories-hero-title { font-size: 2.8rem; }
+            .vol-block { grid-template-columns: 56px 1fr; }
+            .vol-left { display: none; }
+        }
+        @media (max-width: 575px) {
+            .stories-hero .container { padding: 110px 1.5rem 80px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner Start -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+    <!-- Spinner End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/leafspirelogoremovebg.png" alt="LeafSpire Logo" style="width:56px;height:56px;object-fit:contain;margin-right:10px;">
+                <h1 class="fw-bold mb-0" style="font-family:'Italianno',cursive;font-size:2.2rem;">
+                    Leaf<span class="text-white">spire</span>
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="causes.html" class="nav-item nav-link">Causes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Our Programmes</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Get Involved</a>
+                            <a href="404.html" class="dropdown-item active">Stories</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- ════════════════════════════
+         CINEMATIC HERO
+    ════════════════════════════ -->
+    <section class="stories-hero" id="stories-top">
+        <canvas id="stories-canvas"></canvas>
+        <div class="hero-beam"></div>
+
+        <!-- Floating image collage -->
+        <div class="hero-collage">
+            <div class="hero-collage-img hci-1"></div>
+            <div class="hero-collage-img hci-2"></div>
+            <div class="hero-collage-img hci-3"></div>
+            <div class="hero-collage-img hci-4"></div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-7 col-xl-6">
+                    <nav class="hero-breadcrumb" aria-label="breadcrumb">
+                        <a href="index.html">Home</a>
+                        <span class="sep"><i class="fa fa-chevron-right" style="font-size:0.55rem;"></i></span>
+                        <span class="current">Stories</span>
+                    </nav>
+                    <div class="stories-eyebrow">Real People. Real Growth. Real Impact.</div>
+                    <h1 class="stories-hero-title">
+                        Stories that<br>
+                        <em>inspire</em><br>
+                        change.
+                    </h1>
+                    <p class="stories-hero-sub">
+                        Every meaningful movement is built through human stories. These are the voices of a growing community — young people who found purpose, mentors who found meaning, and a community that found itself.
+                    </p>
+                    <div class="stories-hero-actions">
+                        <a href="#stories-section" class="btn-sage"><i class="fa fa-book-open me-1"></i> Read Stories</a>
+                        <a href="contact.html" class="btn-glass"><i class="fa fa-pen me-1"></i> Share Yours</a>
+                    </div>
+                    <div class="hero-cats">
+                        <span class="hero-cat-pill active">All Stories</span>
+                        <span class="hero-cat-pill">Youth Voice</span>
+                        <span class="hero-cat-pill">Mental Health</span>
+                        <span class="hero-cat-pill">Volunteer</span>
+                        <span class="hero-cat-pill">SDG</span>
+                        <span class="hero-cat-pill">Community</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-cue">
+            <span>Scroll</span>
+            <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+        </div>
+    </section>
+    <!-- Hero End -->
+
+
+    <!-- ════════════════════════════
+         STORIES SECTION
+    ════════════════════════════ -->
+    <div class="container-xxl py-5 mt-2" id="stories-section">
+        <div class="container">
+
+            <!-- Section Header -->
+            <div class="text-center mb-4 reveal">
+                <div class="section-pill">Our Stories</div>
+                <h1 class="display-6 mb-2">Stories That Move the World</h1>
+                <p style="color:var(--text-muted);font-size:0.95rem;max-width:520px;margin:0 auto;">Real stories from the young people, mentors, and communities we walk alongside every day.</p>
+            </div>
+
+            <!-- Filter Bar -->
+            <div class="filter-bar reveal reveal-delay-1" id="filterBar">
+                <button class="filter-btn active" data-filter="all">All Stories</button>
+                <button class="filter-btn" data-filter="youth">Youth Story</button>
+                <button class="filter-btn" data-filter="mental">Mental Health</button>
+                <button class="filter-btn" data-filter="sdg">SDG</button>
+                <button class="filter-btn" data-filter="reflection">Reflection</button>
+                <button class="filter-btn" data-filter="community">Community</button>
+                <button class="filter-btn" data-filter="mentor">Mentorship</button>
+                <button class="filter-btn" data-filter="volunteer">Volunteer</button>
+                <button class="filter-btn" data-filter="leadership">Leadership</button>
+            </div>
+
+            <!-- Stories Grid -->
+            <div class="stories-grid" id="storiesGrid">
+
+                <!-- Card 1: WIDE FEATURED -->
+                <div class="story-card wide reveal reveal-delay-1" data-category="youth">
+                    <div class="story-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=800&q=80" alt="Youth leader story">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-youth">Youth Story</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta">
+                            <span>May 2025</span><span class="dot"></span><span>6 min read</span>
+                        </div>
+                        <h3>From the Periphery to the Podium: How Mentorship Gave Me My Voice</h3>
+                        <p class="story-excerpt">I grew up believing leadership was for other people — people with better schools, better networks, better luck. Then I met my mentor through LeafSpire's programme, and everything I thought I knew about my future began to shift. This is the story of that shift, told in my own words.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?w=80&q=80" alt="">
+                                <div>
+                                    <span class="story-author-name">Amara Njeri</span>
+                                    <span class="story-author-role">Youth Volunteer</span>
+                                </div>
+                            </div>
+                            <a href="https://medium.com/@leafspirefoundation/from-the-periphery-to-the-podium-how-mentorship-gave-me-my-voice-c30ca123b886" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="story-card reveal reveal-delay-2" data-category="mental">
+                    <div class="story-img-wrap">
+                        <img src="img/k2.jpg">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-mental">Mental Health</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>April 2025</span><span class="dot"></span><span>4 min read</span></div>
+                        <h3>Breaking the Silence: What Happened When I Finally Asked for Help</h3>
+                        <p class="story-excerpt">For two years, I carried anxiety like a stone in my chest. I smiled through it, laughed through it, graduated through it. LeafSpire's listening circle was the first space where I didn't have to pretend.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/k7.jpg" alt="">
+                                <div>
+                                    <span class="story-author-name">Zawadi Ochieng</span>
+                                    <span class="story-author-role">University Student</span>
+                                </div>
+                            </div>
+                            <a href="https://medium.com/@leafspirefoundation/breaking-the-silence-what-happened-when-i-finally-asked-for-help-c1c8dd34c79b" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: TALL -->
+                <div class="story-card tall reveal reveal-delay-1" data-category="mentor">
+                    <div class="story-img-wrap">
+                        <img src="img/k4.jpg" alt="Mentorship">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-mentor">Mentorship</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>April 2025</span><span class="dot"></span><span>5 min read</span></div>
+                        <h3>The Mentor Who Taught Me How to Ask for Help</h3>
+                        <p class="story-excerpt">David had every answer. What he lacked was the courage to admit when he didn't. His mentor changed that — one honest conversation at a time. Vulnerability, it turned out, was the foundation of real leadership.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/testimonial-1.jpg">
+                                <div>
+                                    <span class="story-author-name">David Kamau</span>
+                                    <span class="story-author-role">Programme Mentee</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/the-mentor-who-taught-me-how-to-ask?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="story-card reveal reveal-delay-2" data-category="sdg">
+                    <div class="story-img-wrap">
+                        <img src="img/k9.jpg">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-sdg">SDG</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>March 2025</span><span class="dot"></span><span>5 min read</span></div>
+                        <h3>We Planted 100 Trees. Here Is What the Earth Taught Us Back.</h3>
+                        <p class="story-excerpt">Our SDG Action Day started as a weekend exercise. It became a conversation between 60 young people and the land they had taken for granted. What we learned surprised every one of us.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/testimonial-2.jpg" alt="">
+                                <div>
+                                    <span class="story-author-name">Brian Kamau</span>
+                                    <span class="story-author-role">Sustainability Lead</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/we-planted-100-trees-here-is-what?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="story-card reveal reveal-delay-3" data-category="community">
+                    <div class="story-img-wrap">
+                        <img src="img/k3.jpg">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-community">Community</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>March 2025</span><span class="dot"></span><span>4 min read</span></div>
+                        <h3>One Clean-Up Drive Changed How Our Neighbourhood Sees Young People</h3>
+                        <p class="story-excerpt">We showed up with gloves and bags. The elders expected us to leave within the hour. Three hours later, they were working alongside us — and inviting us back next month.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/plant.png">
+                                <div>
+                                    <span class="story-author-name">Faith Wambua</span>
+                                    <span class="story-author-role">Community Coordinator</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/one-clean-up-drive-changed-how-our?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 6: TALL volunteer -->
+                <div class="story-card tall reveal reveal-delay-2" data-category="volunteer">
+                    <div class="story-img-wrap">
+                        <img src="img/stant.jpg" alt="Volunteer story">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-volunteer">Volunteer</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>February 2025</span><span class="dot"></span><span>5 min read</span></div>
+                        <h3>I Came to Give. I Left with More Than I Arrived With.</h3>
+                        <p class="story-excerpt">Wanjiru signed up to volunteer for three months. Fourteen months later, she's still here — and she knows exactly why. Giving, she discovered, is the most generous thing you can do for yourself.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/sde.jpg" alt="">
+                                <div>
+                                    <span class="story-author-name">Wanjiru Mwangi</span>
+                                    <span class="story-author-role">Lead Volunteer Facilitator</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/i-came-to-give-i-left-with-more-than?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 7 -->
+                <div class="story-card reveal reveal-delay-1" data-category="reflection">
+                    <div class="story-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?w=700&q=80" alt="Founder reflection">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-reflection">Reflection</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>January 2025</span><span class="dot"></span><span>7 min read</span></div>
+                        <h3>Why We Started LeafSpire — and What the First Year Taught Us</h3>
+                        <p class="story-excerpt">A founder's honest letter about the gap we saw, the mistakes we made, and why we believe more now than we ever did at the beginning.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/leafspirelogo.png" alt="">
+                                <div>
+                                    <span class="story-author-name">LeafSpire Founders</span>
+                                    <span class="story-author-role">Founding Team</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/why-we-started-leafspire-and-what?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 8 -->
+                <div class="story-card reveal reveal-delay-2" data-category="mental">
+                    <div class="story-img-wrap">
+                        <img src="img/k8.jpg" alt="Mental health burnout">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-mental">Mental Health</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>December 2024</span><span class="dot"></span><span>4 min read</span></div>
+                        <h3>The Invisible Weight: Talking About Burnout in Youth Spaces</h3>
+                        <p class="story-excerpt">We're told to be grateful. We're told we have everything. We're told to keep going. But nobody talks about what it costs — and it's time someone did.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/j1.jpg" alt="">
+                                <div>
+                                    <span class="story-author-name">Mira Achieng</span>
+                                    <span class="story-author-role">Programme Participant</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/the-invisible-weight-talking-about?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 9 -->
+                <div class="story-card reveal reveal-delay-3" data-category="youth">
+                    <div class="story-img-wrap">
+                        <img src="img/k1.jpg" alt="Youth council">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-youth">Youth Story</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>November 2024</span><span class="dot"></span><span>5 min read</span></div>
+                        <h3>How Five School Friends Built a Youth Council That Actually Works</h3>
+                        <p class="story-excerpt">LeafSpire workshops gave us the framework. The rest — the late nights, the arguments, the breakthroughs — was entirely ours. Here is how we built something real.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/leafspirelogo.png">
+                                <div>
+                                    <span class="story-author-name">The Kibera Five</span>
+                                    <span class="story-author-role">Youth Council</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/how-five-school-friends-built-a-youth?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 10: WIDE leadership -->
+                <div class="story-card wide reveal reveal-delay-1" data-category="leadership">
+                    <div class="story-img-wrap">
+                        <img src="img/pick.jpg" alt="Leadership journey">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-leadership">Leadership</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>October 2024</span><span class="dot"></span><span>8 min read</span></div>
+                        <h3>At 17, I Facilitated My First Workshop. Here Is What I Learned.</h3>
+                        <p class="story-excerpt">Faith thought she was too young, too inexperienced, too quiet. Then LeafSpire put her in front of twenty young people and handed her the room. She hasn't looked back since. This is the story of how confidence isn't something you find — it's something you practise until the fear becomes fuel.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/pick.jpg">
+                                <div>
+                                    <span class="story-author-name">Faith Otieno</span>
+                                    <span class="story-author-role">Youth Leader, Cohort 4</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/at-17-i-facilitated-my-first-workshop?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 11 -->
+                <div class="story-card reveal reveal-delay-2" data-category="sdg">
+                    <div class="story-img-wrap">
+                        <img src="img/plant.png" alt="Climate youth">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-sdg">SDG</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>October 2024</span><span class="dot"></span><span>6 min read</span></div>
+                        <h3>Climate Justice Is a Youth Issue — And We're Done Waiting for Adults to Lead</h3>
+                        <p class="story-excerpt">The data is clear. The timeline is urgent. And a generation of young people is no longer content to simply observe. This is what our climate action looked like on the ground.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/leafspirelogo.png" alt="">
+                                <div>
+                                    <span class="story-author-name">Seun Otieno</span>
+                                    <span class="story-author-role">Climate Advocate</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/climate-justice-is-a-youth-issue?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 12 -->
+                <div class="story-card reveal reveal-delay-3" data-category="volunteer">
+                    <div class="story-img-wrap">
+                        <img src="img/k5.jpg" alt="Volunteer debrief">
+                        <div class="story-img-overlay"></div>
+                        <span class="story-category cat-volunteer">Volunteer</span>
+                    </div>
+                    <div class="story-body">
+                        <div class="story-meta"><span>September 2024</span><span class="dot"></span><span>5 min read</span></div>
+                        <h3>The Saturday That Changed Our Neighbourhood</h3>
+                        <p class="story-excerpt">Forty LeafSpire members. One estate. A clean-up drive that turned into something no one planned — a celebration of belonging and the power of young people showing up together.</p>
+                        <div class="story-footer">
+                            <div class="story-author">
+                                <img class="story-author-avatar" src="img/leafspirelogo.png" alt="">
+                                <div>
+                                    <span class="story-author-name">Kasarani Team</span>
+                                    <span class="story-author-role">Community Volunteers</span>
+                                </div>
+                            </div>
+                            <a href="https://open.substack.com/pub/leafspire/p/the-saturday-that-changed-our-neighbourhood?r=8hnc54&utm_campaign=post&utm_medium=web&showWelcomeOnShare=true" class="read-more-btn">Read Story <span class="arrow"><i class="fa fa-arrow-right"></i></span></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /stories-grid -->
+
+            <!-- Editorial Quote -->
+            <div class="editorial-quote reveal">
+                <p>Every story on this page is proof that young people don't just need opportunity — they need to be seen, heard, and believed in. That is what LeafSpire exists to do.</p>
+                <cite>— LeafSpire Founding Team</cite>
+            </div>
+
+        </div>
+    </div>
+    <!-- Stories Section End -->
+
+
+    <!-- ════════════════════════════
+         YOUR STORY CTA
+    ════════════════════════════ -->
+    <div class="container-xxl pb-2">
+        <div class="container">
+            <div class="stories-cta reveal">
+                <h2>Your Story Belongs Here Too</h2>
+                <p>If you've been touched by LeafSpire's work — as a participant, volunteer, mentor, or partner — we'd love to share your story with the world.</p>
+                <a class="btn btn-outline-primary py-2 px-4 me-2" href="contact.html" style="border-color:#fff;color:#fff;">
+                    Share Your Story
+                    <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ════════════════════════════
+         YOUTUBE BANNER SECTION
+    ════════════════════════════ -->
+    <div class="youtube-section">
+        <div class="container">
+            <div class="youtube-section-heading reveal">
+                <div class="section-pill">Watch Our Story</div>
+                <h2>See Our Impact Come Alive</h2>
+                <p>Programme highlights, community moments, and real stories — all on our YouTube channel.</p>
+            </div>
+
+            <div class="youtube-banner-wrap reveal reveal-delay-1">
+                <div class="youtube-banner-inner">
+                    <img class="youtube-banner-bg" src="img/carousel-1.png" alt="LeafSpire YouTube" onerror="this.src='https://images.unsplash.com/photo-1528605248644-14dd04022da1?w=1200&q=80'">
+                    <div class="youtube-banner-overlay"></div>
+                    <div class="youtube-ripple"></div>
+                    <div class="youtube-banner-content">
+                        <div class="youtube-cta-label">Subscribe &amp; follow us to stay updated</div>
+                        <div class="youtube-title">
+                            Watch Our <em>Impact Stories</em><br>on YouTube
+                        </div>
+                        <a href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR" target="_blank" rel="noopener" class="yt-play-btn">
+                            <svg width="26" height="19" viewBox="0 0 26 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.5 3.09C25.22 1.97 24.34 1.09 23.22 0.81C21.2 0.3 13 0.3 13 0.3C13 0.3 4.8 0.3 2.78 0.81C1.66 1.09 0.78 1.97 0.5 3.09C0 5.11 0 9.3 0 9.3C0 9.3 0 13.49 0.5 15.51C0.78 16.63 1.66 17.47 2.78 17.75C4.8 18.26 13 18.26 13 18.26C13 18.26 21.2 18.26 23.22 17.75C24.34 17.47 25.22 16.63 25.5 15.51C26 13.49 26 9.3 26 9.3C26 9.3 26 5.11 25.5 3.09Z" fill="white"/>
+                                <path d="M10.4 13.27L17.15 9.3L10.4 5.33V13.27Z" fill="#FF0000"/>
+                            </svg>
+                            Watch on YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- YouTube Section End -->
+
+
+    <!-- ════════════════════════════
+         A DAY AS A VOLUNTEER
+    ════════════════════════════ -->
+    <div class="volunteer-day-section">
+        <div class="container">
+            <div class="volunteer-day-intro reveal">
+                <div class="section-pill">Behind the Scenes</div>
+                <h2>A Day as a Volunteer</h2>
+                <p>What it actually looks like to show up — and what it feels like to leave knowing you made a difference today.</p>
+            </div>
+
+            <div class="vol-timeline">
+
+                <!-- Block 1 -->
+                <div class="vol-block reveal reveal-delay-1">
+                    <div class="vol-left">
+                        <span class="vol-time">7:30 AM</span>
+                        <div class="vol-card">
+                            <span class="vol-tag">Morning</span>
+                            <h4>Briefing &amp; Intention Setting</h4>
+                            <p>The day starts with tea, warmth, and a circle. Volunteers share their intentions for the day — not goals, but the way they want to show up. It sets the tone for everything that follows.</p>
+                        </div>
+                    </div>
+                    <div class="vol-center">
+                        <div class="vol-dot"><i class="fa fa-sun"></i></div>
+                    </div>
+                    <div class="vol-right"></div>
+                </div>
+
+                <!-- Block 2 -->
+                <div class="vol-block flipped reveal reveal-delay-2">
+                    <div class="vol-left"></div>
+                    <div class="vol-center">
+                        <div class="vol-dot"><i class="fa fa-users"></i></div>
+                    </div>
+                    <div class="vol-right">
+                        <span class="vol-time">9:00 AM</span>
+                        <div class="vol-card">
+                            <span class="vol-tag">Workshop</span>
+                            <h4>Facilitating a Cohort Workshop</h4>
+                            <p>A room full of young people who started the morning uncertain. By the end of the session, three of them are speaking for the first time — and the room is listening. This is the work.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 3 -->
+                <div class="vol-block reveal reveal-delay-3">
+                    <div class="vol-left">
+                        <span class="vol-time">12:30 PM</span>
+                        <div class="vol-card">
+                            <span class="vol-tag">One-on-One</span>
+                            <h4>One-on-One Mentorship Session</h4>
+                            <p>The quieter, slower, most important work. A volunteer sits across from a young person and simply listens — without agenda, without judgment. Sometimes that's the most powerful thing you can offer.</p>
+                        </div>
+                    </div>
+                    <div class="vol-center">
+                        <div class="vol-dot"><i class="fa fa-heart"></i></div>
+                    </div>
+                    <div class="vol-right"></div>
+                </div>
+
+                <!-- Block 4 -->
+                <div class="vol-block flipped reveal reveal-delay-4">
+                    <div class="vol-left"></div>
+                    <div class="vol-center">
+                        <div class="vol-dot"><i class="fa fa-star"></i></div>
+                    </div>
+                    <div class="vol-right">
+                        <span class="vol-time">4:00 PM</span>
+                        <div class="vol-card">
+                            <span class="vol-tag">Close of Day</span>
+                            <h4>Team Debrief &amp; Community Moment</h4>
+                            <p>The day ends the way it started — in a circle. Volunteers share what surprised them, what moved them, what they'll carry home. Nobody leaves unchanged. That's not a coincidence. It's the design.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- Volunteer Day End -->
+
+
+    <!-- ════════════════════════════
+         YOUR VOLUNTEER JOURNEY
+    ════════════════════════════ -->
+    <div class="journey-section">
+        <div class="container">
+            <div class="journey-intro reveal">
+                <div class="section-pill">Get Involved</div>
+                <h2>Your Volunteer Journey</h2>
+                <p>From application to leadership — here is how it works.</p>
+            </div>
+
+            <div class="journey-steps reveal reveal-delay-1">
+
+                <div class="journey-step">
+                    <div class="journey-num">1</div>
+                    <div class="journey-step-body">
+                        <h4>Apply</h4>
+                        <p>Tell us who you are and what moves you. No experience required — just genuine heart.</p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-num">2</div>
+                    <div class="journey-step-body">
+                        <h4>Connect</h4>
+                        <p>Meet the team. We match you with the programme that fits your strengths and schedule.</p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-num">3</div>
+                    <div class="journey-step-body">
+                        <h4>Orientation</h4>
+                        <p>A full onboarding day where you learn our values, methods, and meet your cohort.</p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-num">4</div>
+                    <div class="journey-step-body">
+                        <h4>Participate</h4>
+                        <p>Show up. Facilitate. Listen. Support young people as they find their voices and path.</p>
+                    </div>
+                </div>
+
+                <div class="journey-step">
+                    <div class="journey-num">5</div>
+                    <div class="journey-step-body">
+                        <h4>Lead</h4>
+                        <p>The best volunteers become mentors to the next wave. The cycle of impact continues.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="text-center mt-5 reveal">
+                <a href="testimonial.html" class="btn btn-primary py-2 px-4">
+                    Join as a Volunteer
+                    <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                        <i class="fa fa-arrow-right"></i>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- Journey End -->
+
+
+    <!-- ════════════════════════════
+         FOOTER (exact match to index.html)
+    ════════════════════════════ -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold mb-2" style="font-family:'Italianno',cursive;color:var(--green-soft);">
+                        Leaf<span style="color:#fff;">spire</span>
+                    </h1>
+                    <p style="font-size:0.82rem;color:rgba(255,255,255,0.45);letter-spacing:0.12em;text-transform:uppercase;margin-bottom:1rem;">Youth Today · Leaders Tomorrow</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact</h5>
+                    <p><i class="fa fa-phone me-3" style="color:var(--green-soft)"></i>+254 701 114562</p>
+                    <p><i class="fa fa-envelope me-3" style="color:var(--green-soft)"></i>leafspirefoundation@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Programmes</a>
+                    <a class="btn btn-link" href="terms.html">Terms &amp; Conditions</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay Connected</h5>
+                    <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+                    <form id="subscribeForm">
+                        <div class="position-relative mx-auto" style="max-width:400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5" type="email" id="emailInput" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </form>
+                    <small class="text-muted d-block mt-2">We only send meaningful updates. No spam.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="#">Riva.html</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Popup -->
+    <div id="leafspirePopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);justify-content:center;align-items:center;z-index:9999;">
+        <div style="background:#fff;padding:30px;border-radius:16px;text-align:center;width:90%;max-width:420px;animation:popIn 0.25s ease;">
+            <div style="font-size:42px;margin-bottom:10px;">💚</div>
+            <h3 style="color:var(--green-deep);">Thank You for Joining LeafSpire</h3>
+            <p style="font-size:14px;color:#444;">You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+            <button onclick="document.getElementById('leafspirePopup').style.display='none'" style="margin-top:15px;padding:10px 20px;border:none;background:var(--green-mid);color:#fff;border-radius:8px;cursor:pointer;">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // ===== PARTICLE CANVAS (hero background) =====
+        (function () {
+            var canvas = document.getElementById('stories-canvas');
+            if (!canvas) return;
+            var ctx = canvas.getContext('2d');
+            var particles = [];
+            var W, H;
+
+            function resize() {
+                W = canvas.width = canvas.offsetWidth;
+                H = canvas.height = canvas.offsetHeight;
+            }
+            resize();
+            window.addEventListener('resize', resize);
+
+            // Create particles
+            for (var i = 0; i < 60; i++) {
+                particles.push({
+                    x: Math.random() * 1400,
+                    y: Math.random() * 800,
+                    r: Math.random() * 2 + 0.5,
+                    vx: (Math.random() - 0.5) * 0.35,
+                    vy: (Math.random() - 0.5) * 0.35,
+                    alpha: Math.random() * 0.5 + 0.1
+                });
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, W, H);
+                particles.forEach(function (p) {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = 'rgba(82,183,136,' + p.alpha + ')';
+                    ctx.fill();
+                    p.x += p.vx;
+                    p.y += p.vy;
+                    if (p.x < 0 || p.x > W) p.vx *= -1;
+                    if (p.y < 0 || p.y > H) p.vy *= -1;
+                });
+                requestAnimationFrame(draw);
+            }
+            draw();
+        })();
+
+        // ===== SCROLL REVEAL =====
+        (function () {
+            var reveals = document.querySelectorAll('.reveal');
+            if (!reveals.length) return;
+            var observer = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.08 });
+            reveals.forEach(function (el) { observer.observe(el); });
+        })();
+
+        // ===== FILTER BAR =====
+        (function () {
+            var btns = document.querySelectorAll('.filter-btn');
+            var cards = document.querySelectorAll('#storiesGrid .story-card');
+
+            btns.forEach(function (btn) {
+                btn.addEventListener('click', function () {
+                    btns.forEach(function (b) { b.classList.remove('active'); });
+                    btn.classList.add('active');
+                    var filter = btn.getAttribute('data-filter');
+                    cards.forEach(function (card) {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            card.classList.remove('hidden');
+                            setTimeout(function () { card.classList.add('visible'); }, 10);
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+        })();
+
+        // ===== HERO CATEGORY PILLS (visual only) =====
+        document.querySelectorAll('.hero-cat-pill').forEach(function (pill) {
+            pill.addEventListener('click', function () {
+                document.querySelectorAll('.hero-cat-pill').forEach(function (p) { p.classList.remove('active'); });
+                pill.classList.add('active');
+                // scroll to stories section
+                var sec = document.getElementById('stories-section');
+                if (sec) sec.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            });
+        });
+
+        // ===== BACK TO TOP =====
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('.back-to-top');
+            if (!btn) return;
+            btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+
+        // ===== NEWSLETTER SUBSCRIBE =====
+        (function () {
+            var form = document.getElementById('subscribeForm');
+            var popup = document.getElementById('leafspirePopup');
+            if (!form) return;
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                var email = document.getElementById('emailInput').value;
+                try {
+                    await fetch('https://formspree.io/f/xredavrk', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: email })
+                    });
+                    popup.style.display = 'flex';
+                    form.reset();
+                } catch (err) {
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+        })();
+    </script>
+
+</body>
+</html>

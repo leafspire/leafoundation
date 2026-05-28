@@ -1,0 +1,1412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Our Causes — LeafSpire</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LeafSpire causes youth mentorship mental health community volunteering sustainability" name="keywords">
+    <meta content="Explore the causes LeafSpire champions — youth mentorship, mental health, community action, and sustainability for young people everywhere." name="description">
+
+    <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===========================
+           CSS VARIABLES
+        =========================== */
+        :root {
+            --green-deep:   #1b4332;
+            --green-mid:    #2d6a4f;
+            --green-main:   #40916c;
+            --green-soft:   #52b788;
+            --green-light:  #b7e4c7;
+            --green-pale:   #d8f3dc;
+            --green-mist:   #f0faf3;
+            --white:        #ffffff;
+            --dark:         #0d1b12;
+            --text-body:    #3a4a3e;
+            --text-muted:   #7a9080;
+            --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+            --shadow-hover: 0 20px 50px rgba(29,67,44,0.22);
+            --radius-card:  16px;
+            --transition:   all 0.36s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background: #ffffff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        .display-4, .display-6 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-weight: 700;
+        }
+
+        .text-primary   { color: var(--green-main) !important; }
+        .bg-primary     { background-color: var(--green-main) !important; }
+        .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; }
+        .btn-primary:hover { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(64,145,108,0.35); }
+        .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+        .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; }
+        .border-primary { border-color: var(--green-main) !important; }
+        .bg-secondary   { background-color: var(--green-pale) !important; }
+
+        #spinner { z-index: 9999; }
+        .spinner-grow.text-primary { color: var(--green-main) !important; }
+
+        /* ===========================
+           TOP BAR
+        =========================== */
+        .top-bar {
+            background: var(--green-deep);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+        }
+        .top-bar a { transition: var(--transition); }
+        .top-bar a:hover { color: var(--green-light) !important; }
+
+        /* ===========================
+           NAVBAR — EXACT MATCH from index.html
+        =========================== */
+        .navbar {
+            background: rgba(27, 67, 50, 0.97) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(82,183,136,0.15);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .navbar-brand img {
+            width: 62px;
+            height: 62px;
+            object-fit: contain;
+            margin-right: 10px;
+        }
+        .navbar-brand h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.2rem;
+            margin-bottom: 0 !important;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--green-soft) !important;
+        }
+        .navbar-brand h1 span { color: #fff !important; }
+        .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            padding: 1.5rem 0.85rem !important;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%; right: 50%;
+            height: 2px;
+            background: var(--green-soft);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after, .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .dropdown-menu {
+            background: var(--green-deep);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .dropdown-item {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 0.87rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
+        .btn-sm-square {
+            width: 24px; height: 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 0.7rem;
+        }
+
+        /* ===========================
+           PAGE HEADER
+        =========================== */
+        .page-header {
+            position: relative;
+            min-height: 380px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            background: var(--green-deep);
+            margin-bottom: 0 !important;
+        }
+        .page-header-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('img/ball.jpg');
+            background-size: cover;
+            background-position: center 35%;
+            opacity: 0.22;
+            transform: scale(1.04);
+            animation: headerZoom 12s ease-in-out infinite alternate;
+        }
+        @keyframes headerZoom {
+            from { transform: scale(1.04); }
+            to   { transform: scale(1.12); }
+        }
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -40px; left: -40px;
+            width: 260px; height: 260px;
+            background-image: radial-gradient(circle, rgba(82,183,136,0.35) 1.5px, transparent 1.5px);
+            background-size: 22px 22px;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .page-header::after {
+            content: '';
+            position: absolute;
+            bottom: -80px; right: -80px;
+            width: 340px; height: 340px;
+            background: radial-gradient(circle, rgba(82,183,136,0.18) 0%, transparent 70%);
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .page-header .container {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 6rem 1rem 3.5rem;
+        }
+        .page-header .display-4 {
+            font-size: clamp(2.4rem, 6vw, 4rem);
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 24px rgba(0,0,0,0.35);
+            margin-bottom: 1rem;
+            opacity: 0;
+            animation: fadeSlideDown 0.8s 0.2s forwards;
+        }
+        .page-header .page-header-sub {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 1.05rem;
+            color: rgba(255,255,255,0.72);
+            font-weight: 300;
+            max-width: 480px;
+            margin: 0 auto 1.5rem;
+            opacity: 0;
+            animation: fadeSlideDown 0.8s 0.4s forwards;
+        }
+        .breadcrumb-item a { color: rgba(255,255,255,0.7); text-decoration: none; }
+        .breadcrumb-item + .breadcrumb-item::before { color: rgba(255,255,255,0.35); }
+        .breadcrumb { opacity: 0; animation: fadeSlideDown 0.8s 0.6s forwards; }
+        @keyframes fadeSlideDown {
+            from { opacity: 0; transform: translateY(-18px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        .page-header-wave {
+            display: block;
+            width: 100%;
+            overflow: hidden;
+            line-height: 0;
+            margin-top: -2px;
+        }
+        .page-header-wave svg { display: block; }
+
+        /* ===========================
+           SECTION LABEL PILL
+        =========================== */
+        .section-label {
+            display: inline-block;
+            background: var(--green-pale);
+            color: var(--green-main);
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 999px;
+            margin-bottom: 1rem;
+        }
+
+        /* ===========================
+           INTRO BAND
+        =========================== */
+        .causes-intro-band {
+            background: var(--green-mist);
+            border-top: 3px solid var(--green-pale);
+            border-bottom: 3px solid var(--green-pale);
+            padding: 3.5rem 0;
+            text-align: center;
+        }
+        .causes-intro-band h1 {
+            font-size: clamp(1.9rem, 3.5vw, 2.7rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .causes-intro-band p {
+            color: var(--text-muted);
+            font-size: 1rem;
+            max-width: 640px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* ===========================
+           IMPACT STAT STRIP
+        =========================== */
+        .stat-strip {
+            background: var(--green-deep);
+            padding: 2.8rem 0;
+        }
+        .stat-item { text-align: center; position: relative; }
+        .stat-item + .stat-item::before {
+            content: '';
+            position: absolute;
+            left: 0; top: 15%; height: 70%;
+            width: 1px;
+            background: rgba(82,183,136,0.25);
+        }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--green-light);
+            line-height: 1;
+            margin-bottom: 0.3rem;
+        }
+        .stat-label {
+            font-size: 0.82rem;
+            font-weight: 500;
+            color: rgba(255,255,255,0.55);
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* ===========================
+           CAUSES CARDS SECTION
+        =========================== */
+        .causes-section {
+            padding: 6rem 0;
+            background: #fff;
+        }
+
+        /* Expandable Cause Card */
+        .cause-card {
+            border-radius: var(--radius-card);
+            overflow: hidden;
+            background: #fff;
+            box-shadow: 0 2px 16px rgba(29,67,44,0.08), 0 1px 3px rgba(0,0,0,0.04);
+            transition: transform 0.38s cubic-bezier(0.165, 0.84, 0.44, 1),
+                        box-shadow 0.38s cubic-bezier(0.165, 0.84, 0.44, 1);
+            position: relative;
+            transform-style: preserve-3d;
+            will-change: transform;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+        }
+        .cause-card:hover {
+            transform: translateY(-8px) scale(1.012);
+            box-shadow: 0 28px 60px rgba(29,67,44,0.18), 0 8px 20px rgba(0,0,0,0.08);
+        }
+        .cause-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--green-main), var(--green-soft));
+            z-index: 2;
+            transform-origin: left;
+            transition: transform 0.4s ease;
+            transform: scaleX(0);
+        }
+        .cause-card:hover::before,
+        .cause-card.expanded::before { transform: scaleX(1); }
+
+        .cause-card-img {
+            position: relative;
+            overflow: hidden;
+            height: 220px;
+            flex-shrink: 0;
+        }
+        .cause-card-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
+            display: block;
+        }
+        .cause-card:hover .cause-card-img img { transform: scale(1.07); }
+
+        .cause-card-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(27,67,50,0.85) 0%, transparent 55%);
+            opacity: 0;
+            transition: opacity 0.38s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.25rem;
+        }
+        .cause-card:hover .cause-card-img-overlay { opacity: 1; }
+        .cause-card-img-overlay span {
+            color: #fff;
+            font-size: 0.82rem;
+            font-weight: 600;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .cause-badge {
+            position: absolute;
+            top: 14px; left: 16px;
+            background: var(--green-deep);
+            color: var(--green-light);
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 999px;
+            z-index: 3;
+        }
+
+        /* Card body */
+        .cause-card-body {
+            padding: 1.6rem 1.6rem 1rem;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .cause-card-body h5 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 0.65rem;
+            line-height: 1.35;
+        }
+        .cause-card-body p.short-desc {
+            color: var(--text-muted);
+            font-size: 0.875rem;
+            line-height: 1.75;
+            margin-bottom: 0;
+        }
+
+        /* Expand toggle */
+        .cause-expand-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin: 1rem 1.6rem 0;
+            padding-bottom: 1rem;
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            color: var(--green-main);
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        .cause-expand-btn:hover { color: var(--green-deep); }
+        .cause-expand-btn .expand-icon {
+            width: 20px; height: 20px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: inline-flex; align-items: center; justify-content: center;
+            font-size: 0.7rem;
+            transition: transform 0.3s ease;
+        }
+        .cause-card.expanded .cause-expand-btn .expand-icon { transform: rotate(45deg); }
+
+        /* Expanded content */
+        .cause-expanded-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.55s cubic-bezier(0.4, 0, 0.2, 1),
+                        padding 0.35s ease;
+            background: var(--green-mist);
+            border-top: 1px solid var(--green-pale);
+        }
+        .cause-card.expanded .cause-expanded-content {
+            max-height: 500px;
+        }
+        .cause-expanded-inner {
+            padding: 1.5rem 1.6rem;
+        }
+        .cause-expanded-inner h6 {
+            font-size: 0.78rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--green-mid);
+            margin-bottom: 0.75rem;
+        }
+        .cause-expanded-inner p {
+            font-size: 0.855rem;
+            color: var(--text-body);
+            line-height: 1.78;
+            margin-bottom: 1rem;
+        }
+        .cause-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 7px;
+            margin-top: 0.5rem;
+        }
+        .cause-tag {
+            font-size: 0.68rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 999px;
+            border: 1.5px solid var(--green-light);
+            color: var(--green-mid);
+            background: transparent;
+        }
+
+        /* ===========================
+           FEATURED CAUSE — FULL WIDTH
+        =========================== */
+        .feature-cause {
+            background: var(--green-mist);
+            padding: 5rem 0;
+        }
+        .feature-cause-inner {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 8px 48px rgba(29,67,44,0.13);
+            display: flex;
+            min-height: 420px;
+        }
+        .feature-cause-img {
+            flex: 0 0 50%;
+            position: relative;
+            overflow: hidden;
+        }
+        .feature-cause-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s ease;
+        }
+        .feature-cause-inner:hover .feature-cause-img img { transform: scale(1.04); }
+        .feature-cause-img-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to right, transparent 60%, var(--green-mist));
+        }
+        .feature-cause-body {
+            flex: 1;
+            padding: 3rem 3rem 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: var(--green-mist);
+        }
+        .feature-cause-body h2 {
+            font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .feature-cause-body p {
+            color: var(--text-muted);
+            font-size: 0.93rem;
+            line-height: 1.85;
+            margin-bottom: 1.5rem;
+        }
+        .feature-cause-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 1.8rem;
+        }
+        .feature-tag {
+            font-size: 0.72rem;
+            font-weight: 600;
+            letter-spacing: 0.06em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 999px;
+            border: 1.5px solid var(--green-light);
+            color: var(--green-mid);
+            background: transparent;
+            transition: var(--transition);
+        }
+        .feature-tag:hover {
+            background: var(--green-main);
+            border-color: var(--green-main);
+            color: #fff;
+        }
+        @media (max-width: 767px) {
+            .feature-cause-inner { flex-direction: column; }
+            .feature-cause-img { flex: 0 0 260px; }
+            .feature-cause-img-overlay { background: linear-gradient(to top, var(--green-mist) 5%, transparent 50%); }
+            .feature-cause-body { padding: 2rem 1.5rem; }
+        }
+
+        /* ===========================
+           SUPPORT CTA (no button)
+        =========================== */
+        .support-note {
+            text-align: center;
+            padding: 3rem 1rem 1rem;
+        }
+        .support-note p {
+            font-size: 1rem;
+            color: var(--text-muted);
+            max-width: 620px;
+            margin: 0 auto;
+            line-height: 1.85;
+        }
+        .support-note a {
+            color: var(--green-main);
+            text-decoration: underline;
+            text-underline-offset: 3px;
+        }
+        .support-note a:hover { color: var(--green-deep); }
+
+        /* ===========================
+           LAYERED VISUAL STORYTELLING SECTION
+        =========================== */
+        .story-section {
+            padding: 6rem 0;
+            background: #fff;
+            position: relative;
+            overflow: hidden;
+        }
+        .story-section::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-image: radial-gradient(circle, rgba(82,183,136,0.07) 1px, transparent 1px);
+            background-size: 30px 30px;
+            pointer-events: none;
+        }
+        .story-card {
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 32px rgba(29,67,44,0.10);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 360px;
+        }
+        .story-card.reverse { direction: rtl; }
+        .story-card.reverse > * { direction: ltr; }
+        .story-card-img {
+            position: relative;
+            overflow: hidden;
+        }
+        .story-card-img img {
+            width: 100%; height: 100%;
+            object-fit: cover;
+            transition: transform 0.55s ease;
+        }
+        .story-card:hover .story-card-img img { transform: scale(1.05); }
+        .story-card-body {
+            background: var(--green-mist);
+            padding: 2.8rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .story-card-body .section-label { margin-bottom: 0.75rem; }
+        .story-card-body h3 {
+            font-size: clamp(1.3rem, 2.2vw, 1.8rem);
+            color: var(--dark);
+            margin-bottom: 1rem;
+        }
+        .story-card-body p {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            line-height: 1.82;
+        }
+        @media (max-width: 767px) {
+            .story-card, .story-card.reverse { grid-template-columns: 1fr; direction: ltr; }
+            .story-card-img { min-height: 220px; }
+            .story-card-body { padding: 2rem 1.5rem; }
+        }
+
+        /* ===========================
+           GET INVOLVED / MENTOR CTA
+        =========================== */
+        .mentor-cta {
+            background: linear-gradient(135deg, var(--green-deep) 0%, var(--green-mid) 100%);
+            padding: 5rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .mentor-cta::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.03'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        .mentor-cta h2 {
+            font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+            color: #fff;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        .mentor-cta p {
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            max-width: 580px;
+            margin: 0 auto 2rem;
+            line-height: 1.8;
+            position: relative;
+        }
+        .mentor-cta .btn {
+            position: relative;
+            padding: 0.85rem 2.4rem;
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            border-radius: 999px;
+            font-size: 0.9rem;
+        }
+
+        /* ===========================
+           SCROLL REVEAL
+        =========================== */
+        .sr {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        .sr.visible { opacity: 1; transform: translateY(0); }
+        .sr-d1 { transition-delay: 0.08s; }
+        .sr-d2 { transition-delay: 0.18s; }
+        .sr-d3 { transition-delay: 0.28s; }
+        .sr-d4 { transition-delay: 0.38s; }
+        .sr-d5 { transition-delay: 0.48s; }
+
+        /* ===========================
+           FOOTER — EXACT MATCH from index.html
+        =========================== */
+        .footer { background: var(--dark) !important; }
+        .footer h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            color: var(--green-soft) !important;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        .footer h1 span { color: #fff !important; }
+        .footer h5 {
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.88rem;
+            font-weight: 600;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.9) !important;
+        }
+        .footer .btn-square {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(82,183,136,0.12);
+            border: 1px solid rgba(82,183,136,0.25);
+            color: var(--green-light);
+            font-size: 0.78rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .footer .btn-square:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+        .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+        .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+        .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+        .footer .form-control {
+            background: rgba(255,255,255,0.07) !important;
+            border: 1px solid rgba(82,183,136,0.25) !important;
+            color: #fff !important;
+            border-radius: 8px;
+            font-size: 0.88rem;
+        }
+        .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+        .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+        .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 1.25rem 0;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.35);
+        }
+        .copyright a { color: var(--green-light); text-decoration: none; }
+        .copyright a:hover { color: var(--green-soft); }
+
+        /* Back to top */
+        .back-to-top {
+            background: var(--green-main) !important;
+            border: none !important;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.4);
+            border-radius: 50% !important;
+            width: 46px; height: 46px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); }
+
+        /* ===========================
+           RESPONSIVE
+        =========================== */
+        @media (max-width: 991.98px) {
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-link { padding: 0.6rem 1rem !important; }
+            .nav-link::after { display: none; }
+            .stat-item + .stat-item::before { display: none; }
+        }
+        @media (max-width: 575.98px) {
+            .cause-card-img { height: 180px; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <!-- Navbar Start -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/leafspirelogoremovebg.png" alt="LeafSpire Logo">
+                <h1 class="fw-bold mb-0">Leaf<span>spire</span></h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="causes.html" class="nav-item nav-link active">Causes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Our Programmes</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Get Involved</a>
+                            <a href="404.html" class="dropdown-item">Stories</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                </div>
+                    </a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Page Header -->
+    <div class="page-header mb-0">
+        <div class="page-header-bg"></div>
+        <div class="container">
+            <div class="section-label" style="color: var(--green-soft); background: rgba(82,183,136,0.15);">LeafSpire NGO</div>
+            <h1 class="display-4 text-white mb-3">Our Causes</h1>
+            <p class="page-header-sub">The issues that shape our mission — and the young people we exist to serve.</p>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb justify-content-center mb-0">
+                    <li class="breadcrumb-item"><a class="text-white" href="index.html">Home</a></li>
+                    <li class="breadcrumb-item text-primary active" aria-current="page">Causes</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Wavy divider -->
+    <div class="page-header-wave" style="background: var(--green-deep);">
+        <svg viewBox="0 0 1440 54" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+            <path d="M0 27 C360 54 1080 0 1440 27 L1440 54 L0 54 Z" fill="#ffffff"/>
+        </svg>
+    </div>
+
+
+    <!-- Intro Band -->
+    <div class="causes-intro-band">
+        <div class="container">
+            <div class="sr">
+                <span class="section-label">Why We Exist</span>
+                <h1>Every Young Person Deserves<br>the Chance to Thrive</h1>
+                <p>LeafSpire works at the intersection of mentorship, mental health, community action, and sustainability to ensure no young person is left behind — regardless of where they come from. These are the causes that drive every programme, every partnership, and every volunteer hour we invest.</p>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Impact Stats -->
+    <div class="stat-strip">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-6 col-md-3 stat-item sr sr-d1">
+                    <div class="stat-number">500<span style="color: var(--green-soft);">+</span></div>
+                    <div class="stat-label">Youth Reached</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item sr sr-d2">
+                    <div class="stat-number">120<span style="color: var(--green-soft);">+</span></div>
+                    <div class="stat-label">Active Mentors</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item sr sr-d3">
+                    <div class="stat-number">40<span style="color: var(--green-soft);">+</span></div>
+                    <div class="stat-label">Community Events</div>
+                </div>
+                <div class="col-6 col-md-3 stat-item sr sr-d4">
+                    <div class="stat-number">6</div>
+                    <div class="stat-label">Focus Areas</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Causes Cards Section -->
+    <div class="causes-section">
+        <div class="container">
+            <div class="text-center mb-5 sr">
+                <span class="section-label">Where We Show Up</span>
+                <h1 class="display-6 mb-3" style="font-size: clamp(1.7rem, 3vw, 2.4rem);">Walking alongside<br> Young people</h1>
+                <p style="color: var(--text-muted); max-width: 520px; margin: 0 auto; font-size: 0.95rem;">Click any cause card to explore the impact, vision, and activities behind each focus area.</p>
+            </div>
+
+            <div class="row g-4 justify-content-center">
+
+                <!-- Cause 1: Mentorship & Leadership -->
+                <div class="col-lg-4 col-md-6 sr sr-d1">
+                    <div class="cause-card" onclick="toggleCard(this)">
+                        <div class="cause-card-img">
+                            <span class="cause-badge">Mentorship</span>
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?w=700&q=80" alt="Youth mentorship session" loading="lazy">
+                            <div class="cause-card-img-overlay">
+                                <span>Tap to Explore <span style="width:20px;height:20px;border-radius:50%;background:var(--green-soft);display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;"><i class="fa fa-arrow-right"></i></span></span>
+                            </div>
+                        </div>
+                        <div class="cause-card-body">
+                            <h5>Youth Mentorship &amp; Leadership</h5>
+                            <p class="short-desc">Connecting ambitious young people with experienced mentors who guide them through career choices, build confidence, and cultivate purposeful leadership skills.</p>
+                        </div>
+                        <button class="cause-expand-btn" aria-label="Expand cause details">
+                            Learn More
+                            <span class="expand-icon"><i class="fa fa-plus" style="font-size:0.6rem;"></i></span>
+                        </button>
+                        <div class="cause-expanded-content">
+                            <div class="cause-expanded-inner">
+                                <h6>The Vision</h6>
+                                <p>We pair youth aged 16–30 with seasoned professionals and community leaders across multiple sectors. Through structured one-on-one sessions, group workshops, and real-world project work, participants gain the clarity, confidence, and connections they need to lead with purpose.</p>
+                                <h6>Impact &amp; Activities</h6>
+                                <p>Participants engage in career guidance conversations, leadership training bootcamps, and peer mentorship circles. Alumni have gone on to launch startups, secure scholarships, and mentor others in their own communities — multiplying the cycle of impact.</p>
+                                <div class="cause-tags">
+                                    <span class="cause-tag">Career Guidance</span>
+                                    <span class="cause-tag">Leadership Training</span>
+                                    <span class="cause-tag">Peer Circles</span>
+                                    <span class="cause-tag">Workshops</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cause 2: Mental Health -->
+                <div class="col-lg-4 col-md-6 sr sr-d2">
+                    <div class="cause-card" onclick="toggleCard(this)">
+                        <div class="cause-card-img">
+                            <span class="cause-badge">Wellbeing</span>
+                            <img src="img/j1.jpg" alt="Mental health support" loading="lazy">
+                            <div class="cause-card-img-overlay">
+                                <span>Tap to Explore <span style="width:20px;height:20px;border-radius:50%;background:var(--green-soft);display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;"><i class="fa fa-arrow-right"></i></span></span>
+                            </div>
+                        </div>
+                        <div class="cause-card-body">
+                            <h5>Mental Health &amp; Emotional Wellbeing</h5>
+                            <p class="short-desc">Creating safe, stigma-free spaces where youth can speak openly, access peer support, and build the emotional resilience that underpins every dimension of their growth.</p>
+                        </div>
+                        <button class="cause-expand-btn" aria-label="Expand cause details">
+                            Learn More
+                            <span class="expand-icon"><i class="fa fa-plus" style="font-size:0.6rem;"></i></span>
+                        </button>
+                        <div class="cause-expanded-content">
+                            <div class="cause-expanded-inner">
+                                <h6>The Vision</h6>
+                                <p>Mental health is not a luxury — it is the foundation of everything else. We create peer-supported environments where young people feel safe discussing their struggles without judgment, gaining tools to navigate life's pressures.</p>
+                                <h6>Impact &amp; Activities</h6>
+                                <p>From facilitated listening circles and wellness workshops to mental health awareness campaigns, our programmes break stigma while building lasting community bonds. Participants leave with emotional vocabulary, coping skills, and a network of peers who care.</p>
+                                <div class="cause-tags">
+                                    <span class="cause-tag">Peer Support</span>
+                                    <span class="cause-tag">Wellness Circles</span>
+                                    <span class="cause-tag">Stigma Reduction</span>
+                                    <span class="cause-tag">Resilience Building</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cause 3: Community Volunteering -->
+                <div class="col-lg-4 col-md-6 sr sr-d3">
+                    <div class="cause-card" onclick="toggleCard(this)">
+                        <div class="cause-card-img">
+                            <span class="cause-badge">Community</span>
+                            <img src="img/cute.jpg" alt="Youth community volunteering" loading="lazy">
+                            <div class="cause-card-img-overlay">
+                                <span>Tap to Explore <span style="width:20px;height:20px;border-radius:50%;background:var(--green-soft);display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;"><i class="fa fa-arrow-right"></i></span></span>
+                            </div>
+                        </div>
+                        <div class="cause-card-body">
+                            <h5>Community Impact &amp; Volunteering</h5>
+                            <p class="short-desc">Youth-led clean-up drives, tree planting campaigns, and neighbourhood outreach initiatives that transform local environments while nurturing civic responsibility.</p>
+                        </div>
+                        <button class="cause-expand-btn" aria-label="Expand cause details">
+                            Learn More
+                            <span class="expand-icon"><i class="fa fa-plus" style="font-size:0.6rem;"></i></span>
+                        </button>
+                        <div class="cause-expanded-content">
+                            <div class="cause-expanded-inner">
+                                <h6>The Vision</h6>
+                                <p>When young people invest in their communities, they discover a sense of ownership and belonging that no classroom can teach. Our volunteering initiatives turn passive observers into active architects of their neighbourhoods.</p>
+                                <h6>Impact &amp; Activities</h6>
+                                <p>Community clean-up drives, school outreach, mentorship of younger peers, neighbourhood gardens, and collaborative public space projects all form part of this programme. Youth develop civic identity alongside tangible, visible impact.</p>
+                                <div class="cause-tags">
+                                    <span class="cause-tag">Clean-up Drives</span>
+                                    <span class="cause-tag">Tree Planting</span>
+                                    <span class="cause-tag">School Outreach</span>
+                                    <span class="cause-tag">Civic Action</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cause 4: Sustainability & SDGs -->
+                <div class="col-lg-4 col-md-6 sr sr-d4">
+                    <div class="cause-card" onclick="toggleCard(this)">
+                        <div class="cause-card-img">
+                            <span class="cause-badge">Sustainability</span>
+                            <img src="https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?w=700&q=80" alt="Environmental sustainability" loading="lazy">
+                            <div class="cause-card-img-overlay">
+                                <span>Tap to Explore <span style="width:20px;height:20px;border-radius:50%;background:var(--green-soft);display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;"><i class="fa fa-arrow-right"></i></span></span>
+                            </div>
+                        </div>
+                        <div class="cause-card-body">
+                            <h5>SDG Engagement &amp; Environment</h5>
+                            <p class="short-desc">Educating, mobilising, and equipping youth with climate literacy and environmental awareness — turning them into committed stewards and champions of the UN SDGs.</p>
+                        </div>
+                        <button class="cause-expand-btn" aria-label="Expand cause details">
+                            Learn More
+                            <span class="expand-icon"><i class="fa fa-plus" style="font-size:0.6rem;"></i></span>
+                        </button>
+                        <div class="cause-expanded-content">
+                            <div class="cause-expanded-inner">
+                                <h6>The Vision</h6>
+                                <p>The climate crisis is a youth crisis — young people will inherit both its consequences and its solutions. We arm young leaders with the knowledge, frameworks, and motivation to advocate for planetary health in their communities and beyond.</p>
+                                <h6>Impact &amp; Activities</h6>
+                                <p>SDG-aligned workshops, environmental debate forums, climate storytelling projects, and hands-on conservation activities give participants the tools to lead local environmental change. Youth who complete this programme become vocal, informed climate advocates.</p>
+                                <div class="cause-tags">
+                                    <span class="cause-tag">Climate Literacy</span>
+                                    <span class="cause-tag">SDG Advocacy</span>
+                                    <span class="cause-tag">Conservation</span>
+                                    <span class="cause-tag">Environmental Stewardship</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cause 5: Social Inclusion -->
+                <div class="col-lg-4 col-md-6 sr sr-d5">
+                    <div class="cause-card" onclick="toggleCard(this)">
+                        <div class="cause-card-img">
+                            <span class="cause-badge">Inclusion</span>
+                            <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d?w=700&q=80" alt="Social inclusion" loading="lazy">
+                            <div class="cause-card-img-overlay">
+                                <span>Tap to Explore <span style="width:20px;height:20px;border-radius:50%;background:var(--green-soft);display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;"><i class="fa fa-arrow-right"></i></span></span>
+                            </div>
+                        </div>
+                        <div class="cause-card-body">
+                            <h5>Social Inclusion &amp; Equal Access</h5>
+                            <p class="short-desc">Ensuring no young person is excluded because of poverty, gender, disability, or geography — creating accessible pathways to education, skills, and opportunity for all.</p>
+                        </div>
+                        <button class="cause-expand-btn" aria-label="Expand cause details">
+                            Learn More
+                            <span class="expand-icon"><i class="fa fa-plus" style="font-size:0.6rem;"></i></span>
+                        </button>
+                        <div class="cause-expanded-content">
+                            <div class="cause-expanded-inner">
+                                <h6>The Vision</h6>
+                                <p>Access to opportunity should not depend on circumstance of birth. We actively design our programmes to welcome and centre young people from underserved and marginalised backgrounds — removing every barrier we can identify.</p>
+                                <h6>Impact &amp; Activities</h6>
+                                <p>Inclusive design in all our programmes, outreach to under-resourced communities, accessible mental health resources, and targeted scholarships ensure that vulnerability is never a barrier to growth. Long-term, our alumni become bridges of access for others.</p>
+                                <div class="cause-tags">
+                                    <span class="cause-tag">Equal Access</span>
+                                    <span class="cause-tag">Inclusive Design</span>
+                                    <span class="cause-tag">Community Outreach</span>
+                                    <span class="cause-tag">Scholarships</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cause 6: Education & Skills -->
+                <div class="col-lg-4 col-md-6 sr sr-d1">
+                    <div class="cause-card" onclick="toggleCard(this)">
+                        <div class="cause-card-img">
+                            <span class="cause-badge">Education</span>
+                            <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="Youth education" loading="lazy">
+                            <div class="cause-card-img-overlay">
+                                <span>Tap to Explore <span style="width:20px;height:20px;border-radius:50%;background:var(--green-soft);display:inline-flex;align-items:center;justify-content:center;font-size:0.6rem;"><i class="fa fa-arrow-right"></i></span></span>
+                            </div>
+                        </div>
+                        <div class="cause-card-body">
+                            <h5>Education &amp; Skills Development</h5>
+                            <p class="short-desc">From digital literacy to entrepreneurship training, we close the skills gap — giving youth the practical knowledge and financial awareness to build independent, sustainable futures.</p>
+                        </div>
+                        <button class="cause-expand-btn" aria-label="Expand cause details">
+                            Learn More
+                            <span class="expand-icon"><i class="fa fa-plus" style="font-size:0.6rem;"></i></span>
+                        </button>
+                        <div class="cause-expanded-content">
+                            <div class="cause-expanded-inner">
+                                <h6>The Vision</h6>
+                                <p>Skills are the bridge between potential and independence. We invest in practical, relevant, future-facing skills development that meets young people where the economy actually is — not where it was a decade ago.</p>
+                                <h6>Impact &amp; Activities</h6>
+                                <p>Digital literacy bootcamps, entrepreneurship incubation, financial education workshops, CV clinics, and mock interview sessions prepare youth for the real world. Participants leave ready to enter employment, launch ventures, or pursue further education with confidence.</p>
+                                <div class="cause-tags">
+                                    <span class="cause-tag">Digital Literacy</span>
+                                    <span class="cause-tag">Entrepreneurship</span>
+                                    <span class="cause-tag">Financial Education</span>
+                                    <span class="cause-tag">Career Readiness</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Support Note (no donate button) -->
+            <div class="support-note sr">
+                <p>If you would like to support any of these causes, collaborate with us, mentor young people, or contribute in meaningful ways, please <a href="contact.html">contact us directly</a> — we would love to hear from you.</p>
+            </div>
+
+        </div>
+    </div>
+    <!-- Causes Cards End -->
+
+
+    <!-- Visual Storytelling Section -->
+    <div class="story-section">
+        <div class="container">
+            <div class="text-center mb-5 sr">
+                <span class="section-label">Stories of Change</span>
+                <h1 class="display-6" style="font-size: clamp(1.7rem, 3vw, 2.4rem);">What Change Looks Like<br>in Practice</h1>
+            </div>
+
+            <div class="story-card mb-4 sr">
+                <div class="story-card-img">
+                    <img src="img/talk.jpg" alt="Mentorship workshop" loading="lazy">
+                </div>
+                <div class="story-card-body">
+                    <span class="section-label">Mentorship in Action</span>
+                    <h3>One Conversation Can Change Everything</h3>
+                    <p>Our mentorship sessions are not lectures — they are structured conversations between two people, built on trust. Mentors bring their experience; participants bring their questions, ambitions, and real challenges. The outcomes are transformative: career pivots, scholarship applications, first businesses launched, and most importantly, young people who now believe in their own capacity to lead.</p>
+                </div>
+            </div>
+
+            <div class="story-card reverse sr">
+                <div class="story-card-img">
+                    <img src="img/talk2.jpg" alt="Mental health circle" loading="lazy">
+                </div>
+                <div class="story-card-body">
+                    <span class="section-label">Mental Health Support</span>
+                    <h3>Safe Spaces Build Stronger Communities</h3>
+                    <p>When a young person feels genuinely heard for the first time, something shifts. Our peer support circles and emotional resilience workshops have helped hundreds of young people break cycles of isolation, develop healthier coping strategies, and rediscover a sense of hope. Mental wellness is not separate from our other work — it is the foundation of all of it.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Featured Spotlight -->
+    <div class="feature-cause" id="mentorship">
+        <div class="container">
+            <div class="text-center mb-5 sr">
+                <span class="section-label">Programme Spotlight</span>
+                <h2 class="display-6" style="font-size: clamp(1.6rem, 2.8vw, 2.2rem);">Spotlight: Youth Mentorship Programme</h2>
+            </div>
+            <div class="feature-cause-inner sr">
+                <div class="feature-cause-img">
+                    <img src="img/ok1.jpg" alt="Young people in a mentorship workshop" loading="lazy">
+                    <div class="feature-cause-img-overlay"></div>
+                </div>
+                <div class="feature-cause-body">
+                    <span class="section-label">Active Programme</span>
+                    <h2>Building Tomorrow's Leaders — One Conversation at a Time</h2>
+                    <p>Our flagship mentorship programme pairs young people aged 16–30 with professionals and community leaders across multiple sectors. Through structured one-on-one sessions, group workshops, and real-world project work, participants gain the clarity, confidence, and connections they need to navigate life's crossroads — and lead with purpose.</p>
+                    <p>Since our first cohort, we have seen participants start businesses, secure scholarships, and go on to mentor others in their own communities.</p>
+                    <div class="feature-cause-tags">
+                        <span class="feature-tag">Career Guidance</span>
+                        <span class="feature-tag">Leadership Training</span>
+                        <span class="feature-tag">Peer Circles</span>
+                        <span class="feature-tag">Workshops</span>
+                        <span class="feature-tag">Globally Inclusive</span>
+                    </div>
+                    <div class="d-flex gap-3 flex-wrap">
+                        <a class="btn btn-primary py-2 px-4" href="contact.html">
+                            Get Involved
+                            <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                        <a class="btn btn-outline-primary py-2 px-4" href="service.html">
+                            Learn More
+                            <div class="d-inline-flex btn-sm-square bg-primary text-white rounded-circle ms-2">
+                                <i class="fa fa-arrow-right"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Get Involved / Apply to Mentor CTA -->
+    <div class="mentor-cta">
+        <div class="container">
+            <div class="sr">
+                <div class="section-label" style="background: rgba(82,183,136,0.15); color: var(--green-light); margin-bottom: 1.25rem;">Get Involved</div>
+                <h2>Ready to Champion a Cause?</h2>
+                <p>Whether you volunteer your time, lend your expertise as a mentor, or bring your skills to our programmes — every act of meaningful support helps young people and communities around the world grow into the leaders the future needs.</p>
+                <div class="d-flex gap-3 justify-content-center flex-wrap">
+                    <a class="btn btn-primary py-2 px-4" href="contact.html">
+                        Apply to Become a Mentor
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                    <a class="btn btn-outline-light py-2 px-4" href="contact.html">
+                        Volunteer With Us
+                        <div class="d-inline-flex btn-sm-square bg-white text-primary rounded-circle ms-2">
+                            <i class="fa fa-arrow-right"></i>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Footer — Exact match from index.html with Formspree -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-0 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold mb-2" style="font-family: 'Italianno', cursive; color: var(--green-soft);">
+                        Leaf<span style="color: #fff;">spire</span>
+                    </h1>
+                    <p style="font-size: 0.82rem; color: rgba(255,255,255,0.45); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Youth Today · Leaders Tomorrow</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact</h5>
+                    <p><i class="fa fa-phone me-3" style="color: var(--green-soft);"></i>+254 701 114562</p>
+                    <p><i class="fa fa-envelope me-3" style="color: var(--green-soft);"></i>leafspirefoundation@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Programmes</a>
+                    <a class="btn btn-link" href="terms.html">Terms &amp; Conditions</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay Connected</h5>
+                    <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+                    <form id="subscribeForm">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5 text-light" type="email" id="emailInput" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </form>
+                    <small class="text-muted d-block mt-2">We only send meaningful updates. No spam.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="https://htmlcodex.com">riva.https</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Popup -->
+    <div id="leafspirePopup" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.6);backdrop-filter:blur(6px);justify-content:center;align-items:center;z-index:9999;">
+        <div style="background:#fff;padding:30px;border-radius:16px;text-align:center;width:90%;max-width:420px;animation:popIn 0.25s ease;">
+            <div style="font-size:42px;margin-bottom:10px;">💚</div>
+            <h3 style="color:#1f6f4a;font-family:'Playfair Display',serif;">Thank You for Joining LeafSpire</h3>
+            <p style="font-size:14px;color:#444;">You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+            <button onclick="document.getElementById('leafspirePopup').style.display='none'" style="margin-top:15px;padding:10px 20px;border:none;background:#1f6f4a;color:white;border-radius:8px;cursor:pointer;font-family:'DM Sans',sans-serif;">Close</button>
+        </div>
+    </div>
+    <style>@keyframes popIn { from{transform:scale(0.85);opacity:0} to{transform:scale(1);opacity:1} }</style>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display:none;"><i class="bi bi-arrow-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // ===== SCROLL REVEAL =====
+        (function () {
+            var els = document.querySelectorAll('.sr');
+            if (!('IntersectionObserver' in window)) {
+                els.forEach(function(el){ el.classList.add('visible'); });
+                return;
+            }
+            var obs = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        obs.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.10 });
+            els.forEach(function (el) { obs.observe(el); });
+        })();
+
+        // ===== EXPANDABLE CAUSE CARDS =====
+        function toggleCard(card) {
+            var isExpanded = card.classList.contains('expanded');
+            // Close all cards first
+            document.querySelectorAll('.cause-card.expanded').forEach(function(c) {
+                c.classList.remove('expanded');
+            });
+            // If it wasn't expanded, expand it
+            if (!isExpanded) {
+                card.classList.add('expanded');
+                // Scroll card into view gently
+                setTimeout(function() {
+                    card.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                }, 100);
+            }
+        }
+
+        // ===== 3D TILT ON CAUSE CARDS =====
+        document.querySelectorAll('.cause-card').forEach(function (card) {
+            card.addEventListener('mousemove', function (e) {
+                if (card.classList.contains('expanded')) return;
+                var rect = card.getBoundingClientRect();
+                var x = e.clientX - rect.left;
+                var y = e.clientY - rect.top;
+                var cx = rect.width / 2;
+                var cy = rect.height / 2;
+                var rotX = ((y - cy) / cy) * -4;
+                var rotY = ((x - cx) / cx) * 4;
+                card.style.transform = 'translateY(-8px) rotateX(' + rotX + 'deg) rotateY(' + rotY + 'deg) scale(1.012)';
+            });
+            card.addEventListener('mouseleave', function () {
+                card.style.transform = '';
+            });
+        });
+
+        // ===== BACK TO TOP =====
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('.back-to-top');
+            if (!btn) return;
+            btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        }, { passive: true });
+
+        // ===== FORMSPREE NEWSLETTER =====
+        var form = document.getElementById('subscribeForm');
+        if (form) {
+            form.addEventListener('submit', async function (e) {
+                e.preventDefault();
+                var email = document.getElementById('emailInput').value;
+                try {
+                    await fetch('https://formspree.io/f/xredavrk', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ email: email })
+                    });
+                    document.getElementById('leafspirePopup').style.display = 'flex';
+                    form.reset();
+                } catch (err) {
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+        }
+    </script>
+
+</body>
+</html>

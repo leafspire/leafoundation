@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Contact Us — LeafSpire | Youth Today, Leaders Tomorrow</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="LeafSpire contact Kenya youth NGO mentorship mental health" name="keywords">
+    <meta content="Get in touch with LeafSpire — Kenya's youth empowerment initiative." name="description">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="img/leafspirelogo.png">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <style>
+        /* ===== CSS VARIABLES (matches index exactly) ===== */
+        :root {
+            --green-deep:   #1b4332;
+            --green-mid:    #2d6a4f;
+            --green-main:   #40916c;
+            --green-soft:   #52b788;
+            --green-light:  #b7e4c7;
+            --green-pale:   #d8f3dc;
+            --green-mist:   #f0faf3;
+            --white:        #ffffff;
+            --dark:         #0d1b12;
+            --text-body:    #3a4a3e;
+            --text-muted:   #7a9080;
+            --shadow-card:  0 4px 24px rgba(29,67,44,0.10);
+            --shadow-hover: 0 12px 36px rgba(29,67,44,0.18);
+            --radius-card:  14px;
+            --transition:   all 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            color: var(--text-body);
+            background: #fff;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1, h2, h3, h4, h5 {
+            font-family: 'Playfair Display', Georgia, serif;
+            color: var(--dark);
+            line-height: 1.25;
+        }
+
+        /* Bootstrap overrides */
+        .text-primary   { color: var(--green-main) !important; }
+        .bg-primary     { background-color: var(--green-main) !important; }
+        .btn-primary    { background-color: var(--green-main); border-color: var(--green-main); color: #fff; font-weight: 600; letter-spacing: 0.03em; }
+        .btn-primary:hover, .btn-primary:focus { background-color: var(--green-deep); border-color: var(--green-deep); transform: translateY(-1px); box-shadow: 0 6px 20px rgba(64,145,108,0.35); }
+        .btn-outline-primary { border-color: var(--green-main); color: var(--green-main); font-weight: 600; }
+        .btn-outline-primary:hover { background-color: var(--green-main); border-color: var(--green-main); color: #fff; transform: translateY(-1px); }
+        .bg-secondary   { background-color: var(--green-pale) !important; }
+
+        /* Spinner */
+        #spinner { z-index: 9999; }
+        .spinner-grow.text-primary { color: var(--green-main) !important; }
+
+        /* Top bar */
+        .top-bar {
+            background: var(--green-deep);
+            padding: 8px 0;
+            font-size: 0.82rem;
+            letter-spacing: 0.02em;
+        }
+        .top-bar a { transition: var(--transition); }
+        .top-bar a:hover { color: var(--green-light) !important; }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(27, 67, 50, 0.97) !important;
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(82,183,136,0.15);
+            padding: 0 2rem;
+            transition: var(--transition);
+        }
+        .navbar-brand h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.2rem;
+            margin-bottom: 0 !important;
+            line-height: 1;
+            letter-spacing: 0.02em;
+            color: var(--green-soft) !important;
+        }
+        .navbar-brand h1 span { color: #fff !important; }
+        .nav-link {
+            color: rgba(255,255,255,0.82) !important;
+            font-weight: 500;
+            font-size: 0.9rem;
+            letter-spacing: 0.04em;
+            padding: 1.5rem 0.85rem !important;
+            position: relative;
+            transition: var(--transition);
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 50%; right: 50%;
+            height: 2px;
+            background: var(--green-soft);
+            transition: var(--transition);
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .dropdown-menu {
+            background: var(--green-deep);
+            border: 1px solid rgba(82,183,136,0.2);
+            border-radius: 8px;
+            padding: 0.5rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+        }
+        .dropdown-item {
+            color: rgba(255,255,255,0.78) !important;
+            font-size: 0.87rem;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            transition: var(--transition);
+        }
+        .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
+        .btn-sm-square {
+            width: 24px; height: 24px;
+            display: inline-flex; align-items: center; justify-content: center;
+            border-radius: 50%;
+            font-size: 0.7rem;
+        }
+
+        /* ===========================
+           CONTACT HERO
+        =========================== */
+        .contact-hero {
+            position: relative;
+            min-height: 420px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: var(--green-deep);
+        }
+        .contact-hero__bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1600&q=80&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center 30%;
+            opacity: 0.22;
+            transform: scale(1.04);
+            transition: transform 8s ease;
+        }
+        .contact-hero:hover .contact-hero__bg { transform: scale(1.0); }
+        .contact-hero__overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(27,67,50,0.88) 0%, rgba(45,106,79,0.65) 60%, rgba(0,0,0,0.3) 100%);
+        }
+        .contact-hero__content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 7rem 1rem 4rem;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(28px);
+            animation: heroReveal 0.9s 0.2s cubic-bezier(0.4,0,0.2,1) forwards;
+        }
+        @keyframes heroReveal {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .contact-hero__eyebrow {
+            display: inline-block;
+            background: rgba(82,183,136,0.18);
+            border: 1px solid rgba(82,183,136,0.35);
+            color: var(--green-light);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.16em;
+            text-transform: uppercase;
+            padding: 6px 20px;
+            border-radius: 999px;
+            margin-bottom: 1.2rem;
+        }
+        .contact-hero__title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.2rem, 5vw, 3.6rem);
+            font-weight: 700;
+            color: #fff;
+            text-shadow: 0 2px 20px rgba(0,0,0,0.3);
+            margin-bottom: 1rem;
+            line-height: 1.15;
+        }
+        .contact-hero__title em {
+            font-style: italic;
+            color: var(--green-light);
+        }
+        .contact-hero__sub {
+            color: rgba(255,255,255,0.65);
+            font-size: 1rem;
+            max-width: 480px;
+            margin: 0 auto 1.8rem;
+            font-weight: 300;
+        }
+        .contact-hero__breadcrumb { list-style: none; padding: 0; margin: 0; display: flex; justify-content: center; gap: 0.5rem; }
+        .contact-hero__breadcrumb li { font-size: 0.82rem; color: rgba(255,255,255,0.45); }
+        .contact-hero__breadcrumb li a { color: rgba(255,255,255,0.6); text-decoration: none; transition: var(--transition); }
+        .contact-hero__breadcrumb li a:hover { color: var(--green-light); }
+        .contact-hero__breadcrumb li.active { color: var(--green-soft); }
+        .contact-hero__breadcrumb li:not(:last-child)::after { content: '/'; margin-left: 0.5rem; }
+
+        /* ===========================
+           CONTACT INFO CARDS
+        =========================== */
+        .contact-info-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+            margin-top: -2.5rem;
+            position: relative;
+            z-index: 10;
+            margin-bottom: 0;
+        }
+        @media (max-width: 767px) {
+            .contact-info-row { grid-template-columns: 1fr; margin-top: 2rem; }
+        }
+        @media (min-width: 768px) and (max-width: 991px) {
+            .contact-info-row { grid-template-columns: 1fr 1fr; }
+        }
+
+        .info-card {
+            background: #fff;
+            border-radius: var(--radius-card);
+            padding: 2rem 1.5rem;
+            text-align: center;
+            box-shadow: var(--shadow-card);
+            border: 1px solid rgba(183,228,199,0.35);
+            transition: var(--transition);
+            opacity: 0;
+            transform: translateY(24px);
+        }
+        .info-card.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        .info-card:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-5px);
+        }
+        .info-card__icon {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.1rem;
+            transition: var(--transition);
+        }
+        .info-card:hover .info-card__icon {
+            background: var(--green-main);
+        }
+        .info-card:hover .info-card__icon svg path,
+        .info-card:hover .info-card__icon svg circle,
+        .info-card:hover .info-card__icon svg polyline,
+        .info-card:hover .info-card__icon svg line,
+        .info-card:hover .info-card__icon svg rect {
+            stroke: #fff;
+        }
+        .info-card h5 {
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.4rem;
+            color: var(--dark);
+        }
+        .info-card p {
+            font-size: 0.88rem;
+            color: var(--text-muted);
+            margin: 0;
+            line-height: 1.6;
+        }
+        .info-card a {
+            color: var(--green-main);
+            text-decoration: none;
+            transition: var(--transition);
+            font-weight: 500;
+        }
+        .info-card a:hover { color: var(--green-deep); }
+
+        /* ===========================
+           SECTION LABEL PILL
+        =========================== */
+        .section-label {
+            display: inline-block;
+            background-color: var(--green-pale);
+            color: var(--green-main);
+            font-size: 0.78rem;
+            font-weight: 600;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 999px;
+            margin-bottom: 0.85rem;
+        }
+
+        /* ===========================
+           FORM SECTION
+        =========================== */
+        .contact-section { padding: 6rem 0; background: #fff; }
+
+        .form-card {
+            background: #fff;
+            border-radius: 18px;
+            padding: 3rem 2.5rem;
+            box-shadow: 0 8px 48px rgba(29,67,44,0.12);
+            border: 1px solid rgba(183,228,199,0.4);
+        }
+        @media (max-width: 575px) { .form-card { padding: 2rem 1.25rem; } }
+
+        .form-card .display-6 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        /* Floating label upgrade */
+        .form-floating > .form-control {
+            border: none;
+            border-bottom: 2px solid rgba(64,145,108,0.25);
+            border-radius: 8px 8px 0 0;
+            background: var(--green-mist);
+            padding: 1rem 1rem 0.5rem;
+            font-size: 0.92rem;
+            color: var(--dark);
+            transition: var(--transition);
+        }
+        .form-floating > .form-control:focus {
+            outline: none;
+            box-shadow: none;
+            border-bottom-color: var(--green-main);
+            background: #fff;
+        }
+        .form-floating > label {
+            color: var(--text-muted);
+            font-size: 0.88rem;
+            padding: 1rem;
+            transition: var(--transition);
+        }
+        .form-floating textarea.form-control { min-height: 130px; resize: none; }
+
+        /* Animated underline accent */
+        .input-wrap { position: relative; }
+        .input-wrap::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 2px;
+            background: linear-gradient(90deg, var(--green-main), var(--green-soft));
+            transition: width 0.35s ease;
+            border-radius: 0 0 2px 2px;
+        }
+        .input-wrap:focus-within::after { width: 100%; }
+
+        /* Submit button */
+        .btn-submit {
+            background: linear-gradient(135deg, var(--green-main) 0%, var(--green-mid) 100%);
+            border: none;
+            border-radius: 10px;
+            color: #fff;
+            font-weight: 600;
+            font-size: 1rem;
+            padding: 0.85rem 2rem;
+            letter-spacing: 0.03em;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .btn-submit::before {
+            content: '';
+            position: absolute; inset: 0;
+            background: linear-gradient(135deg, var(--green-soft), var(--green-main));
+            opacity: 0;
+            transition: opacity 0.35s;
+        }
+        .btn-submit:hover::before { opacity: 1; }
+        .btn-submit:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(64,145,108,0.40);
+        }
+        .btn-submit span, .btn-submit .btn-sm-square { position: relative; z-index: 1; }
+        .btn-submit .btn-sm-square { background: rgba(255,255,255,0.2); }
+
+        /* Success message */
+        .form-success {
+            display: none;
+            text-align: center;
+            padding: 2rem;
+        }
+        .form-success.show { display: block; }
+        .form-success__icon {
+            width: 70px; height: 70px;
+            border-radius: 50%;
+            background: var(--green-pale);
+            display: flex; align-items: center; justify-content: center;
+            margin: 0 auto 1.2rem;
+        }
+
+        /* ===========================
+           SCROLL REVEAL
+        =========================== */
+        .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.6s ease, transform 0.6s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.22s; }
+        .reveal-delay-3 { transition-delay: 0.34s; }
+
+        /* ===========================
+           FOOTER (matches index exactly)
+        =========================== */
+        .footer { background: var(--dark) !important; }
+        .footer h1 {
+            font-family: 'Italianno', cursive;
+            font-size: 2.4rem;
+            color: var(--green-soft) !important;
+            margin-bottom: 0.5rem;
+            line-height: 1;
+        }
+        .footer h1 span { color: #fff !important; }
+        .footer h5 { font-family: 'DM Sans', sans-serif; font-size: 0.88rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.9) !important; }
+        .footer .btn-square {
+            width: 36px; height: 36px;
+            border-radius: 50%;
+            background: rgba(82,183,136,0.12);
+            border: 1px solid rgba(82,183,136,0.25);
+            color: var(--green-light);
+            font-size: 0.78rem;
+            display: inline-flex; align-items: center; justify-content: center;
+            transition: var(--transition);
+        }
+        .footer .btn-square:hover { background: var(--green-main); border-color: var(--green-main); color: #fff; transform: scale(1.1); }
+        .footer .btn-link { color: rgba(255,255,255,0.55) !important; font-size: 0.88rem; padding: 0.25rem 0; text-decoration: none; display: block; transition: var(--transition); }
+        .footer .btn-link:hover { color: var(--green-light) !important; padding-left: 6px; }
+        .footer p { font-size: 0.88rem; color: rgba(255,255,255,0.5); }
+        .footer .form-control {
+            background: rgba(255,255,255,0.07) !important;
+            border: 1px solid rgba(82,183,136,0.25) !important;
+            color: #fff !important;
+            border-radius: 8px;
+            font-size: 0.88rem;
+        }
+        .footer .form-control::placeholder { color: rgba(255,255,255,0.35); }
+        .footer .form-control:focus { border-color: var(--green-soft) !important; box-shadow: 0 0 0 3px rgba(82,183,136,0.15); }
+        .footer .btn-primary { border-radius: 6px; font-size: 0.82rem; padding: 0.4rem 1rem; }
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.07);
+            padding: 1.25rem 0;
+            font-size: 0.82rem;
+            color: rgba(255,255,255,0.35);
+        }
+        .copyright a { color: var(--green-light); text-decoration: none; }
+        .copyright a:hover { color: var(--green-soft); }
+
+        /* Popup */
+        .leafspire-popup {
+            display: none; position: fixed; inset: 0;
+            background: rgba(0,0,0,0.6); backdrop-filter: blur(6px);
+            justify-content: center; align-items: center; z-index: 9999;
+        }
+        .leafspire-popup-card {
+            background: #fff; padding: 30px; border-radius: 16px;
+            text-align: center; width: 90%; max-width: 420px;
+            animation: popIn 0.25s ease;
+        }
+        .leafspire-icon { font-size: 42px; margin-bottom: 10px; }
+        .leafspire-popup-card h3 { color: #1f6f4a; }
+        .leafspire-popup-card p { font-size: 14px; color: #444; }
+        .leafspire-btn {
+            margin-top: 15px; padding: 10px 20px; border: none;
+            background: #1f6f4a; color: white; border-radius: 8px; cursor: pointer;
+        }
+        @keyframes popIn {
+            from { transform: scale(0.85); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* Back to top */
+        .back-to-top {
+            background: var(--green-main) !important;
+            border: none !important;
+            box-shadow: 0 4px 16px rgba(64,145,108,0.4);
+            border-radius: 50% !important;
+            width: 46px; height: 46px;
+            display: flex; align-items: center; justify-content: center;
+        }
+        .back-to-top:hover { background: var(--green-deep) !important; transform: translateY(-3px); }
+
+        /* Responsive */
+        @media (max-width: 991.98px) {
+            .navbar { padding: 0.5rem 1rem; }
+            .nav-link { padding: 0.6rem 1rem !important; }
+            .nav-link::after { display: none; }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Spinner -->
+    <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+        <div class="spinner-grow text-primary" role="status"></div>
+    </div>
+
+    <!-- Navbar -->
+    <div class="container-fluid fixed-top px-0 wow fadeIn" data-wow-delay="0.1s">
+        <div class="top-bar text-white-50 row gx-0 align-items-center d-none d-lg-flex">
+            <div class="col-lg-6 px-5 text-start">
+                <small class="ms-4"><i class="fa fa-envelope me-2"></i>leafspirefoundation@gmail.com</small>
+            </div>
+            <div class="col-lg-6 px-5 text-end">
+                <small>Follow us:</small>
+                <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+            <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
+                <img src="img/leafspirelogoremovebg.png" alt="Leafspire Logo" style="width:62px; height:62px; object-fit:contain; margin-right:10px;">
+                <h1 class="fw-bold mb-0" style="font-family: 'Italianno', cursive; font-size: 2.2rem;">
+                    Leaf<span class="text-white">spire</span>
+                </h1>
+            </a>
+            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <div class="navbar-nav ms-auto p-4 p-lg-0">
+                    <a href="index.html" class="nav-item nav-link">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
+                    <a href="causes.html" class="nav-item nav-link">Causes</a>
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                        <div class="dropdown-menu m-0">
+                            <a href="service.html" class="dropdown-item">Our Programmes</a>
+                            <a href="team.html" class="dropdown-item">Our Team</a>
+                            <a href="testimonial.html" class="dropdown-item">Get Involved</a>
+                            <a href="404.html" class="dropdown-item">Stories</a>
+                        </div>
+                    </div>
+                    <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- CONTACT HERO -->
+    <div class="contact-hero">
+        <div class="contact-hero__bg"></div>
+        <div class="contact-hero__overlay"></div>
+        <div class="contact-hero__content">
+            <span class="contact-hero__eyebrow">Get In Touch</span>
+            <h1 class="contact-hero__title">Reach Out to <em>LeafSpire</em></h1>
+            <p class="contact-hero__sub">Whether you want to volunteer, partner, donate, or simply learn more — we'd love to hear from you.</p>
+            <ol class="contact-hero__breadcrumb">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Pages</a></li>
+                <li class="active">Contact Us</li>
+            </ol>
+        </div>
+    </div>
+    <!-- Hero End -->
+
+
+    <!-- CONTACT INFO CARDS -->
+    <div class="container" style="padding-bottom: 0;">
+        <div class="contact-info-row">
+
+            <div class="info-card" data-reveal>
+                <div class="info-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                        <polyline points="22,6 12,13 2,6"/>
+                    </svg>
+                </div>
+                <h5>Email Us</h5>
+                <p><a href="mailto:leafspirefoundation@gmail.com">leafspirefoundation@gmail.com</a></p>
+                <p style="margin-top: 0.3rem; font-size: 0.8rem; color: var(--text-muted);">We respond within 24 hours</p>
+            </div>
+
+            <div class="info-card" data-reveal style="transition-delay: 0.12s;">
+                <div class="info-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 14a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 3.21h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 10.9a16 16 0 0 0 6 6l1.06-.92a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.9 18a2 2 0 0 1 .1 1"/>
+                    </svg>
+                </div>
+                <h5>Call Us</h5>
+                <p><a href="tel:+254701114562">+254 701 114 562</a></p>
+                <p style="margin-top: 0.3rem; font-size: 0.8rem; color: var(--text-muted);">Mon – Fri, 9am – 5pm EAT</p>
+            </div>
+
+            <div class="info-card" data-reveal style="transition-delay: 0.24s;">
+                <div class="info-card__icon">
+                    <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+                    </svg>
+                </div>
+                <h5>Follow Us</h5>
+                <p>
+                    <a href="https://www.instagram.com/leafspirefoundation/" target="_blank">@leafspirefoundation</a>
+                </p>
+                <div style="display: flex; justify-content: center; gap: 0.6rem; margin-top: 0.7rem;">
+                    <a href="https://www.facebook.com/profile.php?id=61590070211326" target="_blank" style="color: var(--green-main); font-size: 1rem;"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://x.com/Leafspire" target="_blank" style="color: var(--green-main); font-size: 1rem;"><i class="fab fa-twitter"></i></a>
+                    <a href="https://youtube.com/@leafspirefoundation" target="_blank" style="color: var(--green-main); font-size: 1rem;"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/leafspirefoundation/" target="_blank" style="color: var(--green-main); font-size: 1rem;"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Info Cards End -->
+
+
+    <!-- FORM SECTION -->
+    <div class="contact-section">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 reveal">
+                    <div class="form-card">
+                        <span class="section-label">Send a Message</span>
+                        <h1 class="display-6 mb-2">Have a Query?<br><em style="font-style: italic; color: var(--green-main);">We're Listening.</em></h1>
+                        <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 2rem;">Fill in the form below and a member of our team will get back to you as soon as possible.</p>
+
+                        <div id="contactForm">
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="input-wrap">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                            <label for="name">Your Name</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="input-wrap">
+                                        <div class="form-floating">
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                            <label for="email">Your Email</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-wrap">
+                                        <div class="form-floating">
+                                            <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                            <label for="subject">Subject</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="input-wrap">
+                                        <div class="form-floating">
+                                            <textarea class="form-control" placeholder="Leave a message here" id="message"></textarea>
+                                            <label for="message">Your Message</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button class="btn-submit" id="submitBtn" type="button">
+                                        <span>Send Message</span>
+                                        <div class="d-inline-flex btn-sm-square rounded-circle ms-2" style="width:28px;height:28px;font-size:0.78rem;">
+                                            <i class="fa fa-arrow-right"></i>
+                                        </div>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Success state -->
+                        <div class="form-success" id="formSuccess">
+                            <div class="form-success__icon">
+                                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--green-main)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <polyline points="20 6 9 17 4 12"/>
+                                </svg>
+                            </div>
+                            <h5 style="color: var(--green-deep); margin-bottom: 0.5rem;">Message Sent!</h5>
+                            <p style="font-size: 0.9rem; color: var(--text-muted);">Thank you for reaching out. We'll get back to you within 24 hours.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Form End -->
+
+
+    <!-- FOOTER (exact duplicate of index.html) -->
+    <div class="container-fluid bg-dark text-white-50 footer mt-5 pt-5 wow fadeIn" data-wow-delay="0.1s">
+        <div class="container py-5">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h1 class="fw-bold mb-2" style="font-family: 'Italianno', cursive; color: var(--green-soft);">
+                        Leaf<span style="color: #fff;">spire</span>
+                    </h1>
+                    <p style="font-size: 0.82rem; color: rgba(255,255,255,0.45); letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 1rem;">Youth Today · Leaders Tomorrow</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-square me-1" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-square me-1" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-square me-1" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
+                        <a class="btn btn-square me-0" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Contact</h5>
+                    <p><i class="fa fa-phone me-3" style="color: var(--green-soft);"></i>+254 701 114562</p>
+                    <p><i class="fa fa-envelope me-3" style="color: var(--green-soft);"></i>leafspirefoundation@gmail.com</p>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Quick Links</h5>
+                    <a class="btn btn-link" href="about.html">About Us</a>
+                    <a class="btn btn-link" href="contact.html">Contact Us</a>
+                    <a class="btn btn-link" href="service.html">Our Programmes</a>
+                    <a class="btn btn-link" href="terms.html">Terms &amp; Conditions</a>
+                    <a class="btn btn-link" href="contact.html">Support</a>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-light mb-4">Stay Connected</h5>
+                    <p>Get updates on our programmes, events, and impact stories directly to your inbox.</p>
+                    <form id="subscribeForm">
+                        <div class="position-relative mx-auto" style="max-width: 400px;">
+                            <input class="form-control bg-transparent w-100 py-3 ps-4 pe-5 text-light" type="email" id="emailInput" placeholder="Your email address" required>
+                            <button type="submit" class="btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2">Subscribe</button>
+                        </div>
+                    </form>
+                    <small class="text-muted d-block mt-2">We only send meaningful updates. No spam.</small>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                        &copy; <a href="#">LeafSpire</a>, All Rights Reserved.
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        Designed By <a href="#">riva.html</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Popup -->
+    <div id="leafspirePopup" class="leafspire-popup">
+        <div class="leafspire-popup-card">
+            <div class="leafspire-icon">💚</div>
+            <h3>Thank You for Joining Leafspire</h3>
+            <p>You are now part of our community. Expect updates on programmes, events, and impact stories.</p>
+            <button onclick="closePopup()" class="leafspire-btn">Close</button>
+        </div>
+    </div>
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top" style="display:none;"><i class="bi bi-arrow-up"></i></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/parallax/parallax.min.js"></script>
+    <script src="js/main.js"></script>
+
+    <script>
+        // ===== SCROLL REVEAL =====
+        (function () {
+            var els = document.querySelectorAll('.reveal, [data-reveal]');
+            if (!els.length) return;
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.1 });
+            els.forEach(function (el) { io.observe(el); });
+        })();
+
+        // ===== FORM SUBMIT =====
+        document.getElementById('submitBtn').addEventListener('click', function () {
+            var name = document.getElementById('name').value.trim();
+            var email = document.getElementById('email').value.trim();
+            if (!name || !email) {
+                document.getElementById('name').style.borderBottomColor = '#e74c3c';
+                document.getElementById('email').style.borderBottomColor = '#e74c3c';
+                return;
+            }
+            var form = document.getElementById('contactForm');
+            var success = document.getElementById('formSuccess');
+            form.style.transition = 'opacity 0.3s';
+            form.style.opacity = '0';
+            setTimeout(function () {
+                form.style.display = 'none';
+                success.classList.add('show');
+            }, 320);
+        });
+
+        // ===== NEWSLETTER SUBSCRIPTION (Formspree) =====
+        var subscribeForm = document.getElementById('subscribeForm');
+        var popup = document.getElementById('leafspirePopup');
+
+        subscribeForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            var email = document.getElementById('emailInput').value;
+            try {
+                await fetch('https://formspree.io/f/xredavrk', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ email: email })
+                });
+                popup.style.display = 'flex';
+                subscribeForm.reset();
+            } catch (error) {
+                alert('Something went wrong. Please try again.');
+            }
+        });
+
+        function closePopup() {
+            popup.style.display = 'none';
+        }
+
+        // ===== BACK TO TOP =====
+        window.addEventListener('scroll', function () {
+            var btn = document.querySelector('.back-to-top');
+            if (btn) btn.style.display = window.scrollY > 300 ? 'flex' : 'none';
+        });
+    </script>
+</body>
+</html>

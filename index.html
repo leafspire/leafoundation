@@ -89,11 +89,10 @@
 
         /* ===== NAVBAR ===== */
         .navbar {
-            background: rgba(27, 67, 50, 0.97) !important;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(82,183,136,0.15);
-            padding: 0 2rem;
+            background: #ffffff !important;
+            border-bottom: 1px solid rgba(27,67,50,0.08);
+            box-shadow: 0 2px 14px rgba(27,67,50,0.06);
+            padding: 0.3rem 2rem;
             transition: var(--transition);
         }
         .navbar-brand h1 {
@@ -105,8 +104,23 @@
             color: var(--green-soft) !important;
         }
         .navbar-brand h1 span { color: #fff !important; }
+        .navbar-brand {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        /* Logo image occupies the same brand slot; height is capped so the
+           navbar's overall height only grows as much as needed to fit the
+           larger logo, without leaving extra unused padding around it. */
+        .navbar-logo-img {
+            height: auto;
+            max-height: 108px;
+            width: auto;
+            max-width: 420px;
+            object-fit: contain;
+            display: block;
+        }
         .nav-link {
-            color: rgba(255,255,255,0.82) !important;
+            color: var(--green-deep) !important;
             font-weight: 500;
             font-size: 0.9rem;
             letter-spacing: 0.04em;
@@ -124,7 +138,14 @@
         }
         .nav-link:hover::after,
         .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
-        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .nav-link:hover, .nav-link.active { color: var(--green-main) !important; }
+        .dropdown-toggle::after { border-top-color: var(--green-deep); }
+        .navbar-toggler {
+            border-color: rgba(27,67,50,0.25) !important;
+        }
+        .navbar-toggler-icon {
+            filter: invert(1) brightness(0.35) sepia(1) hue-rotate(90deg) saturate(1.5);
+        }
         .dropdown-menu {
             background: var(--green-deep);
             border: 1px solid rgba(82,183,136,0.2);
@@ -639,6 +660,51 @@
         }
         .team-social .btn-square:hover { background: var(--green-main); color: #fff; transform: scale(1.12); }
 
+        /* ===== FOUNDERS ===== */
+        .founder-item {
+            border-radius: var(--radius-card);
+            box-shadow: var(--shadow-card);
+            transition: var(--transition);
+            background: #fff;
+            text-align: center;
+            padding: 2rem 1.5rem 1.75rem;
+            height: 100%;
+        }
+        .founder-item:hover {
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-4px);
+        }
+        .founder-img-wrap {
+            width: 132px;
+            height: 132px;
+            margin: 0 auto 1.25rem;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 16px rgba(29,67,44,0.14);
+        }
+        .founder-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        .founder-item:hover .founder-img-wrap img { transform: scale(1.03); }
+        .founder-text h5 { font-size: 1rem; font-weight: 600; color: var(--dark); margin-bottom: 0.2rem; }
+        .founder-text .text-primary {
+            display: block;
+            font-size: 0.82rem;
+            letter-spacing: 0.05em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+        .founder-quote {
+            font-style: italic;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            line-height: 1.65;
+            margin: 0;
+        }
+
         /* ===== FOOTER ===== */
         .footer { background: var(--dark) !important; }
         .footer h1 {
@@ -729,9 +795,10 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 991.98px) {
             #header-carousel .carousel-item img { height: 70vh; min-height: 420px; }
-            .navbar { padding: 0.5rem 1rem; }
+            .navbar { padding: 0.4rem 1rem; }
             .nav-link { padding: 0.6rem 1rem !important; }
             .nav-link::after { display: none; }
+            .navbar-logo-img { max-height: 80px; max-width: 320px; }
             .about-img-main { position: relative; width: 100%; height: 300px; top: auto; left: auto; margin-bottom: 1rem; }
             .about-img-inset { display: none; }
             .about-images-wrap { min-height: unset; }
@@ -773,10 +840,7 @@
         </div>
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
-                <img src="img/leafspirelogoremovebg.png" alt="Leafspire Logo" style="width:62px; height:62px; object-fit:contain; margin-right:10px;">
-                <h1 class="fw-bold mb-0" style="font-family: 'Italianno', cursive; font-size: 2.2rem;">
-                    Leaf<span class="text-white">spire</span>
-                </h1>
+                <img src="img/newleaf.png" alt="LeafSpire" class="navbar-logo-img">
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
@@ -1267,87 +1331,76 @@
     <!-- YouTube Banner Section End -->
 
     
-<!-- Team Start -->
+<!-- Founders Start -->
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
-            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Team</div>
-            <h1 class="display-6 mb-3">Young Leaders Behind LeafSpire</h1>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Passionate young Kenyans driving change from the ground up.</p>
+            <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Founders</div>
+            <h1 class="display-6 mb-3">The Founders Behind LeafSpire</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">Four young Kenyans who built LeafSpire around a shared belief in what young people can become.</p>
         </div>
 
         <div class="row g-4 justify-content-center">
 
-            <!-- Row 1: Executive Director -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 1 -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/esc.jpg" alt="">
+                    <div class="founder-item">
+                        <div class="founder-img-wrap">
+                            <img src="img/esc.JPG" alt="Escriva Josemaria">
                         </div>
-                        <div class="team-text bg-light text-center p-4">
+                        <div class="founder-text">
                             <h5>Escriva Josemaria</h5>
-                            <p class="text-primary">Executive Director</p>
+                            <span class="text-primary">Founder &amp; Executive Director</span>
+                            <p class="founder-quote">"Real change begins when young people discover that leadership starts with serving others."</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Deputy Executive Director -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 2 -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Vee.png" alt="">
+                    <div class="founder-item">
+                        <div class="founder-img-wrap">
+                            <img src="img/Vee.PNG" alt="Veronicah Leleruk Naitamany">
                         </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Veronicah L. Naitamany</h5>
-                            <p class="text-primary">Deputy Executive Director</p>
+                        <div class="founder-text">
+                            <h5>Veronicah Leleruk Naitamany</h5>
+                            <span class="text-primary">Co-Founder &amp; Deputy Executive Director</span>
+                            <p class="founder-quote">"Sustainable communities are built when people are empowered to shape their own future."</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Director of Programs -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 3 -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/faith.png" alt="">
+                    <div class="founder-item">
+                        <div class="founder-img-wrap">
+                            <img src="img/faith.PNG" alt="Faith Nganga">
                         </div>
-                        <div class="team-text bg-light text-center p-4">
+                        <div class="founder-text">
                             <h5>Faith Nganga</h5>
-                            <p class="text-primary">Director of Programs</p>
+                            <span class="text-primary">Co-Founder &amp; Director of Programs</span>
+                            <p class="founder-quote">"Healing creates confident individuals, and confident individuals build stronger communities."</p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Row 2: Communications (under Executive Director) -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 4 -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/conrad.png" alt="">
+                    <div class="founder-item">
+                        <div class="founder-img-wrap">
+                            <img src="img/Ach.JPG" alt="Achsah Otweyo">
                         </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Conrad Isiongo</h5>
-                            <p class="text-primary">Director of Communications</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Advocacy & Research Lead -->
-            <div class="col-lg-4 col-md-6">
-                <div class="wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/ws.png" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Washingtone Tinega</h5>
-                            <p class="text-primary">Advocacy & Research Lead</p>
+                        <div class="founder-text">
+                            <h5>Achsah Otweyo</h5>
+                            <span class="text-primary">Co-Founder &amp; Director of Operations</span>
+                            <p class="founder-quote">"Strong systems create lasting impact and allow communities to thrive for generations."</p>
                         </div>
                     </div>
                 </div>
@@ -1356,7 +1409,7 @@
         </div>
     </div>
 </div>
-<!-- Team End -->
+<!-- Founders End -->
 
 
 

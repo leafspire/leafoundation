@@ -85,24 +85,35 @@
 
         /* ===== NAVBAR ===== */
         .navbar {
-            background: rgba(27, 67, 50, 0.97) !important;
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(82,183,136,0.15);
-            padding: 0 2rem;
+            background: #ffffff !important;
+            border-bottom: 1px solid rgba(27,67,50,0.08);
+            box-shadow: 0 2px 14px rgba(27,67,50,0.06);
+            padding: 0.3rem 2rem;
             transition: var(--transition);
         }
         .navbar-brand h1 {
             font-family: 'Italianno', cursive;
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             margin-bottom: 0 !important;
             line-height: 1;
             letter-spacing: 0.02em;
             color: var(--green-soft) !important;
         }
         .navbar-brand h1 span { color: #fff !important; }
+        .navbar-brand {
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+        .navbar-logo-img {
+            height: auto;
+            max-height: 108px;
+            width: auto;
+            max-width: 420px;
+            object-fit: contain;
+            display: block;
+        }
         .nav-link {
-            color: rgba(255,255,255,0.82) !important;
+            color: var(--green-deep) !important;
             font-weight: 500;
             font-size: 0.9rem;
             letter-spacing: 0.04em;
@@ -118,8 +129,16 @@
             background: var(--green-soft);
             transition: var(--transition);
         }
-        .nav-link:hover::after, .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
-        .nav-link:hover, .nav-link.active { color: #fff !important; }
+        .nav-link:hover::after,
+        .nav-link.active::after { left: 0.85rem; right: 0.85rem; }
+        .nav-link:hover, .nav-link.active { color: var(--green-main) !important; }
+        .dropdown-toggle::after { border-top-color: var(--green-deep); }
+        .navbar-toggler {
+            border-color: rgba(27,67,50,0.25) !important;
+        }
+        .navbar-toggler-icon {
+            filter: invert(1) brightness(0.35) sepia(1) hue-rotate(90deg) saturate(1.5);
+        }
         .dropdown-menu {
             background: var(--green-deep);
             border: 1px solid rgba(82,183,136,0.2);
@@ -135,8 +154,6 @@
             transition: var(--transition);
         }
         .dropdown-item:hover { background: rgba(82,183,136,0.15); color: #fff !important; }
-        .navbar .btn-outline-primary { border-color: var(--green-soft); color: var(--green-soft); font-size: 0.875rem; padding: 0.45rem 1.2rem; }
-        .navbar .btn-outline-primary:hover { background: var(--green-soft); color: var(--dark); }
         .btn-sm-square {
             width: 24px; height: 24px;
             display: inline-flex; align-items: center; justify-content: center;
@@ -722,6 +739,33 @@
         .team-text h5 { font-size: 1rem; font-weight: 600; color: var(--dark); }
         .team-text .text-primary { font-size: 0.82rem; letter-spacing: 0.05em; text-transform: uppercase; }
 
+        /* ===== FOUNDER PHOTO (Team Section) ===== */
+        .founder-photo-wrap {
+            width: 100%;
+            max-width: 190px;
+            aspect-ratio: 1 / 1;
+            margin: 1.75rem auto 0;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 8px 22px rgba(27,67,50,0.14);
+            transition: var(--transition);
+        }
+        .founder-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .founder-card:hover .founder-photo-wrap { box-shadow: 0 14px 30px rgba(27,67,50,0.22); }
+        .founder-card:hover .founder-photo { transform: scale(1.03); }
+        .founder-bio {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0.6rem 0 0;
+        }
+
         .btn-square {
             width: 32px; height: 32px;
             border-radius: 50%;
@@ -859,9 +903,10 @@
         /* ===== RESPONSIVE ===== */
         @media (max-width: 991.98px) {
             .page-hero { min-height: 52vh; }
-            .navbar { padding: 0.5rem 1rem; }
+            .navbar { padding: 0.4rem 1rem; }
             .nav-link { padding: 0.6rem 1rem !important; }
             .nav-link::after { display: none; }
+            .navbar-logo-img { max-height: 80px; max-width: 320px; }
             .about-image-stack { min-height: 340px; margin-bottom: 2rem; }
             .story-split__col { min-height: auto; padding: 2rem; }
             .wwd-body__inner { grid-template-columns: 1fr; }
@@ -896,25 +941,22 @@
                 <small>Follow us:</small>
                 <a class="text-white-50 ms-3" href="https://www.facebook.com/profile.php?id=61590070211326"><i class="fab fa-facebook-f"></i></a>
                 <a class="text-white-50 ms-3" href="https://x.com/Leafspire"><i class="fab fa-twitter"></i></a>
-                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation"><i class="fab fa-youtube"></i></a>
+                <a class="text-white-50 ms-3" href="https://youtube.com/@leafspirefoundation?si=TQPvzIE116SsMQAR"><i class="fab fa-youtube"></i></a>
                 <a class="text-white-50 ms-3" href="https://www.instagram.com/leafspirefoundation/"><i class="fab fa-instagram"></i></a>
             </div>
         </div>
 
         <nav class="navbar navbar-expand-lg navbar-dark py-lg-0 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
             <a href="index.html" class="navbar-brand ms-4 ms-lg-0 d-flex align-items-center">
-                <img src="img/leafspirelogoremovebg.png" alt="LeafSpire Logo" style="width:58px;height:58px;object-fit:contain;margin-right:10px;">
-                <h1 class="fw-bold mb-0" style="font-family:'Italianno',cursive;font-size:2.2rem;">
-                    Leaf<span class="text-white">spire</span>
-                </h1>
+                <img src="img/newleaf.png" alt="LeafSpire" class="navbar-logo-img">
             </a>
             <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarCollapse">
                 <div class="navbar-nav ms-auto p-4 p-lg-0">
-                    <a href="index.html" class="nav-item nav-link">Home</a>
-                    <a href="about.html" class="nav-item nav-link active">About</a>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About</a>
                     <a href="causes.html" class="nav-item nav-link">Causes</a>
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
@@ -926,8 +968,6 @@
                         </div>
                     </div>
                     <a href="contact.html" class="nav-item nav-link">Contact</a>
-                </div>
-                    </a>
                 </div>
             </div>
         </nav>
@@ -1473,82 +1513,71 @@
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 500px;">
             <div class="d-inline-block rounded-pill bg-secondary text-primary py-1 px-3 mb-3">Our Team</div>
-            <h1 class="display-6 mb-3">Young Leaders Behind LeafSpire</h1>
-            <p style="color: var(--text-muted); font-size: 0.95rem;">Passionate young Kenyans driving change from the ground up.</p>
+            <h1 class="display-6 mb-3">The Founders Behind LeafSpire</h1>
+            <p style="color: var(--text-muted); font-size: 0.95rem;">The people who turned a simple belief in young Kenyans into a movement.</p>
         </div>
 
         <div class="row g-4 justify-content-center">
 
-            <!-- Row 1: Executive Director -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 1: Executive Director -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.1s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/esc.jpg" alt="">
+                    <div class="team-item founder-card position-relative rounded overflow-hidden">
+                        <div class="founder-photo-wrap">
+                            <img class="founder-photo" src="img/esc.JPG" alt="Escriva Josemaria, Founder and Executive Director">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Escriva Josemaria</h5>
-                            <p class="text-primary">Executive Director</p>
+                            <p class="text-primary mb-2">Founder &amp; Executive Director</p>
+                            <p class="founder-bio"></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Deputy Executive Director -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 2: Deputy Executive Director -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.2s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/Vee.png" alt="">
+                    <div class="team-item founder-card position-relative rounded overflow-hidden">
+                        <div class="founder-photo-wrap">
+                            <img class="founder-photo" src="img/Vee.PNG" alt="Veronicah Leleruk Naitamany, Co-Founder and Deputy Executive Director">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Veronicah L. Naitamany</h5>
-                            <p class="text-primary">Deputy Executive Director</p>
+                            <h5>Veronicah Leleruk Naitamany</h5>
+                            <p class="text-primary mb-2">Co-Founder &amp; Deputy Executive Director</p>
+                            <p class="founder-bio"></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Director of Programs -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 3: Director of Programs -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.3s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/faith.png" alt="">
+                    <div class="team-item founder-card position-relative rounded overflow-hidden">
+                        <div class="founder-photo-wrap">
+                            <img class="founder-photo" src="img/faith.PNG" alt="Faith Nganga, Co-Founder and Director of Programs">
                         </div>
                         <div class="team-text bg-light text-center p-4">
                             <h5>Faith Nganga</h5>
-                            <p class="text-primary">Director of Programs</p>
+                            <p class="text-primary mb-2">Co-Founder &amp; Director of Programs</p>
+                            <p class="founder-bio"></p>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Row 2: Communications (under Executive Director) -->
-            <div class="col-lg-4 col-md-6">
+            <!-- Founder 4: Director of Operations -->
+            <div class="col-lg-3 col-md-6">
                 <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/conrad.png" alt="">
+                    <div class="team-item founder-card position-relative rounded overflow-hidden">
+                        <div class="founder-photo-wrap">
+                            <img class="founder-photo" src="img/Ach.JPG" alt="Achsah Otweyo, Co-Founder and Director of Operations">
                         </div>
                         <div class="team-text bg-light text-center p-4">
-                            <h5>Conrad Isiongo</h5>
-                            <p class="text-primary">Director of Communications</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Advocacy & Research Lead -->
-            <div class="col-lg-4 col-md-6">
-                <div class="wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="team-item position-relative rounded overflow-hidden">
-                        <div class="overflow-hidden">
-                            <img class="img-fluid" src="img/ws.png" alt="">
-                        </div>
-                        <div class="team-text bg-light text-center p-4">
-                            <h5>Washingtone Tinega</h5>
-                            <p class="text-primary">Advocacy & Research Lead</p>
+                            <h5>Achsah Otweyo</h5>
+                            <p class="text-primary mb-2">Co-Founder &amp; Director of Operations</p>
+                            <p class="founder-bio"></p>
                         </div>
                     </div>
                 </div>
